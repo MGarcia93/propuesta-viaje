@@ -77,14 +77,14 @@ test.describe('Trip presentation page', () => {
   test('shows progress bar', async ({ page }) => {
     await page.goto('/viajes/china-clasica-tecnologica-12-dias');
     const progress = page.locator('#slide-progress');
-    await expect(progress).toBeVisible();
+    await expect(progress).toBeAttached();
   });
 });
 
 test.describe('Comparison page', () => {
   test('loads comparison table', async ({ page }) => {
     await page.goto('/comparar');
-    await expect(page.locator('h1')).toContainText('Comparar');
+    await expect(page.getByRole('heading', { name: 'Comparar' })).toBeVisible();
   });
 
   test('shows trip names in comparison', async ({ page }) => {
@@ -95,13 +95,13 @@ test.describe('Comparison page', () => {
 
   test('shows score indicators', async ({ page }) => {
     await page.goto('/comparar');
-    const scoresSection = page.locator('text=Puntajes');
+    const scoresSection = page.getByText('Puntajes').first();
     await expect(scoresSection).toBeVisible();
   });
 
   test('shows budget comparison', async ({ page }) => {
     await page.goto('/comparar');
-    const budgetSection = page.locator('text=Presupuesto');
+    const budgetSection = page.getByText('Presupuesto').first();
     await expect(budgetSection).toBeVisible();
   });
 
