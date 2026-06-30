@@ -7,4 +7,6 @@ dist/
 opencode.json
 openspec/
 *.Zone.Identifier
+test-results/
+playwright-report/
 
