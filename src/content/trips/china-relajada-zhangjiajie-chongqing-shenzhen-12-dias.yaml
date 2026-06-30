@@ -10,7 +10,7 @@ name: "China en 12 días: naturaleza, ciudad vertical y tecnología"
 shortName: "China relajada"
 status: draft
 version: 1
-lastUpdated: 2026-06-30
+lastUpdated: "2026-06-30"
 
 countries:
   - China
@@ -24,7 +24,7 @@ durationDays: 12
 durationNights: 11
 
 estimatedDates:
-  month: May
+  month: "May"
   year: 2027
   status: estimated
 
@@ -714,7 +714,7 @@ budget:
   travelers: 1
   priceBasis: per-person
   disclaimer: "Estimación para una persona durante mayo de 2027. Los hoteles se calculan como habitaciones privadas locales con baño privado y buenas reseñas. El vuelo internacional se basa en la tarifa orientativa encontrada por el usuario."
-  lastUpdated: 2026-06-30
+  lastUpdated: "2026-06-30"
 
   items:
     - category: flights
@@ -1038,7 +1038,7 @@ requirements:
   visa:
     value: "Pendiente para mayo de 2027."
     status: pending
-    lastUpdated: 2026-06-30
+    lastUpdated: "2026-06-30"
   passport:
     value: "Pasaporte vigente durante toda la estadía; confirmar vigencia mínima exigida."
     status: estimated
@@ -1478,37 +1478,37 @@ sources:
   - topic: "Propuesta original"
     name: "Itinerario China 12 días relajado"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Documento aportado por el usuario."
 
   - topic: "Alojamiento en Chongqing"
     name: "Booking.com — Hoteles de tres estrellas en Chongqing"
     url: "https://www.booking.com/threestars/city/cn/chongqing.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Booking muestra opciones desde aproximadamente USD 20,55 y un promedio cercano a USD 49 para tres estrellas; se usó USD 30 por noche por las tarifas observadas por el usuario."
 
   - topic: "Alojamiento en Jiefangbei"
     name: "Booking.com — Alojamientos cerca de People's Liberation Monument"
     url: "https://www.booking.com/landmark/cn/jiefangbei.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Se observan opciones desde CNY 268 por noche."
 
   - topic: "Alojamiento en Wulingyuan"
     name: "Booking.com — Hoteles en Wulingyuan"
     url: "https://www.booking.com/district/cn/zhangjiajie/wulingyuan.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Hay hoteles y guesthouses bien valorados cerca de la entrada del parque; el precio exacto requiere fechas."
 
   - topic: "Alojamiento en Shenzhen"
     name: "Booking.com — Hoteles económicos en Shenzhen"
     url: "https://www.booking.com/budget/city/cn/shenzhen.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Incluye opciones en Futian y Huaqiangbei."
 
   - topic: "Visa"
     name: "Cancillería Argentina — Exención de visado para ciudadanos argentinos"
     url: "https://cbeij.cancilleria.gob.ar/es/exenci%C3%B3n-de-visado-para-ciudadanos-argentinos"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "La exención publicada alcanza hasta el 31 de diciembre de 2026; mayo de 2027 permanece pendiente."
 
 # ──────────────────────────────────────────────

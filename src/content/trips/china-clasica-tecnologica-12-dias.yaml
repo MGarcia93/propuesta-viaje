@@ -10,7 +10,7 @@ name: "China clásica y tecnológica: Beijing, Zhangjiajie y Shenzhen"
 shortName: "China clásica y tecnológica"
 status: incomplete
 version: 1
-lastUpdated: 2026-06-30
+lastUpdated: "2026-06-30"
 
 countries:
   - China
@@ -24,7 +24,7 @@ durationDays: 12
 durationNights: 11
 
 estimatedDates:
-  month: May
+  month: "May"
   year: 2027
   status: estimated
 
@@ -694,7 +694,7 @@ budget:
   travelers: 1
   priceBasis: per-person
   disclaimer: "Los importes no verificables se dejan pendientes. El alojamiento solo incorpora cifras cuando Booking permite mostrar una referencia pública; mayo de 2027 todavía no dispone de tarifas finales verificables."
-  lastUpdated: 2026-06-30
+  lastUpdated: "2026-06-30"
 
   items:
     - category: flights
@@ -1404,31 +1404,31 @@ sources:
   - topic: "Propuesta original"
     name: "Itinerario China 12 días clásico turístico"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Documento aportado por el usuario."
 
   - topic: "Alojamiento en Beijing"
     name: "Booking.com — Hoteles en Beijing"
     url: "https://www.booking.com/city/cn/beijing.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Booking muestra hoteles desde USD 34 y promedios actuales, pero no tarifas válidas para mayo de 2027."
 
   - topic: "Alojamiento en Wulingyuan"
     name: "Booking.com — Zhangjiajie Wulingyuan Integrity Hotel"
     url: "https://www.booking.com/hotel/cn/tian-ya-zhi-cheng-jiu-dian.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "El alojamiento tiene ubicación 9,4 y valoración 8,3, pero Booking exige ingresar fechas para mostrar el precio."
 
   - topic: "Alojamiento cerca del parque"
     name: "Booking.com — Hoteles cerca de Zhangjiajie National Forest Park"
     url: "https://www.booking.com/landmark/cn/zhangjiajie-national-park.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Hay varias opciones bien valoradas; falta precio para mayo de 2027."
 
   - topic: "Alojamiento en Shenzhen"
     name: "Booking.com — Hoteles en Huaqiangbei"
     url: "https://www.booking.com/district/cn/shenzhen/huaqiangbei.html"
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Booking lista opciones bien valoradas, pero no expone una tarifa verificable para mayo de 2027."
 
 # ──────────────────────────────────────────────

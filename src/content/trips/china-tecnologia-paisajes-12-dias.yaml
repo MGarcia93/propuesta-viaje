@@ -10,7 +10,7 @@ name: "China: tecnología, ciudades verticales y paisajes de fantasía"
 shortName: "China futurista y natural"
 status: draft
 version: 1
-lastUpdated: 2026-06-30
+lastUpdated: "2026-06-30"
 
 countries:
   - China
@@ -26,7 +26,7 @@ durationDays: 12
 durationNights: 11
 
 estimatedDates:
-  month: November
+  month: "November"
   year: 2026
   status: estimated
 
@@ -769,7 +769,7 @@ budget:
   travelers: 1
   priceBasis: per-person
   disclaimer: "Estimación orientativa para noviembre de 2026, viajando sola y ocupando habitación individual. No incluye compras personales ni el vuelo internacional, que queda pendiente hasta definir fechas concretas."
-  lastUpdated: 2026-06-30
+  lastUpdated: "2026-06-30"
 
   items:
     - category: flights
@@ -1135,11 +1135,11 @@ requirements:
   visa:
     value: "Exención de visa por hasta 30 días para titulares de pasaporte argentino ordinario durante la política vigente en 2026."
     status: estimated
-    lastUpdated: 2026-06-30
+    lastUpdated: "2026-06-30"
   passport:
     value: "Pasaporte ordinario vigente durante toda la estadía; se recomienda margen adicional de vigencia."
     status: estimated
-    lastUpdated: 2026-06-30
+    lastUpdated: "2026-06-30"
   vaccines:
     value: "No se incorporan vacunas obligatorias específicas en esta propuesta."
     status: pending
@@ -1599,55 +1599,55 @@ sources:
   - topic: "Propuesta original"
     name: "Itinerario China 12 días el quearme"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Documento aportado por el usuario."
 
   - topic: "Vuelos internacionales"
     name: "Referencia del usuario"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Pendiente de cotizar Buenos Aires–Shanghai y Hong Kong–Buenos Aires."
 
   - topic: "Alojamiento en Shanghai"
     name: "Estimación de mercado"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Hotel cómodo de gama media cerca de estación con conexión a Hongqiao."
 
   - topic: "Alojamiento en Wangxian Valley"
     name: "Estimación de mercado"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Pensión u hotel próximo al valle; dormir dentro del complejo puede aumentar el precio."
 
   - topic: "Alojamiento en Wulingyuan"
     name: "Tarifas publicadas para hoteles próximos a Wulingyuan"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Estimación basada en tarifas publicadas."
 
   - topic: "Alojamiento en Chongqing"
     name: "Promedios publicados de hoteles 3 estrellas"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Estimación basada en promedios."
 
   - topic: "Alojamiento en Shenzhen"
     name: "Estimación de mercado"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Priorizar acceso al metro y conexión final a Hong Kong."
 
   - topic: "Transporte"
     name: "Estimación de tarifas de segunda clase"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Tarifas ferroviarias estimadas para segunda clase."
 
   - topic: "Visa"
     name: "Política migratoria vigente 2026"
     url: null
-    accessedAt: 2026-06-30
+    accessedAt: "2026-06-30"
     notes: "Exención de visa por hasta 30 días para pasaporte argentino ordinario. Debe reconfirmarse."
 
 # ──────────────────────────────────────────────
