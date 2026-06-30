@@ -12,28 +12,44 @@ export function calculateBudgetTotal(budget: Trip['budget']): BudgetTotals {
   const confirmedItems = items.filter(
     (item) => item.status !== 'pending' && item.amountPerPerson != null,
   );
-  const pendingItems = items.some((item) => item.status === 'pending');
+  const hasConfirmed = confirmedItems.length > 0;
+  const hasPending = items.some((item) => item.status === 'pending');
 
-  const subtotalPerPerson = confirmedItems.reduce(
-    (sum, item) => sum + (item.amountPerPerson ?? 0),
-    0,
-  );
+  const subtotalPerPerson = hasConfirmed
+    ? confirmedItems.reduce((sum, item) => sum + (item.amountPerPerson ?? 0), 0)
+    : null;
 
-  const contingencyAmount =
-    budget?.contingency?.amountPerPerson ?? null;
+  const contingencyAmount = budget?.contingency?.amountPerPerson ?? null;
 
   const totalPerPerson =
-    contingencyAmount != null
-      ? subtotalPerPerson + contingencyAmount
-      : subtotalPerPerson;
+    subtotalPerPerson != null
+      ? subtotalPerPerson + (contingencyAmount ?? 0)
+      : null;
 
   const travelers = budget?.travelers ?? 1;
-  const totalGroup = totalPerPerson != null ? totalPerPerson * travelers : null;
+  const totalGroup =
+    totalPerPerson != null ? totalPerPerson * travelers : null;
 
   return {
-    subtotalPerPerson: subtotalPerPerson > 0 ? subtotalPerPerson : null,
-    totalPerPerson: totalPerPerson > 0 ? totalPerPerson : null,
+    subtotalPerPerson,
+    totalPerPerson,
     totalGroup,
-    pendingItems,
+    pendingItems: hasPending,
+  };
+}
+
+/**
+ * Attach recalculated budget totals to a trip.
+ * Returns a copy of the trip with `budget.calculatedTotals`
+ * set to the value derived from items (not the authored value).
+ * Useful in page frontmatter where the trip is needed with reliable totals.
+ */
+export function attachCalculatedTotals(trip: Trip): Trip {
+  return {
+    ...trip,
+    budget: {
+      ...(trip.budget ?? { items: [] }),
+      calculatedTotals: calculateBudgetTotal(trip.budget),
+    },
   };
 }

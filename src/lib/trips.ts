@@ -52,7 +52,7 @@ function toCardProjection(trip: Trip): TripCardProjection {
     visual: trip.visual ?? {},
     durationDays: trip.durationDays,
     durationNights: trip.durationNights,
-    budgetLevel: trip.budgetLevel,
+    budgetLevel: trip.catalog.budgetLevel,
     scores: trip.scores ?? {},
     comparison: trip.comparison ?? {},
     budgetTotals: calculateBudgetTotal(trip.budget),

@@ -26,6 +26,48 @@ export function getBestByScore(
 }
 
 /**
+ * Compare all trips across every documented dimension.
+ * Returns per-dimension best-by-score results plus a full ComparisonSummary.
+ */
+export function compareTrips(
+  trips: TripComparisonProjection[],
+): {
+  summary: ComparisonSummary;
+  bestByScorePerDimension: Partial<
+    Record<string, { slug: string; score: string; value: number } | null>
+  >;
+  tripCount: number;
+} {
+  const scoreKeys: (keyof NonNullable<TripComparisonProjection['scores']>)[] =
+    [
+      'culture',
+      'nature',
+      'nightlife',
+      'gastronomy',
+      'relaxation',
+      'adventure',
+      'technology',
+      'comfort',
+      'variety',
+      'visualImpact',
+    ];
+
+  const bestByScorePerDimension: Partial<
+    Record<string, { slug: string; score: string; value: number } | null>
+  > = {};
+
+  for (const key of scoreKeys) {
+    bestByScorePerDimension[key] = getBestByScore(trips, key);
+  }
+
+  return {
+    summary: buildComparisonSummary(trips),
+    bestByScorePerDimension,
+    tripCount: trips.length,
+  };
+}
+
+/**
  * Find the cheapest trip among those with complete (non-pending) budget totals.
  */
 export function getCheapestTrip(

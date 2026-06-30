@@ -19,7 +19,7 @@ export interface TripCardProjection {
   visual: NonNullable<Trip['visual']>;
   durationDays: number;
   durationNights: number;
-  budgetLevel: Trip['budgetLevel'];
+  budgetLevel: Trip['catalog']['budgetLevel'];
   scores: NonNullable<Trip['scores']>;
   comparison: NonNullable<Trip['comparison']>;
   budgetTotals: BudgetTotals;
