@@ -4,4 +4,7 @@ dist/
 .astro/
 .env
 .env.*
+opencode.json
+openspec/
+*.Zone.Identifier
 
