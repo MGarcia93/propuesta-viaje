@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Home page', () => {
   test('loads and shows hero section', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('h1')).toContainText('¿A dónde nos vamos?');
+    await expect(page.getByRole('heading', { name: '¿A dónde nos vamos?' })).toBeVisible();
   });
 
   test('shows trip catalog with cards', async ({ page }) => {
@@ -89,20 +89,23 @@ test.describe('Comparison page', () => {
 
   test('shows trip names in comparison', async ({ page }) => {
     await page.goto('/comparar');
-    const table = page.locator('table');
-    await expect(table).toBeVisible();
+    const cards = page.locator('[href^="/viajes/"]').first();
+    await expect(cards).toBeVisible();
   });
 
-  test('shows score indicators', async ({ page }) => {
+  test('shows score indicators in detailed view', async ({ page }) => {
     await page.goto('/comparar');
+    // Open the detailed comparison section
+    const details = page.locator('details');
+    await details.locator('summary').click();
     const scoresSection = page.getByText('Puntajes').first();
     await expect(scoresSection).toBeVisible();
   });
 
-  test('shows budget comparison', async ({ page }) => {
+  test('shows budget in summary cards', async ({ page }) => {
     await page.goto('/comparar');
-    const budgetSection = page.getByText('Presupuesto').first();
-    await expect(budgetSection).toBeVisible();
+    const priceText = page.getByText('USD').first();
+    await expect(priceText).toBeVisible();
   });
 
   test('back link navigates to home', async ({ page }) => {

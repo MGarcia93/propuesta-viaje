@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ComparisonCards from '../components/comparison/ComparisonCards.astro';
 import ComparisonDesktop from '../components/comparison/ComparisonDesktop.astro';
 import ComparisonMobile from '../components/comparison/ComparisonMobile.astro';
 import ComparisonSummary from '../components/comparison/ComparisonSummary.astro';
@@ -36,21 +37,33 @@ const summary = buildComparisonSummary(trips);
       </p>
     </div>
 
-    <!-- Summary cards -->
+    <!-- Summary cards — the main comparison view -->
+    <div class="mb-10">
+      <ComparisonCards trips={trips} />
+    </div>
+
+    <!-- Quick insights -->
     <div class="mb-10">
       <ComparisonSummary summary={summary} />
     </div>
 
-    <!-- Desktop comparison table -->
-    <div class="mb-10">
-      <h2 class="font-display text-display-sm text-text-primary mb-6">
-        Comparación detallada
-      </h2>
-      <ComparisonDesktop trips={trips} />
-    </div>
+    <!-- Detailed comparison — collapsible -->
+    <details class="group">
+      <summary class="cursor-pointer flex items-center gap-2 text-sm font-semibold text-text-secondary hover:text-text-primary transition-colors mb-6 select-none">
+        <svg class="h-4 w-4 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        Ver comparación detallada
+      </summary>
 
-    <!-- Mobile comparison -->
-    <ComparisonMobile trips={trips} />
+      <!-- Desktop table -->
+      <div class="mb-10">
+        <ComparisonDesktop trips={trips} />
+      </div>
+
+      <!-- Mobile cards -->
+      <ComparisonMobile trips={trips} />
+    </details>
 
     <!-- Footer info -->
     {trips.some((t) => t.budgetTotals.pendingItems) && (

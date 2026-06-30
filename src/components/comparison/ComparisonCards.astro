@@ -1,0 +1,117 @@
+---
+import type { TripComparisonProjection } from '../../lib/types';
+
+interface Props {
+  trips: TripComparisonProjection[];
+}
+
+const { trips } = Astro.props;
+
+const paceLabel: Record<string, string> = {
+  relaxed: 'Relajado',
+  moderate: 'Moderado',
+  intense: 'Intenso',
+};
+
+const budgetLabel: Record<string, string> = {
+  low: 'Económico',
+  medium: 'Moderado',
+  high: 'Elevado',
+  premium: 'Premium',
+};
+
+// Find cheapest and most expensive
+const withTotals = trips.filter((t) => t.budgetTotals.totalPerPerson != null);
+const cheapest = withTotals.length > 0
+  ? withTotals.reduce((a, b) => (a.budgetTotals.totalPerPerson ?? Infinity) < (b.budgetTotals.totalPerPerson ?? Infinity) ? a : b)
+  : null;
+const mostExpensive = withTotals.length > 0
+  ? withTotals.reduce((a, b) => (a.budgetTotals.totalPerPerson ?? 0) > (b.budgetTotals.totalPerPerson ?? 0) ? a : b)
+  : null;
+---
+
+<div class="grid gap-6 md:grid-cols-3">
+  {trips.map((trip) => {
+    const isCheapest = cheapest && trip.slug === cheapest.slug;
+    const isMostExpensive = mostExpensive && trip.slug === mostExpensive.slug && !isCheapest;
+
+    return (
+      <div class="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+        {/* Header image */}
+        {trip.visual?.coverImage ? (
+          <img
+            src={trip.visual.coverImage}
+            alt={trip.catalog.title}
+            class="w-full h-40 object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div class="w-full h-40 bg-surface flex items-center justify-center">
+            <span class="text-text-dim text-sm">Sin imagen</span>
+          </div>
+        )}
+
+        <div class="p-5">
+          {/* Title + tags */}
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
+            {trip.catalog.tags?.[0] ?? 'Propuesta'}
+          </span>
+          <h3 class="font-display text-lg text-text-primary mt-1 leading-tight">
+            {trip.catalog.title}
+          </h3>
+
+          {/* Key stats */}
+          <div class="mt-4 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs text-text-dim">Duración</span>
+              <span class="text-sm font-semibold text-text-primary">{trip.durationDays} días</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs text-text-dim">Ritmo</span>
+              <span class="text-sm font-semibold text-text-primary">{paceLabel[trip.catalog.pace] ?? trip.catalog.pace}</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs text-text-dim">Presupuesto</span>
+              <span class="text-sm font-semibold text-text-primary">{budgetLabel[trip.catalog.budgetLevel] ?? trip.catalog.budgetLevel}</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-xs text-text-dim">Precio</span>
+              <div class="text-right">
+                {trip.budgetTotals.totalPerPerson != null ? (
+                  <span class={`text-sm font-bold ${isCheapest ? 'text-green-400' : isMostExpensive ? 'text-red-400' : 'text-brand-orange'}`}>
+                    ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                    {trip.budgetTotals.pendingItems && <span class="text-[10px] text-yellow-500/80 ml-1">*</span>}
+                  </span>
+                ) : (
+                  <span class="text-sm text-text-dim">Pendiente</span>
+                )}
+                {isCheapest && <span class="block text-[10px] text-green-400">Más económico</span>}
+                {isMostExpensive && <span class="block text-[10px] text-red-400">Más elevado</span>}
+              </div>
+            </div>
+          </div>
+
+          {/* Best argument */}
+          {trip.catalog.bestArgument && (
+            <div class="mt-4 pt-4 border-t border-surface-border">
+              <p class="text-xs text-text-secondary leading-relaxed">
+                <span class="text-brand-orange font-semibold">Fuerte:</span> {trip.catalog.bestArgument}
+              </p>
+            </div>
+          )}
+
+          {/* CTA */}
+          <a
+            href={`/viajes/${trip.slug}`}
+            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-brand-coral transition-colors"
+          >
+            Ver propuesta
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    );
+  })}
+</div>
