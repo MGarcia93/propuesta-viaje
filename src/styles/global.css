@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-color: #b63b32;
+  --accent-text-color: #f5f0e8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .proposal-card {
+    @apply relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  .slide-container {
+    @apply flex min-h-screen w-full flex-col;
+  }
+
+  .budget-bar {
+    @apply h-2 rounded-full bg-gray-200;
+  }
+
+  .budget-bar-fill {
+    @apply h-2 rounded-full bg-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
