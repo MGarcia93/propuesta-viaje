@@ -77,50 +77,50 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
   // This ensures basic nav works even without the TypeScript controller
   const slides = document.querySelectorAll('[data-slide]');
   const totalSlides = slides.length;
-  if (totalSlides === 0) return;
+  if (totalSlides > 0) {
+    let current = 0;
+    const prevBtn = document.getElementById('slide-prev');
+    const nextBtn = document.getElementById('slide-next');
+    const progress = document.getElementById('slide-progress');
+    const currentEl = document.getElementById('slide-current');
 
-  let current = 0;
-  const prevBtn = document.getElementById('slide-prev');
-  const nextBtn = document.getElementById('slide-next');
-  const progress = document.getElementById('slide-progress');
-  const currentEl = document.getElementById('slide-current');
-
-  function showSlide(index: number) {
-    slides.forEach((s, i) => {
-      (s as HTMLElement).style.display = i === index ? 'flex' : 'none';
-    });
-    current = index;
-    if (currentEl) currentEl.textContent = String(index + 1);
-    if (progress) {
-      progress.style.width = `${((index + 1) / totalSlides) * 100}%`;
-      progress.setAttribute('aria-valuenow', String(index + 1));
+    function showSlide(index: number) {
+      slides.forEach((s, i) => {
+        (s as HTMLElement).style.display = i === index ? 'flex' : 'none';
+      });
+      current = index;
+      if (currentEl) currentEl.textContent = String(index + 1);
+      if (progress) {
+        progress.style.width = `${((index + 1) / totalSlides) * 100}%`;
+        progress.setAttribute('aria-valuenow', String(index + 1));
+      }
+      if (prevBtn) prevBtn.disabled = index === 0;
+      if (nextBtn) nextBtn.disabled = index === totalSlides - 1;
     }
-    if (prevBtn) prevBtn.disabled = index === 0;
-    if (nextBtn) nextBtn.disabled = index === totalSlides - 1;
+
+    function navigate(delta: number) {
+      const next = current + delta;
+      if (next >= 0 && next < totalSlides) showSlide(next);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => navigate(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => navigate(1));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') navigate(-1);
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+    }, { passive: true });
+
+    showSlide(0);
   }
-
-  function navigate(delta: number) {
-    const next = current + delta;
-    if (next >= 0 && next < totalSlides) showSlide(next);
-  }
-
-  if (prevBtn) prevBtn.addEventListener('click', () => navigate(-1));
-  if (nextBtn) nextBtn.addEventListener('click', () => navigate(1));
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') navigate(-1);
-  });
-
-  // Touch support
-  let touchStartX = 0;
-  document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-  document.addEventListener('touchend', (e) => {
-    const diff = touchStartX - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
-  }, { passive: true });
-
-  showSlide(0);
 </script>

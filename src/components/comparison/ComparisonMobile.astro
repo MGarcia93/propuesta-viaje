@@ -28,6 +28,11 @@ for (const trip of trips) {
     Object.keys(trip.scores).forEach((k) => allScoreKeys.add(k));
   }
 }
+
+type ScoreMap = Record<string, number | null | undefined>;
+function getScore(scores: unknown, key: string): number | null {
+  return (scores as ScoreMap)?.[key] ?? null;
+}
 const scoreKeys = Array.from(allScoreKeys).filter(
   (k) => trips.some((t) => typeof t.scores?.[k as keyof typeof t.scores] === 'number'),
 );
@@ -72,7 +77,7 @@ const scoreKeys = Array.from(allScoreKeys).filter(
               <div class="space-y-2">
                 <span class="text-[10px] font-semibold uppercase tracking-wider text-text-dim">Puntajes</span>
                 {scoreKeys.map((key) => {
-                  const val = (trip.scores as Record<string, number | null | undefined>)?.[key] ?? null;
+                  const val = getScore(trip.scores, key);
                   return (
                     <ScoreIndicator
                       key={key}

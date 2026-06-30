@@ -13,6 +13,13 @@ const slideId = `slide-${slide.id}`;
 const source = slide.sourceRef
   ? resolveSlideSource(trip, slide.sourceRef)
   : null;
+
+const highlightEntries: [string, string][] = [];
+if (source?.type === 'reference' && source.data && typeof source.data === 'object' && !Array.isArray(source.data)) {
+  for (const [key, val] of Object.entries(source.data as Record<string, unknown>)) {
+    highlightEntries.push([key, String(val)]);
+  }
+}
 ---
 
 <section
@@ -53,12 +60,12 @@ const source = slide.sourceRef
       </div>
     )}
 
-    {source?.type === 'reference' && source.data && typeof source.data === 'object' && !Array.isArray(source.data) && (
+    {highlightEntries.length > 0 && (
       <div class="mt-6 flex flex-wrap gap-3">
-        {Object.entries(source.data as Record<string, unknown>).map(([key, val]) => (
+        {highlightEntries.map(([key, val]) => (
           <div key={key} class="rounded-lg border border-surface-border bg-surface-card/80 px-4 py-2">
             <span class="text-xs text-text-dim uppercase">{key}</span>
-            <p class="text-sm text-text-primary">{String(val)}</p>
+            <p class="text-sm text-text-primary">{val}</p>
           </div>
         ))}
       </div>

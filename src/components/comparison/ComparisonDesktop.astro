@@ -31,6 +31,11 @@ for (const trip of trips) {
 const scoreKeys = Array.from(allScoreKeys).filter(
   (k) => trips.some((t) => typeof t.scores?.[k as keyof typeof t.scores] === 'number'),
 );
+
+type ScoreMap = Record<string, number | null | undefined>;
+function getScore(scores: unknown, key: string): number | null {
+  return (scores as ScoreMap)?.[key] ?? null;
+}
 ---
 
 <div class="hidden md:block overflow-x-auto">
@@ -76,7 +81,7 @@ const scoreKeys = Array.from(allScoreKeys).filter(
           {scoreKeys.map((key) => {
             const values = trips.map((t) => ({
               slug: t.slug,
-              value: (t.scores as Record<string, number | null | undefined>)?.[key] ?? null,
+              value: getScore(t.scores, key),
             }));
             const maxVal = Math.max(...values.map((v) => v.value ?? 0), 0);
 
