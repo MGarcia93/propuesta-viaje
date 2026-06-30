@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#1E1E2A"/>
+  <circle cx="400" cy="240" r="64" stroke="#E34B32" stroke-width="3" opacity="0.6"/>
+  <path d="M372 234h56v12h-56z" fill="#E34B32" opacity="0.4"/>
+  <path d="M388 222h24v24h-24z" fill="none" stroke="#E34B32" stroke-width="2" opacity="0.4"/>
+  <text x="400" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="600" fill="#F6F2EA" opacity="0.8">China futurista y natural</text>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#F6F2EA" opacity="0.4">Imagen pendiente</text>
+  <line x1="200" y1="450" x2="600" y2="450" stroke="#E34B32" stroke-width="1" opacity="0.15"/>
+</svg>

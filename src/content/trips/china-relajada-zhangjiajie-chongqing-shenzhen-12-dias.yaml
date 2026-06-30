@@ -1028,7 +1028,7 @@ logistics:
   internationalFlightDuration:
     value: null
     status: pending
-  internalFlights: null
+  internalFlights: 0
   trainTrips: 2
   busTrips: 2
   longestTransfer: "Chongqing–Shenzhen"
@@ -1157,7 +1157,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "visual.coverImage"
+    sourceRef: null
 
   - id: concept
     type: editorial
@@ -1169,7 +1169,7 @@ slides:
     layout: text-left
     image: null
     images: []
-    sourceRef: "4.1"
+    sourceRef: null
 
   - id: route
     type: route
@@ -1193,7 +1193,7 @@ slides:
     layout: grid
     image: null
     images: []
-    sourceRef: "reasons"
+    sourceRef: null
 
   - id: zhangjiajie
     type: gallery
@@ -1217,7 +1217,7 @@ slides:
     layout: side-by-side
     image: null
     images: []
-    sourceRef: "itinerary.day5"
+    sourceRef: "itinerary.days-5-6"
 
   - id: chongqing
     type: city
@@ -1241,7 +1241,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "nightlifeSummary"
+    sourceRef: null
 
   - id: shenzhen
     type: city
@@ -1265,7 +1265,7 @@ slides:
     layout: grid
     image: null
     images: []
-    sourceRef: "itinerary.day10"
+    sourceRef: "itinerary.days-10-11"
 
   - id: itinerary
     type: itinerary
@@ -1277,7 +1277,7 @@ slides:
     layout: default
     image: null
     images: []
-    sourceRef: "itinerary"
+    sourceRef: null
 
   - id: pace
     type: pace
@@ -1289,7 +1289,7 @@ slides:
     layout: side-by-side
     image: null
     images: []
-    sourceRef: "paceSummary"
+    sourceRef: null
 
   - id: gastronomy
     type: gastronomy
@@ -1301,7 +1301,7 @@ slides:
     layout: collage
     image: null
     images: []
-    sourceRef: "gastronomy"
+    sourceRef: null
 
   - id: budget
     type: budget
@@ -1337,7 +1337,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "catalog"
+    sourceRef: null
 
 # ──────────────────────────────────────────────
 # 20. Galería general

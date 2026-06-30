@@ -1105,7 +1105,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "visual.coverImage"
+    sourceRef: null
 
   - id: concept
     type: editorial
@@ -1117,7 +1117,7 @@ slides:
     layout: text-left
     image: null
     images: []
-    sourceRef: "4.1"
+    sourceRef: null
 
   - id: route
     type: route
@@ -1153,7 +1153,7 @@ slides:
     layout: collage
     image: null
     images: []
-    sourceRef: "itinerary.day2"
+    sourceRef: "itinerary.days-2-3"
 
   - id: great-wall
     type: full-image
@@ -1165,7 +1165,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "itinerary.day3"
+    sourceRef: "itinerary.days-3-4"
 
   - id: zhangjiajie
     type: gallery
@@ -1189,7 +1189,7 @@ slides:
     layout: side-by-side
     image: null
     images: []
-    sourceRef: "itinerary.day8"
+    sourceRef: "itinerary.days-8-9"
 
   - id: shenzhen
     type: city
@@ -1213,7 +1213,7 @@ slides:
     layout: grid
     image: null
     images: []
-    sourceRef: "itinerary.day10"
+    sourceRef: "itinerary.days-10-11"
 
   - id: itinerary
     type: itinerary
@@ -1225,7 +1225,7 @@ slides:
     layout: default
     image: null
     images: []
-    sourceRef: "itinerary"
+    sourceRef: null
 
   - id: gastronomy
     type: gastronomy
@@ -1237,7 +1237,7 @@ slides:
     layout: collage
     image: null
     images: []
-    sourceRef: "gastronomy"
+    sourceRef: null
 
   - id: budget
     type: budget
@@ -1285,7 +1285,7 @@ slides:
     layout: full-bleed
     image: null
     images: []
-    sourceRef: "catalog"
+    sourceRef: null
 
 # ──────────────────────────────────────────────
 # 20. Galería general
