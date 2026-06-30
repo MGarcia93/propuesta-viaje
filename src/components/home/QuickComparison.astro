@@ -20,45 +20,204 @@ const { trips } = Astro.props;
         </p>
       </div>
 
-      <div class="grid gap-6 md:grid-cols-3">
-        {trips.slice(0, 3).map((trip) => (
-          <div key={trip.slug} class="rounded-xl border border-surface-border bg-surface-card p-5">
-            {trip.visual?.coverImage && (
-              <img
-                src={trip.visual.coverImage}
-                alt={trip.catalog.title}
-                class="w-full h-32 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-            )}
-            <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
-              {trip.catalog.tags?.[0] ?? 'Propuesta'}
-            </span>
-            <h3 class="font-display text-display-sm text-text-primary mt-1 leading-tight">
-              {trip.catalog.title}
-            </h3>
-            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-xs text-text-muted">
-              <span>{trip.durationDays} días</span>
-              {trip.budgetTotals.totalPerPerson != null && (
-                <span class="text-brand-orange font-semibold">
-                  ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
-                </span>
-              )}
-              {trip.catalog.pace && (
-                <span>
-                  Ritmo: {trip.catalog.pace === 'relaxed' ? 'Relajado' : trip.catalog.pace === 'moderate' ? 'Medio' : 'Intenso'}
-                </span>
-              )}
-            </div>
-            <a
-              href={`/viajes/${trip.slug}`}
-              class="mt-4 inline-flex text-sm text-brand-orange hover:text-brand-coral transition-colors"
-            >
-              Ver propuesta →
-            </a>
+      <!-- Slider -->
+      <div class="relative" data-slider>
+        <!-- Track -->
+        <div class="overflow-hidden rounded-xl">
+          <div
+            class="flex transition-transform duration-500 ease-out"
+            data-slider-track
+          >
+            {trips.map((trip) => (
+              <div
+                key={trip.slug}
+                class="w-full flex-shrink-0 px-2"
+                data-slider-item
+              >
+                <div class="rounded-xl border border-surface-border bg-surface-card p-6 md:p-8 flex flex-col md:flex-row gap-6">
+                  <!-- Image -->
+                  <div class="w-full md:w-80 flex-shrink-0">
+                    {trip.visual?.coverImage ? (
+                      <img
+                        src={trip.visual.coverImage}
+                        alt={trip.catalog.title}
+                        class="w-full h-48 md:h-64 object-cover rounded-lg"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div class="w-full h-48 md:h-64 rounded-lg bg-surface flex items-center justify-center">
+                        <span class="text-text-dim text-sm">Sin imagen</span>
+                      </div>
+                    )}
+                  </div>
+
+                  <!-- Content -->
+                  <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
+                        {trip.catalog.tags?.[0] ?? 'Propuesta'}
+                      </span>
+                      <h3 class="font-display text-display-md text-text-primary mt-2 leading-tight">
+                        {trip.catalog.title}
+                      </h3>
+                      {trip.catalog.summary && (
+                        <p class="text-text-secondary mt-3 text-sm leading-relaxed line-clamp-3">
+                          {trip.catalog.summary}
+                        </p>
+                      )}
+                    </div>
+
+                    <div class="mt-6">
+                      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                        <div>
+                          <span class="text-[10px] text-text-dim uppercase tracking-wider block">Duración</span>
+                          <span class="text-text-primary font-semibold">{trip.durationDays} días</span>
+                        </div>
+                        {trip.budgetTotals.totalPerPerson != null && (
+                          <div>
+                            <span class="text-[10px] text-text-dim uppercase tracking-wider block">Precio estimado</span>
+                            <span class="text-brand-orange font-semibold">
+                              ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                            </span>
+                            {trip.budgetTotals.pendingItems && (
+                              <span class="ml-1 text-[10px] text-yellow-500/80">*</span>
+                            )}
+                          </div>
+                        )}
+                        {trip.catalog.pace && (
+                          <div>
+                            <span class="text-[10px] text-text-dim uppercase tracking-wider block">Ritmo</span>
+                            <span class="text-text-primary font-semibold">
+                              {trip.catalog.pace === 'relaxed' ? 'Relajado' : trip.catalog.pace === 'moderate' ? 'Moderado' : 'Intenso'}
+                            </span>
+                          </div>
+                        )}
+                        {trip.catalog.budgetLevel && (
+                          <div>
+                            <span class="text-[10px] text-text-dim uppercase tracking-wider block">Presupuesto</span>
+                            <span class="text-text-primary font-semibold capitalize">
+                              {trip.catalog.budgetLevel === 'low' ? 'Económico' : trip.catalog.budgetLevel === 'medium' ? 'Moderado' : trip.catalog.budgetLevel === 'high' ? 'Elevado' : 'Premium'}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <a
+                        href={`/viajes/${trip.slug}`}
+                        class="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-coral px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-coral/90 transition-colors"
+                      >
+                        Ver propuesta
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <!-- Arrows -->
+        {trips.length > 1 && (
+          <>
+            <button
+              type="button"
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+              data-slider-prev
+              aria-label="Anterior"
+            >
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 w-10 h-10 rounded-full bg-surface-card border border-surface-border flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+              data-slider-next
+              aria-label="Siguiente"
+            >
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </>
+        )}
+
+        <!-- Dots -->
+        {trips.length > 1 && (
+          <div class="flex justify-center gap-2 mt-6" data-slider-dots>
+            {trips.map((_, i) => (
+              <button
+                type="button"
+                class={`w-2 h-2 rounded-full transition-colors ${
+                  i === 0 ? 'bg-brand-orange' : 'bg-surface-border hover:bg-text-dim'
+                }`}
+                data-slider-dot={i}
+                aria-label={`Ir a propuesta ${i + 1}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
+
+      {trips.some((t) => t.budgetTotals.pendingItems) && (
+        <p class="mt-4 text-xs text-yellow-500/80">
+          * Incluye costos pendientes de confirmar.
+        </p>
+      )}
     </div>
   </section>
 )}
+
+<script>
+  document.querySelectorAll('[data-slider]').forEach((slider) => {
+    const track = slider.querySelector('[data-slider-track]');
+    const items = slider.querySelectorAll('[data-slider-item]');
+    const prevBtn = slider.querySelector('[data-slider-prev]');
+    const nextBtn = slider.querySelector('[data-slider-next]');
+    const dots = slider.querySelectorAll('[data-slider-dot]');
+
+    if (!track || items.length === 0) return;
+
+    let current = 0;
+    const total = items.length;
+
+    function goTo(index: number) {
+      current = Math.max(0, Math.min(index, total - 1));
+      (track as HTMLElement).style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        (dot as HTMLElement).classList.toggle('bg-brand-orange', i === current);
+        (dot as HTMLElement).classList.toggle('bg-surface-border', i !== current);
+      });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    // Touch/swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const trackEl = track as HTMLElement;
+
+    trackEl.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    trackEl.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        goTo(current + (diff > 0 ? 1 : -1));
+      }
+    }, { passive: true });
+
+    // Keyboard
+    slider.addEventListener('keydown', (e) => {
+      if ((e as KeyboardEvent).key === 'ArrowLeft') goTo(current - 1);
+      if ((e as KeyboardEvent).key === 'ArrowRight') goTo(current + 1);
+    });
+  });
+</script>
