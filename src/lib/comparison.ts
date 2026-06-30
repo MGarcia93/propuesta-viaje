@@ -48,6 +48,8 @@ export function compareTrips(
       'adventure',
       'technology',
       'comfort',
+      'organizationDifficulty',
+      'budgetAccessibility',
       'variety',
       'visualImpact',
     ];
@@ -150,6 +152,8 @@ export function buildComparisonSummary(
       'adventure',
       'technology',
       'comfort',
+      'organizationDifficulty',
+      'budgetAccessibility',
       'variety',
       'visualImpact',
     ];
