@@ -1,0 +1,53 @@
+---
+// Hero section — cinematic parallax with brand messaging
+---
+
+<section class="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-surface-darker">
+  <!-- Hero background dimmed -->
+  <div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/50 to-surface">
+    <div class="absolute inset-0 opacity-[0.04] bg-gradient-to-br from-brand-orange via-brand-coral to-transparent" />
+  </div>
+
+  <div class="relative z-10 flex w-full max-w-5xl flex-col items-center px-6 text-center">
+    <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand-orange mb-6">
+      El próximo viaje se decide acá
+    </span>
+
+    <h1 class="font-display text-display-xl text-text-primary leading-none mb-6">
+      ¿A dónde nos vamos?
+    </h1>
+
+    <p class="max-w-2xl text-lg text-text-secondary mb-10">
+      Tres propuestas, tres formas completamente distintas de viajar y una sola decisión.
+      Explorá cada una, comparalas y encontrá la que más te representa.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a
+        href="#catalog"
+        class="inline-flex items-center gap-2 rounded-full bg-brand-coral px-6 py-3 text-sm font-semibold text-white hover:bg-brand-coral/90 transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+      >
+        Explorar propuestas
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+      <a
+        href="/comparar"
+        class="inline-flex items-center gap-2 rounded-full border border-surface-border px-6 py-3 text-sm font-semibold text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+      >
+        Compararlas
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+    <svg class="h-5 w-5 text-text-dim" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>

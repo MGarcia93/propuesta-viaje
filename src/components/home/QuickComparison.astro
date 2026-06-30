@@ -1,0 +1,64 @@
+---
+import type { TripCardProjection } from '../../lib/types';
+
+interface Props {
+  trips: TripCardProjection[];
+}
+
+const { trips } = Astro.props;
+---
+
+{trips.length > 0 && (
+  <section class="w-full px-6 py-16 md:px-12 md:py-24 bg-surface-darker">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex flex-col gap-2 mb-10">
+        <h2 class="font-display text-display-lg text-text-primary">
+          Así se vería
+        </h2>
+        <p class="text-text-secondary max-w-2xl">
+          Un vistazo rápido para entender cada viaje en segundos.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        {trips.slice(0, 3).map((trip) => (
+          <div key={trip.slug} class="rounded-xl border border-surface-border bg-surface-card p-5">
+            {trip.visual?.coverImage && (
+              <img
+                src={trip.visual.coverImage}
+                alt={trip.catalog.title}
+                class="w-full h-32 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+            )}
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
+              {trip.catalog.tags?.[0] ?? 'Propuesta'}
+            </span>
+            <h3 class="font-display text-display-sm text-text-primary mt-1 leading-tight">
+              {trip.catalog.title}
+            </h3>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-xs text-text-muted">
+              <span>{trip.durationDays} días</span>
+              {trip.budgetTotals.totalPerPerson != null && (
+                <span class="text-brand-orange font-semibold">
+                  ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                </span>
+              )}
+              {trip.catalog.pace && (
+                <span>
+                  Ritmo: {trip.catalog.pace === 'relaxed' ? 'Relajado' : trip.catalog.pace === 'moderate' ? 'Medio' : 'Intenso'}
+                </span>
+              )}
+            </div>
+            <a
+              href={`/viajes/${trip.slug}`}
+              class="mt-4 inline-flex text-sm text-brand-orange hover:text-brand-coral transition-colors"
+            >
+              Ver propuesta →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

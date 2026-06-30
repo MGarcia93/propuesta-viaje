@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import SlideRenderer from '../../components/presentation/SlideRenderer.astro';
 import PresentationControls from '../../components/presentation/PresentationControls.astro';
+import TripDetailFallback from '../../components/presentation/TripDetailFallback.astro';
 import { getTripCardProjections, getTripBySlug } from '../../lib/trips';
 
 export async function getStaticPaths() {
@@ -53,81 +54,6 @@ const hasSlides = totalSlides > 0;
       />
     </div>
   ) : (
-    <!-- Fallback: detailed view when no slides -->
-    <div class="mx-auto max-w-4xl px-6 py-16">
-      <a
-        href="/"
-        class="inline-flex items-center gap-1 text-sm text-text-muted hover:text-text-primary transition-colors mb-8"
-      >
-        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        Volver al catálogo
-      </a>
-
-      <h1 class="font-display text-display-lg text-text-primary mb-4">
-        {trip.catalog.title}
-      </h1>
-
-      {trip.catalog.summary && (
-        <p class="text-lg text-text-secondary mb-8 max-w-2xl">
-          {trip.catalog.summary}
-        </p>
-      )}
-
-      <!-- Trip metadata -->
-      <div class="flex flex-wrap gap-6 mb-8 text-sm">
-        {trip.durationDays > 0 && (
-          <div>
-            <span class="text-xs text-text-dim uppercase tracking-wider">Duración</span>
-            <p class="text-text-primary font-semibold">{trip.durationDays} días</p>
-          </div>
-        )}
-        {trip.catalog.pace && (
-          <div>
-            <span class="text-xs text-text-dim uppercase tracking-wider">Ritmo</span>
-            <p class="text-text-primary font-semibold capitalize">{trip.catalog.pace}</p>
-          </div>
-        )}
-        {trip.catalog.tags && trip.catalog.tags.length > 0 && (
-          <div>
-            <span class="text-xs text-text-dim uppercase tracking-wider">Etiquetas</span>
-            <div class="flex gap-1 mt-0.5">
-              {trip.catalog.tags.map((tag) => (
-                <span class="text-xs px-2 py-0.5 rounded-full bg-surface-card border border-surface-border">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <!-- Overview -->
-      {trip.concept?.overview && (
-        <div class="text-text-secondary leading-relaxed mb-8">
-          {trip.concept.overview.split('\n').map((p) => (
-            <p class="mb-3">{p}</p>
-          ))}
-        </div>
-      )}
-
-      <!-- Route summary -->
-      {trip.route && trip.route.length > 0 && (
-        <div class="mb-8">
-          <h2 class="font-display text-display-sm text-text-primary mb-4">Recorrido</h2>
-          <div class="flex flex-wrap gap-2">
-            {trip.route.map((entry, i) => (
-              <span key={i} class="text-sm text-text-secondary">
-                {entry.city}
-                {i < trip.route.length - 1 && (
-                  <span class="text-text-dim mx-1">→</span>
-                )}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+    <TripDetailFallback trip={trip} />
   )}
 </Layout>
