@@ -1,0 +1,67 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { resolveSlideSource } from '../../lib/slides';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const source = slide.sourceRef
+  ? resolveSlideSource(trip, slide.sourceRef)
+  : null;
+---
+
+<section
+  id={slideId}
+  class="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden px-6 py-16 md:px-12"
+>
+  {slide.image && (
+    <img
+      src={slide.image}
+      alt={slide.title ?? ''}
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="lazy"
+    />
+  )}
+
+  {slide.image && (
+    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-surface/30" />
+  )}
+
+  <div class="relative z-10 w-full max-w-3xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-3 leading-tight">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary text-lg mb-4 font-display">
+        {slide.subtitle}
+      </p>
+    )}
+
+    {slide.text && (
+      <div class="text-text-secondary leading-relaxed max-w-2xl">
+        {slide.text.split('\n').map((p) => (
+          <p class="mb-3">{p}</p>
+        ))}
+      </div>
+    )}
+
+    {source?.type === 'reference' && source.data && typeof source.data === 'object' && !Array.isArray(source.data) && (
+      <div class="mt-6 flex flex-wrap gap-3">
+        {Object.entries(source.data as Record<string, unknown>).map(([key, val]) => (
+          <div key={key} class="rounded-lg border border-surface-border bg-surface-card/80 px-4 py-2">
+            <span class="text-xs text-text-dim uppercase">{key}</span>
+            <p class="text-sm text-text-primary">{String(val)}</p>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import type { SlideType } from '../../schemas/trip.schema';
+
+import CoverSlide from './CoverSlide.astro';
+import EditorialSlide from './EditorialSlide.astro';
+import ReasonsSlide from './ReasonsSlide.astro';
+import RouteSlide from './RouteSlide.astro';
+import DestinationSlide from './DestinationSlide.astro';
+import CitySlide from './DestinationSlide.astro';
+import HighlightSlide from './HighlightSlide.astro';
+import GallerySlide from './GallerySlide.astro';
+import FullImageSlide from './FullImageSlide.astro';
+import SplitImageSlide from './SplitImageSlide.astro';
+import ItinerarySlide from './ItinerarySlide.astro';
+import PaceSlide from './PaceSlide.astro';
+import NightlifeSlide from './NightlifeSlide.astro';
+import GastronomySlide from './GastronomySlide.astro';
+import BudgetSlide from './BudgetSlide.astro';
+import ProsConsSlide from './ProsConsSlide.astro';
+import ComparisonSummarySlide from './ComparisonSummarySlide.astro';
+import ClosingSlide from './ClosingSlide.astro';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+
+const typeComponentMap: Record<SlideType, typeof CoverSlide> = {
+  cover: CoverSlide,
+  editorial: EditorialSlide,
+  reasons: ReasonsSlide,
+  route: RouteSlide,
+  destination: DestinationSlide,
+  city: CitySlide,
+  highlight: HighlightSlide,
+  gallery: GallerySlide,
+  'full-image': FullImageSlide,
+  'split-image': SplitImageSlide,
+  itinerary: ItinerarySlide,
+  pace: PaceSlide,
+  nightlife: NightlifeSlide,
+  gastronomy: GastronomySlide,
+  budget: BudgetSlide,
+  'pros-cons': ProsConsSlide,
+  'comparison-summary': ComparisonSummarySlide,
+  closing: ClosingSlide,
+};
+
+const SlideComponent = typeComponentMap[slide.type];
+
+if (!SlideComponent) {
+  throw new Error(
+    `Unknown slide type "${slide.type}" in slide "${slide.id}". ` +
+    `Must be one of: ${Object.keys(typeComponentMap).join(', ')}`,
+  );
+}
+---
+
+<SlideComponent slide={slide} trip={trip} />

@@ -1,0 +1,86 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+const nightlife = trip.nightlifeSummary;
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    {nightlife ? (
+      <>
+        {nightlife.overview && (
+          <p class="text-text-secondary leading-relaxed mb-8 max-w-2xl">
+            {nightlife.overview}
+          </p>
+        )}
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          {nightlife.quietNights != null && (
+            <div class="rounded-lg border border-surface-border bg-surface-card px-4 py-3">
+              <span class="text-lg font-bold text-text-primary">{nightlife.quietNights}</span>
+              <p class="text-xs text-text-muted">Noches tranquilas</p>
+            </div>
+          )}
+          {nightlife.urbanNights != null && (
+            <div class="rounded-lg border border-surface-border bg-surface-card px-4 py-3">
+              <span class="text-lg font-bold text-text-primary">{nightlife.urbanNights}</span>
+              <p class="text-xs text-text-muted">Noches urbanas</p>
+            </div>
+          )}
+          {nightlife.partyOptionalNights != null && (
+            <div class="rounded-lg border border-surface-border bg-surface-card px-4 py-3">
+              <span class="text-lg font-bold text-purple-400">{nightlife.partyOptionalNights}</span>
+              <p class="text-xs text-text-muted">Noches de fiesta (opcional)</p>
+            </div>
+          )}
+        </div>
+
+        {nightlife.experiences && nightlife.experiences.length > 0 && (
+          <>
+            <h3 class="font-display font-bold text-text-primary mb-3">Experiencias nocturnas</h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+              {nightlife.experiences.map((exp, i) => (
+                <div key={i} class="rounded-lg border border-surface-border bg-surface-card p-3">
+                  <div class="flex items-start justify-between gap-2">
+                    <span class="text-sm font-medium text-text-primary">{exp.name}</span>
+                    {exp.optional && (
+                      <span class="text-[10px] text-text-dim uppercase">Opcional</span>
+                    )}
+                  </div>
+                  {exp.city && (
+                    <span class="text-xs text-text-muted">{exp.city}</span>
+                  )}
+                  {exp.description && (
+                    <p class="mt-1 text-xs text-text-secondary">{exp.description}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </>
+    ) : (
+      <p class="text-text-muted italic">No hay información de vida nocturna disponible.</p>
+    )}
+  </div>
+</section>

@@ -1,0 +1,93 @@
+---
+import type { ComparisonSummary } from '../../lib/types';
+
+export interface Props {
+  summary: ComparisonSummary;
+}
+
+const { summary } = Astro.props;
+---
+
+<div class="rounded-2xl border border-surface-border bg-surface-card p-6">
+  <h2 class="font-display text-display-sm text-text-primary mb-4">
+    Resumen comparativo
+  </h2>
+
+  {summary.tripCount === 0 ? (
+    <p class="text-text-muted italic">No hay propuestas para comparar.</p>
+  ) : (
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {summary.bestByScore && (
+        <div class="rounded-lg border border-green-500/20 bg-green-500/5 p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-green-400">
+            Mejor puntaje general
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm">
+            {summary.bestByScore.score}: {summary.bestByScore.value}/5
+          </p>
+          <p class="text-xs text-text-muted">{summary.bestByScore.slug}</p>
+        </div>
+      )}
+
+      {summary.cheapest && (
+        <div class="rounded-lg border border-brand-orange/20 bg-brand-orange/5 p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
+            Más económico
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm">
+            ~USD {summary.cheapest.totalPerPerson.toLocaleString()}
+          </p>
+          <p class="text-xs text-text-muted">{summary.cheapest.slug}</p>
+        </div>
+      )}
+
+      {summary.mostExpensive && (
+        <div class="rounded-lg border border-brand-coral/20 bg-brand-coral/5 p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-coral">
+            Más costoso
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm">
+            ~USD {summary.mostExpensive.totalPerPerson.toLocaleString()}
+          </p>
+          <p class="text-xs text-text-muted">{summary.mostExpensive.slug}</p>
+        </div>
+      )}
+
+      {summary.mostRelaxed && (
+        <div class="rounded-lg border border-sky-500/20 bg-sky-500/5 p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-sky-400">
+            Más relajado
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm capitalize">
+            {summary.mostRelaxed.pace}
+          </p>
+          <p class="text-xs text-text-muted">{summary.mostRelaxed.slug}</p>
+        </div>
+      )}
+
+      {summary.longest && (
+        <div class="rounded-lg border border-surface-border p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-text-dim">
+            Más largo
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm">
+            {summary.longest.days} días
+          </p>
+          <p class="text-xs text-text-muted">{summary.longest.slug}</p>
+        </div>
+      )}
+
+      {summary.shortest && (
+        <div class="rounded-lg border border-surface-border p-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-text-dim">
+            Más corto
+          </span>
+          <p class="mt-1 text-text-primary font-bold text-sm">
+            {summary.shortest.days} días
+          </p>
+          <p class="text-xs text-text-muted">{summary.shortest.slug}</p>
+        </div>
+      )}
+    </div>
+  )}
+</div>

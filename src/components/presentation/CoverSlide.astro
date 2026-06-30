@@ -1,0 +1,81 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { calculateBudgetTotal } from '../../lib/budget';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const totals = calculateBudgetTotal(trip.budget);
+const accentColor = trip.visual?.accentColor ?? '#FF553D';
+const slideId = `slide-${slide.id}`;
+---
+
+<section
+  id={slideId}
+  class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden"
+  aria-label={slide.title ?? 'Portada'}
+>
+  <!-- Background image -->
+  {slide.image || trip.visual?.coverImage ? (
+    <img
+      src={slide.image ?? trip.visual?.coverImage ?? ''}
+      alt={slide.title ?? 'Cover image'}
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+    />
+  ) : (
+    <div class="absolute inset-0 bg-surface-darker" />
+  )}
+
+  <!-- Dark overlays -->
+  <div class="absolute inset-0 bg-gradient-to-b from-surface/60 via-surface/30 to-surface" />
+  <div class="absolute inset-0 bg-gradient-to-r from-surface/40 to-transparent" />
+
+  <!-- Content -->
+  <div class="relative z-10 flex w-full max-w-4xl flex-col items-start gap-6 px-6 md:px-12">
+    {slide.eyebrow && (
+      <span
+        class="text-xs font-semibold uppercase tracking-[0.2em]"
+        style={{ color: accentColor }}
+      >
+        {slide.eyebrow}
+      </span>
+    )}
+
+    <h1 class="font-display text-display-lg text-text-primary md:text-display-xl leading-none">
+      {slide.title ?? trip.catalog.title}
+    </h1>
+
+    {slide.subtitle && (
+      <p class="max-w-2xl text-lg text-text-secondary md:text-xl">
+        {slide.subtitle}
+      </p>
+    )}
+
+    <div class="flex flex-wrap gap-4 text-sm text-text-muted">
+      {trip.durationDays > 0 && (
+        <span>
+          {trip.durationDays} días{trip.durationNights ? ` · ${trip.durationNights} noches` : ''}
+        </span>
+      )}
+      {totals.totalPerPerson != null && (
+        <span class="font-semibold" style={{ color: accentColor }}>
+          Desde USD {totals.totalPerPerson.toLocaleString()} por persona
+        </span>
+      )}
+      {totals.pendingItems && (
+        <span class="text-yellow-500/80 text-xs">* Costos estimados</span>
+      )}
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+    <svg class="h-6 w-6 text-text-dim" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>

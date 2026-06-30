@@ -1,0 +1,80 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { resolveSlideSource } from '../../lib/slides';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const source = slide.sourceRef
+  ? resolveSlideSource(trip, slide.sourceRef)
+  : null;
+const route = source?.type === 'reference' && Array.isArray(source.data)
+  ? source.data as Trip['route']
+  : trip.route ?? [];
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    {route.length > 0 ? (
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-surface-border" aria-hidden="true" />
+
+        <div class="space-y-6">
+          {route.map((entry, i) => (
+            <div key={i} class="relative flex gap-4 pl-10">
+              <!-- Timeline dot -->
+              <div class="absolute left-2 top-1.5 h-2.5 w-2.5 rounded-full border-2 border-brand-coral bg-surface"
+                aria-hidden="true"
+              />
+
+              <div class="flex-1 rounded-lg border border-surface-border bg-surface-card p-4">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="font-display font-bold text-text-primary">
+                    {entry.city} · {entry.country}
+                  </h3>
+                  <span class="text-xs text-text-muted whitespace-nowrap">
+                    {entry.nights} noche{entry.nights !== 1 ? 's' : ''}
+                  </span>
+                </div>
+                {entry.role && (
+                  <span class="mt-1 inline-block text-xs text-brand-orange">
+                    {entry.role}
+                  </span>
+                )}
+                {entry.description && (
+                  <p class="mt-1 text-sm text-text-secondary">{entry.description}</p>
+                )}
+                {entry.transportFromPrevious && (
+                  <p class="mt-1 text-xs text-text-muted">
+                    ← {entry.transportFromPrevious}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <p class="text-text-muted italic">No hay recorrido disponible.</p>
+    )}
+  </div>
+</section>

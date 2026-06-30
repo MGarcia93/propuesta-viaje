@@ -1,0 +1,80 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const hasTwoImages = slide.images && slide.images.length >= 2;
+const imageSrc = slide.image;
+const secondImage = hasTwoImages ? slide.images[1] : null;
+---
+
+<section
+  id={slideId}
+  class="flex min-h-[70vh] w-full flex-col md:flex-row overflow-hidden"
+>
+  <!-- Text side -->
+  <div class="flex flex-1 flex-col justify-center px-6 py-12 md:px-12 md:py-16 bg-surface">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-4 leading-tight">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-lg text-text-secondary mb-4 font-display">{slide.subtitle}</p>
+    )}
+
+    {slide.text && (
+      <div class="text-text-secondary leading-relaxed max-w-lg">
+        {slide.text.split('\n').map((p) => (
+          <p class="mb-3">{p}</p>
+        ))}
+      </div>
+    )}
+  </div>
+
+  <!-- Image side -->
+  <div class="flex flex-1 relative min-h-[40vh] md:min-h-auto">
+    {hasTwoImages ? (
+      <div class="grid grid-cols-2 w-full">
+        <div class="relative overflow-hidden">
+          {imageSrc && (
+            <img
+              src={imageSrc}
+              alt={slide.title ?? ''}
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          )}
+        </div>
+        <div class="relative overflow-hidden">
+          {secondImage?.src && (
+            <img
+              src={secondImage.src}
+              alt={secondImage.alt}
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          )}
+        </div>
+      </div>
+    ) : imageSrc ? (
+      <img
+        src={imageSrc}
+        alt={slide.title ?? ''}
+        class="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <div class="flex h-full w-full items-center justify-center bg-surface-darker">
+        <span class="text-text-dim">Sin imagen</span>
+      </div>
+    )}
+  </div>
+</section>

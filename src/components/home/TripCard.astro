@@ -1,0 +1,122 @@
+---
+import type { TripCardProjection } from '../../lib/types';
+
+export interface Props {
+  trip: TripCardProjection;
+}
+
+const { trip } = Astro.props;
+
+const totalPerPerson = trip.budgetTotals.totalPerPerson;
+
+const budgetLabel: Record<string, string> = {
+  low: 'Económico',
+  medium: 'Moderado',
+  high: 'Elevado',
+  premium: 'Premium',
+};
+
+const budgetColors: Record<string, string> = {
+  low: 'bg-green-500/20 text-green-400',
+  medium: 'bg-yellow-500/20 text-yellow-400',
+  high: 'bg-orange-500/20 text-orange-400',
+  premium: 'bg-purple-500/20 text-purple-400',
+};
+---
+
+<a
+  href={`/viajes/${trip.slug}`}
+  class="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-card border border-surface-border transition-all duration-300 hover:border-brand-coral/30 hover:shadow-xl hover:shadow-brand-coral/5 focus-visible:outline-2 focus-visible:outline-brand-coral"
+  aria-label={`Ver viaje: ${trip.catalog.title}`}
+>
+  <!-- Cover image -->
+  <div class="relative aspect-[16/10] overflow-hidden">
+    {trip.visual.coverImage ? (
+      <img
+        src={trip.visual.coverImage}
+        alt={trip.catalog.title}
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
+    ) : (
+      <div class="flex h-full w-full items-center justify-center bg-surface-darker">
+        <span class="text-text-dim text-sm">Sin imagen</span>
+      </div>
+    )}
+    <!-- Gradient overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent" />
+
+    <!-- Top metadata -->
+    <div class="absolute top-3 left-3 right-3 flex items-start justify-between gap-2">
+      {trip.catalog.tags && trip.catalog.tags.length > 0 && (
+        <span class="pill pill-accent text-[10px]">
+          {trip.catalog.tags[0]}
+        </span>
+      )}
+      {trip.budgetLevel && (
+        <span class={`pill ${budgetColors[trip.budgetLevel] ?? 'pill-surface'} text-[10px]`}>
+          {budgetLabel[trip.budgetLevel] ?? trip.budgetLevel}
+        </span>
+      )}
+    </div>
+  </div>
+
+  <!-- Card body -->
+  <div class="flex flex-1 flex-col gap-2 p-4">
+    <h3 class="font-display text-display-sm text-text-primary leading-tight">
+      {trip.catalog.title}
+    </h3>
+
+    {trip.catalog.summary && (
+      <p class="text-sm text-text-secondary line-clamp-2">
+        {trip.catalog.summary}
+      </p>
+    )}
+
+    <!-- Metadata row -->
+    <div class="mt-auto flex flex-wrap items-center gap-x-4 gap-y-1 pt-2 text-xs text-text-muted">
+      <span>
+        {trip.durationDays} días{trip.durationNights ? ` · ${trip.durationNights} noches` : ''}
+      </span>
+      {trip.catalog.pace && (
+        <span>
+          Ritmo: {trip.catalog.pace === 'relaxed' ? 'Relajado' : trip.catalog.pace === 'moderate' ? 'Medio' : 'Intenso'}
+        </span>
+      )}
+      {totalPerPerson != null && (
+        <span class="font-semibold text-brand-orange">
+          ~USD {totalPerPerson.toLocaleString()}
+        </span>
+      )}
+    </div>
+
+    <!-- Score indicators -->
+    {trip.scores && (
+      <div class="mt-1 flex gap-1.5" aria-label="Puntajes">
+        {Object.entries(trip.scores)
+          .filter(([, val]) => typeof val === 'number' && val > 0)
+          .slice(0, 5)
+          .map(([key, val]) => (
+            <div
+              class="flex flex-col items-center gap-0.5"
+              title={`${key}: ${val}/5`}
+              aria-label={`${key}: ${val} de 5`}
+            >
+              <span class="text-[9px] uppercase tracking-wider text-text-dim">{key.slice(0, 3)}</span>
+              <div class="flex gap-[2px]">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <div
+                    class={`h-1 w-1.5 rounded-full ${i < (val as number) ? 'bg-brand-orange' : 'bg-surface-border'}`}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+      </div>
+    )}
+
+    {trip.budgetTotals.pendingItems && (
+      <p class="text-[10px] text-yellow-500/80">* Algunos costos pendientes</p>
+    )}
+  </div>
+</a>

@@ -1,0 +1,132 @@
+---
+import type { TripComparisonProjection } from '../../lib/types';
+import ScoreIndicator from './ScoreIndicator.astro';
+
+export interface Props {
+  trips: TripComparisonProjection[];
+}
+
+const { trips } = Astro.props;
+
+const paceLabel: Record<string, string> = {
+  relaxed: 'Relajado',
+  moderate: 'Moderado',
+  intense: 'Intenso',
+};
+
+const budgetLabel: Record<string, string> = {
+  low: 'Económico',
+  medium: 'Moderado',
+  high: 'Elevado',
+  premium: 'Premium',
+};
+
+// Collect all score dimensions
+const allScoreKeys = new Set<string>();
+for (const trip of trips) {
+  if (trip.scores) {
+    Object.keys(trip.scores).forEach((k) => allScoreKeys.add(k));
+  }
+}
+const scoreKeys = Array.from(allScoreKeys).filter(
+  (k) => trips.some((t) => typeof t.scores?.[k as keyof typeof t.scores] === 'number'),
+);
+---
+
+<div class="md:hidden">
+  {trips.length === 0 ? (
+    <p class="text-text-muted italic text-center py-8">No hay propuestas para comparar.</p>
+  ) : trips.length === 1 ? (
+    <p class="text-text-muted text-center py-4 text-sm">
+      Seleccioná al menos dos propuestas para comparar.
+    </p>
+  ) : (
+    <div class="space-y-8">
+      {trips.map((trip) => (
+        <div key={trip.slug} class="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+          <!-- Trip header -->
+          <div class="flex items-center gap-3 p-4 border-b border-surface-border">
+            {trip.visual?.coverImage && (
+              <img
+                src={trip.visual.coverImage}
+                alt={trip.catalog.title}
+                class="h-12 w-12 rounded-lg object-cover"
+              />
+            )}
+            <div>
+              <a
+                href={`/viajes/${trip.slug}`}
+                class="font-display font-bold text-text-primary hover:text-brand-orange transition-colors"
+              >
+                {trip.catalog.title}
+              </a>
+              {trip.catalog.summary && (
+                <p class="text-xs text-text-muted mt-0.5">{trip.catalog.summary}</p>
+              )}
+            </div>
+          </div>
+
+          <div class="p-4 space-y-4">
+            <!-- Scores -->
+            {scoreKeys.length > 0 && (
+              <div class="space-y-2">
+                <span class="text-[10px] font-semibold uppercase tracking-wider text-text-dim">Puntajes</span>
+                {scoreKeys.map((key) => {
+                  const val = (trip.scores as Record<string, number | null | undefined>)?.[key] ?? null;
+                  return (
+                    <ScoreIndicator
+                      key={key}
+                      label={key.replace(/([A-Z])/g, ' $1').trim()}
+                      value={val ?? 0}
+                      maxValue={5}
+                    />
+                  );
+                })}
+              </div>
+            )}
+
+            <!-- Key data -->
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <span class="text-[10px] text-text-dim uppercase tracking-wider">Duración</span>
+                <p class="text-sm text-text-primary">{trip.durationDays} días / {trip.durationNights} noches</p>
+              </div>
+              <div>
+                <span class="text-[10px] text-text-dim uppercase tracking-wider">Presupuesto</span>
+                <p class="text-sm text-text-primary">
+                  {budgetLabel[trip.budgetLevel] ?? trip.budgetLevel}
+                  {trip.budgetTotals.totalPerPerson != null && (
+                    <span class="block text-brand-orange font-bold">
+                      ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                    </span>
+                  )}
+                </p>
+              </div>
+              <div>
+                <span class="text-[10px] text-text-dim uppercase tracking-wider">Ritmo</span>
+                <p class="text-sm text-text-primary capitalize">{paceLabel[trip.catalog.pace] ?? trip.catalog.pace}</p>
+              </div>
+              <div>
+                <span class="text-[10px] text-text-dim uppercase tracking-wider">Mejor argumento</span>
+                <p class="text-xs text-text-secondary">{trip.catalog.bestArgument ?? <span class="italic">—</span>}</p>
+              </div>
+            </div>
+
+            {trip.budgetTotals.pendingItems && (
+              <p class="text-[10px] text-yellow-500/80">* Algunos costos pendientes</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- Trip selector for mobile -->
+  {trips.length > 2 && (
+    <div class="mt-4 p-3 bg-surface-card border border-surface-border rounded-lg">
+      <p class="text-xs text-text-muted text-center">
+        En pantallas más grandes se muestran todas las propuestas en columnas.
+      </p>
+    </div>
+  )}
+</div>

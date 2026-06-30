@@ -1,0 +1,30 @@
+---
+export interface Props {
+  label: string;
+  value: number;
+  maxValue?: number;
+  showLabel?: boolean;
+}
+
+const { label, value, maxValue = 5, showLabel = true } = Astro.props;
+const percentage = Math.min((value / maxValue) * 100, 100);
+
+const scoreColor = value >= 4
+  ? 'bg-brand-orange'
+  : value >= 3
+    ? 'bg-yellow-500'
+    : 'bg-text-dim';
+---
+
+<div class="flex items-center gap-2" role="img" aria-label={`${label}: ${value} de ${maxValue}`}>
+  {showLabel && (
+    <span class="w-20 text-xs text-text-secondary capitalize truncate">{label}</span>
+  )}
+  <div class="flex-1 h-2 rounded-full bg-surface-border overflow-hidden">
+    <div
+      class={`h-full rounded-full transition-all duration-500 ${scoreColor}`}
+      style={{ width: `${percentage}%` }}
+    />
+  </div>
+  <span class="w-6 text-right text-xs font-bold text-text-primary tabular-nums">{value}</span>
+</div>

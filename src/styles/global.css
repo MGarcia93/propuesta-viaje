@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --accent-color: #b63b32;
-  --accent-text-color: #f5f0e8;
+  --accent-color: #FF553D;
+  --accent-text-color: #FFF7ED;
 }
 
 @layer base {
@@ -13,7 +13,7 @@
   }
 
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-surface text-text-primary antialiased;
     font-family: 'Inter', system-ui, sans-serif;
   }
 
@@ -21,13 +21,17 @@
   h2,
   h3,
   h4 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-brand-coral/30 text-text-primary;
   }
 }
 
 @layer components {
   .proposal-card {
-    @apply relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.02];
+    @apply relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.02] cursor-pointer;
   }
 
   .slide-container {
@@ -35,11 +39,31 @@
   }
 
   .budget-bar {
-    @apply h-2 rounded-full bg-gray-200;
+    @apply h-2 rounded-full bg-surface-border;
   }
 
   .budget-bar-fill {
-    @apply h-2 rounded-full bg-accent;
+    @apply h-2 rounded-full bg-gradient-to-r from-brand-orange to-brand-coral;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .pill-surface {
+    @apply bg-surface-border/60 text-text-secondary;
+  }
+
+  .pill-accent {
+    @apply bg-brand-coral/20 text-brand-orange;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent;
+  }
+
+  .slide-progress {
+    @apply fixed top-0 left-0 z-50 h-0.5 bg-gradient-to-r from-brand-orange to-brand-coral transition-all duration-300;
   }
 }
 

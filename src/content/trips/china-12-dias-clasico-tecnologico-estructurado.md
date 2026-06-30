@@ -1,0 +1,1593 @@
+# PROPUESTA DE VIAJE
+
+## 2.1 Identificación
+
+```yaml
+id: china-clasica-tecnologica-12d
+slug: china-clasica-tecnologica-12-dias
+name: "China clásica y tecnológica: Beijing, Zhangjiajie y Shenzhen"
+shortName: "China clásica y tecnológica"
+status: incomplete
+version: 1
+lastUpdated: 2026-06-30
+
+countries:
+  - China
+regions:
+  - Beijing
+  - Hunan
+  - Guangdong
+  - Hong Kong
+
+durationDays: 12
+durationNights: 11
+
+estimatedDates:
+  month: May
+  year: 2027
+  status: estimated
+
+recommendedSeason:
+  value: "Segunda mitad de mayo"
+  status: estimated
+  note: "Evita el mayor movimiento alrededor del feriado del 1 de mayo. Zhangjiajie puede presentar lluvia o niebla."
+
+travelers: 1
+departureCity:
+  value: "Buenos Aires"
+  status: estimated
+arrivalCity:
+  value: "Beijing"
+  status: estimated
+returnCity:
+  value: "Shenzhen o Hong Kong"
+  status: estimated
+```
+
+## 2.2 Resumen para catálogo
+
+```yaml
+catalog:
+  title: "China clásica, paisajes de fantasía y tecnología"
+  subtitle: "Beijing, Zhangjiajie y Shenzhen en 12 días"
+  summary: "Una primera visita equilibrada que combina la Ciudad Prohibida y la Gran Muralla, los paisajes verticales de Zhangjiajie y la vida tecnológica de Shenzhen."
+  tags:
+    - historia
+    - Gran Muralla
+    - naturaleza
+    - tecnología
+    - ciudades futuristas
+    - primera visita
+  pace: moderate
+  budgetLevel: medium
+  bestArgument: "Combina tres imágenes esenciales y muy diferentes de China sin agregar una cuarta base."
+  mainConcession: "Se eliminan Chongqing, Shanghai, Xi’an y Wangxian Valley."
+```
+
+## 2.3 Identidad visual
+
+```yaml
+visual:
+  accentColor: "#B63B32"
+  textColor: "#F5F0E8"
+  coverImage: null
+  cardImage: null
+  socialImage: null
+  imageStyle: "histórico, natural, futurista y nocturno"
+```
+
+---
+
+# 3. Puntajes comparativos
+
+```yaml
+scores:
+  culture: 5
+  nature: 5
+  nightlife: 3
+  gastronomy: 4
+  relaxation: 3
+  adventure: 4
+  technology: 5
+  comfort: 4
+  organizationDifficulty: 4
+  budgetAccessibility: 3
+  variety: 5
+  visualImpact: 5
+
+scoreRationale:
+  culture: "Beijing concentra la Ciudad Prohibida, la Gran Muralla, hutongs y templos."
+  nature: "Zhangjiajie y Tianmen aportan cuatro noches de paisaje."
+  nightlife: "Shenzhen tiene varias noches completas, pero esta ruta no prioriza fiesta."
+  gastronomy: "Beijing, Hunan y Guangdong ofrecen cocinas regionales distintas."
+  relaxation: "El ritmo es equilibrado, aunque los días 2, 3, 6, 7 y 8 son exigentes."
+  adventure: "Teleféricos, escaleras, senderos y excursiones."
+  technology: "Huaqiangbei y la Shenzhen contemporánea forman una parte central."
+  comfort: "Solo tres bases y un vuelo interno para evitar un tren de 11 a 12 horas."
+  organizationDifficulty: "Requiere reservas anticipadas para la Ciudad Prohibida, Mutianyu, vuelos y parques."
+  budgetAccessibility: "China permite controlar comida y transporte, pero Beijing y el vuelo interno elevan el costo."
+  variety: "Historia imperial, naturaleza y tecnología."
+  visualImpact: "Cada base aporta imágenes muy diferentes y reconocibles."
+```
+
+---
+
+# 4. Concepto narrativo
+
+## 4.1 Idea general
+
+Esta propuesta está pensada para una primera visita más clásica a China sin renunciar al interés original por tecnología y paisajes extraordinarios. Beijing aporta la historia imperial, la Ciudad Prohibida, los hutongs y la Gran Muralla. Zhangjiajie aporta la parte natural, con pilares de arenisca y Tianmen Mountain. Shenzhen conserva la experiencia tecnológica y futurista.
+
+La ruta utiliza solo tres bases. El vuelo Beijing–Zhangjiajie evita perder una jornada completa en tren, mientras que el traslado Zhangjiajie–Shenzhen se reserva como único día ferroviario largo.
+
+## 4.2 Por qué elegirlo
+
+```yaml
+reasons:
+  - title: "Una primera visita más representativa"
+    description: "Incluye Beijing, la Ciudad Prohibida y la Gran Muralla."
+  - title: "Naturaleza extraordinaria"
+    description: "Mantiene Zhangjiajie y Tianmen con tiempo suficiente."
+  - title: "Tecnología obligatoria"
+    description: "Shenzhen y Huaqiangbei siguen siendo una parte central."
+  - title: "Solo tres bases"
+    description: "Evita una cuarta ciudad y cambios constantes de alojamiento."
+  - title: "Traslados razonables"
+    description: "Utiliza un vuelo interno donde realmente evita perder un día."
+```
+
+## 4.3 Ideal para
+
+```yaml
+idealFor:
+  - "Una persona que visite China por primera vez."
+  - "Viajeros interesados en historia, naturaleza y tecnología."
+  - "Quienes quieran conocer la Gran Muralla sin eliminar Zhangjiajie ni Shenzhen."
+```
+
+## 4.4 No ideal para
+
+```yaml
+notIdealFor:
+  - "Quienes prioricen Chongqing y su estética cyberpunk."
+  - "Personas que no quieran tomar vuelos internos."
+  - "Quienes busquen un itinerario de descanso con muchas tardes completamente libres."
+```
+
+---
+
+# 5. Recorrido general
+
+```yaml
+route:
+  - order: 1
+    city: "Beijing"
+    country: "China"
+    nights: 4
+    role: "Historia imperial y Gran Muralla."
+    description: "Ciudad Prohibida, Tiananmén, Jingshan, hutongs, Mutianyu y Templo del Cielo."
+    transportFromPrevious: "Vuelo internacional"
+    transferDuration: null
+    arrivalMethod: "Vuelo"
+    departureMethod: "Vuelo interno"
+
+  - order: 2
+    city: "Zhangjiajie / Wulingyuan"
+    country: "China"
+    nights: 4
+    role: "Paisaje fantástico y montaña."
+    description: "Dos días de parque, Tianmen Mountain y margen de traslado."
+    transportFromPrevious: "Vuelo interno"
+    transferDuration: "Aproximadamente 2 h 25 a 2 h 40 de vuelo, sujeto al servicio"
+    arrivalMethod: "Vuelo"
+    departureMethod: "Tren de alta velocidad"
+
+  - order: 3
+    city: "Shenzhen"
+    country: "China"
+    nights: 3
+    role: "Tecnología, arquitectura contemporánea y salida."
+    description: "Huaqiangbei, Futian, Nanshan y Shenzhen Bay."
+    transportFromPrevious: "Tren de alta velocidad"
+    transferDuration: "Aproximadamente 6 a 7 horas"
+    arrivalMethod: "Tren"
+    departureMethod: "Vuelo desde SZX o conexión hacia HKG"
+```
+
+---
+
+# 6. Etapas o destinos detallados
+
+```yaml
+destinations:
+  - id: beijing
+    city: "Beijing"
+    country: "China"
+    nights: 4
+    pace: moderate
+    role: "China imperial"
+    description: "La base histórica del viaje, con monumentos nacionales, hutongs y una excursión a Mutianyu."
+    whyIncluded: "Aporta la imagen histórica que se espera de una primera visita a China."
+    freeTime: "Una tarde flexible el día 4."
+    notes:
+      - "Reservar la Ciudad Prohibida apenas se habilite la fecha."
+      - "Mutianyu debe tener transporte de ida y vuelta claro."
+    activities:
+      - name: "Plaza de Tiananmén y Ciudad Prohibida"
+        category: history
+        description: "Núcleo imperial de Beijing."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Parque Jingshan"
+        category: culture
+        description: "Mirador sobre la Ciudad Prohibida."
+        estimatedDuration: "1 a 2 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Gran Muralla en Mutianyu"
+        category: history
+        description: "Excursión de día completo."
+        estimatedDuration: "7 a 9 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Templo del Cielo"
+        category: culture
+        description: "Conjunto ceremonial y parque."
+        estimatedDuration: "3 a 4 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Palacio de Verano o distrito 798"
+        category: culture
+        description: "Elección flexible para la tarde del día 4."
+        estimatedDuration: "3 a 5 horas"
+        optional: true
+        estimatedCostPerPerson: null
+        status: pending
+    nightlife:
+      - name: "Houhai y hutongs"
+        type: "paseo nocturno"
+        description: "Calles tradicionales, lagos, bares y restaurantes."
+        optional: true
+        estimatedCostPerPerson: null
+        status: pending
+    foodHighlights:
+      - name: "Pato laqueado"
+        type: "gastronomía tradicional"
+        description: "Experiencia clásica de Beijing."
+        estimatedCostPerPerson: null
+        status: pending
+    images:
+      - src: null
+        alt: "Ciudad Prohibida vista desde la Plaza de Tiananmén"
+        caption: "El núcleo imperial de Beijing"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Tejados de la Ciudad Prohibida vistos desde Jingshan"
+        caption: "La vista panorámica del conjunto imperial"
+        size: large
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Gran Muralla en la sección de Mutianyu"
+        caption: "La gran excursión histórica del viaje"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Calle tradicional de un hutong de Beijing"
+        caption: "La escala cotidiana de la ciudad"
+        size: medium
+        orientation: portrait
+        status: pending
+      - src: null
+        alt: "Templo del Cielo en Beijing"
+        caption: "Arquitectura ceremonial"
+        size: large
+        orientation: portrait
+        status: pending
+
+  - id: zhangjiajie
+    city: "Zhangjiajie / Wulingyuan"
+    country: "China"
+    nights: 4
+    pace: moderate
+    role: "Naturaleza fantástica"
+    description: "Pilares de piedra, miradores, ascensor Bailong, Tianzi Mountain y Tianmen."
+    whyIncluded: "Es la experiencia natural más fuerte del recorrido."
+    freeTime: "La tarde del día 7 puede acortarse según energía."
+    notes:
+      - "Dormir cerca de Wulingyuan durante los días de parque."
+      - "La última noche conviene pasarla en Zhangjiajie ciudad."
+    activities:
+      - name: "Yuanjiajie y ascensor Bailong"
+        category: nature
+        description: "Primer día completo en el parque."
+        estimatedDuration: "7 a 9 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Tianzi Mountain"
+        category: nature
+        description: "Segundo día de miradores y senderos."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Tianmen Mountain"
+        category: adventure
+        description: "Teleférico, pasarelas y Puerta del Cielo."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+    nightlife:
+      - name: "Wulingyuan por la noche"
+        type: "paseo tranquilo"
+        description: "Cena, tiendas y descanso."
+        optional: true
+        estimatedCostPerPerson: null
+        status: pending
+    foodHighlights:
+      - name: "Cocina de Hunan"
+        type: "gastronomía regional"
+        description: "Platos especiados y comidas sencillas después del parque."
+        estimatedCostPerPerson: null
+        status: pending
+    images:
+      - src: null
+        alt: "Pilares de arenisca de Zhangjiajie entre nubes"
+        caption: "El paisaje principal del viaje"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Ascensor Bailong junto a los acantilados"
+        caption: "Infraestructura dentro del paisaje"
+        size: medium
+        orientation: portrait
+        status: pending
+      - src: null
+        alt: "Tianzi Mountain entre niebla"
+        caption: "La segunda jornada del parque"
+        size: large
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Puerta del Cielo de Tianmen Mountain"
+        caption: "Tianmen Cave y los 999 escalones"
+        size: large
+        orientation: portrait
+        status: pending
+      - src: null
+        alt: "Teleférico de Tianmen sobre las montañas"
+        caption: "La experiencia panorámica del día 8"
+        size: wide
+        orientation: landscape
+        status: pending
+
+  - id: shenzhen
+    city: "Shenzhen"
+    country: "China"
+    nights: 3
+    pace: moderate
+    role: "Tecnología y ciudad futurista"
+    description: "Huaqiangbei, Futian, Nanshan, Shenzhen Bay y alternativa costera en Shekou."
+    whyIncluded: "Mantiene el motivo tecnológico original del viaje."
+    freeTime: "La mañana del día 12."
+    notes:
+      - "Priorizar un hotel cerca del metro."
+      - "Revisar garantía y compatibilidad antes de comprar electrónica."
+    activities:
+      - name: "Huaqiangbei"
+        category: technology
+        description: "Mercados de electrónica, robots, drones, IA, impresión 3D y componentes."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+      - name: "Futian y Civic Center"
+        category: urban
+        description: "Arquitectura contemporánea y paseo nocturno."
+        estimatedDuration: "2 a 4 horas"
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+      - name: "Nanshan y Shenzhen Bay"
+        category: urban
+        description: "Empresas tecnológicas, arquitectura y parques costeros."
+        estimatedDuration: "5 a 7 horas"
+        optional: false
+        estimatedCostPerPerson: null
+        status: pending
+      - name: "Shekou y Sea World"
+        category: relaxation
+        description: "Alternativa más tranquila junto al puerto."
+        estimatedDuration: "3 a 5 horas"
+        optional: true
+        estimatedCostPerPerson: null
+        status: pending
+    nightlife:
+      - name: "Futian iluminado"
+        type: "paseo urbano"
+        description: "Skyline, centros comerciales y espacios públicos."
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+    foodHighlights:
+      - name: "Cocina cantonesa"
+        type: "gastronomía regional"
+        description: "Dim sum, carnes asadas, arroz y mariscos."
+        estimatedCostPerPerson: null
+        status: pending
+    images:
+      - src: null
+        alt: "Mercados de electrónica de Huaqiangbei"
+        caption: "Tecnología que se puede tocar"
+        size: large
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Robots y drones expuestos en Shenzhen"
+        caption: "Productos y prototipos del ecosistema tecnológico"
+        size: medium
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Distrito de Futian iluminado"
+        caption: "La Shenzhen futurista"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Shenzhen Bay y skyline moderno"
+        caption: "La ciudad costera y contemporánea"
+        size: wide
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Puerto y paseo de Shekou Sea World"
+        caption: "La alternativa relajada del último día completo"
+        size: medium
+        orientation: landscape
+        status: pending
+```
+
+---
+
+# 7. Itinerario día por día
+
+```yaml
+itinerary:
+  - day: 1
+    city: "Beijing"
+    title: "Llegada y recuperación"
+    summary: "Inmigración, traslado y paseo corto."
+    intensity: relaxed
+    transport: "Vuelo internacional y metro o traslado"
+    freeTimeHours: 1
+    morning: []
+    afternoon:
+      - "Llegada y check-in."
+    evening:
+      - "Wangfujing o hutong cercano."
+      - "Cena y descanso."
+    notes:
+      - "No programar una visita importante."
+    images:
+      - src: null
+        alt: "Calle nocturna de Beijing"
+        caption: "Primera noche del viaje"
+        status: pending
+
+  - day: 2
+    city: "Beijing"
+    title: "Beijing imperial"
+    summary: "Tiananmén, Ciudad Prohibida, Jingshan y hutongs."
+    intensity: intense
+    transport: "Metro y caminata"
+    freeTimeHours: 0
+    morning:
+      - "Plaza de Tiananmén."
+      - "Ciudad Prohibida."
+    afternoon:
+      - "Parque Jingshan."
+    evening:
+      - "Hutongs y Houhai."
+    notes:
+      - "Reservar la Ciudad Prohibida con anticipación."
+    images:
+      - src: null
+        alt: "Ciudad Prohibida y sus patios"
+        caption: "El día histórico principal"
+        status: pending
+
+  - day: 3
+    city: "Beijing"
+    title: "Gran Muralla"
+    summary: "Excursión de día completo a Mutianyu."
+    intensity: moderate
+    transport: "Bus, traslado compartido o excursión"
+    freeTimeHours: 0
+    morning:
+      - "Traslado a Mutianyu."
+    afternoon:
+      - "Recorrido por la muralla y regreso."
+    evening:
+      - "Noche libre."
+    notes:
+      - "Elegir transporte de regreso claramente definido."
+    images:
+      - src: null
+        alt: "Gran Muralla en Mutianyu"
+        caption: "Uno de los íconos nacionales del viaje"
+        status: pending
+
+  - day: 4
+    city: "Beijing"
+    title: "Beijing ceremonial y cotidiano"
+    summary: "Templo del Cielo y tarde flexible."
+    intensity: relaxed
+    transport: "Metro y caminata"
+    freeTimeHours: 3
+    morning:
+      - "Templo del Cielo."
+    afternoon:
+      - "Palacio de Verano, 798, zona olímpica o descanso."
+    evening:
+      - "Última noche en Beijing."
+    notes:
+      - "No intentar cubrir todas las alternativas."
+    images:
+      - src: null
+        alt: "Templo del Cielo"
+        caption: "La mañana ceremonial de Beijing"
+        status: pending
+
+  - day: 5
+    city: "Zhangjiajie / Wulingyuan"
+    title: "Vuelo hacia las montañas"
+    summary: "Mañana libre y vuelo interno."
+    intensity: moderate
+    transport: "Vuelo interno y traslado terrestre"
+    freeTimeHours: 2
+    morning:
+      - "Mañana libre."
+    afternoon:
+      - "Vuelo a Zhangjiajie."
+      - "Traslado a Wulingyuan."
+    evening:
+      - "Cena y descanso."
+    notes:
+      - "El vuelo evita un viaje ferroviario de aproximadamente 11 a 12 horas."
+    images: []
+
+  - day: 6
+    city: "Wulingyuan"
+    title: "Yuanjiajie"
+    summary: "Primer día completo entre los pilares de piedra."
+    intensity: moderate
+    transport: "Buses internos, ascensor y caminata"
+    freeTimeHours: 1
+    morning:
+      - "Ascensor Bailong."
+      - "Yuanjiajie."
+    afternoon:
+      - "Miradores y circuito interno."
+    evening:
+      - "Cena y descanso."
+    notes:
+      - "No intentar completar todo el parque."
+    images:
+      - src: null
+        alt: "Pilares de Yuanjiajie"
+        caption: "El gran paisaje natural"
+        status: pending
+
+  - day: 7
+    city: "Wulingyuan"
+    title: "Tianzi Mountain"
+    summary: "Segundo día de parque con margen."
+    intensity: moderate
+    transport: "Buses internos y caminata"
+    freeTimeHours: 2
+    morning:
+      - "Tianzi Mountain."
+    afternoon:
+      - "Senderos, miradores o regreso temprano."
+    evening:
+      - "Noche libre."
+    notes:
+      - "Puede reordenarse según niebla y visibilidad."
+    images:
+      - src: null
+        alt: "Tianzi Mountain entre niebla"
+        caption: "Segundo día del parque"
+        status: pending
+
+  - day: 8
+    city: "Zhangjiajie"
+    title: "Tianmen Mountain"
+    summary: "Teleférico, pasarelas y Puerta del Cielo."
+    intensity: moderate
+    transport: "Teleférico, buses y caminata"
+    freeTimeHours: 1
+    morning:
+      - "Ascenso y miradores."
+    afternoon:
+      - "Tianmen Cave y 999 escalones."
+    evening:
+      - "Última noche cerca de la estación."
+    notes:
+      - "Elegir alternativa mecánica si aparece cansancio."
+    images:
+      - src: null
+        alt: "Puerta del Cielo de Tianmen"
+        caption: "Una experiencia distinta al parque forestal"
+        status: pending
+
+  - day: 9
+    city: "Shenzhen"
+    title: "Tren hacia el sur"
+    summary: "Traslado largo y primera noche en Futian."
+    intensity: moderate
+    transport: "Tren de alta velocidad y metro"
+    freeTimeHours: 1
+    morning:
+      - "Tren hacia Shenzhen."
+    afternoon:
+      - "Llegada y check-in."
+    evening:
+      - "Futian o Civic Center."
+    notes:
+      - "No sumar una visita importante."
+    images:
+      - src: null
+        alt: "Futian iluminado"
+        caption: "Llegada a la China futurista"
+        status: pending
+
+  - day: 10
+    city: "Shenzhen"
+    title: "Shenzhen tecnológica"
+    summary: "Día completo en Huaqiangbei."
+    intensity: moderate
+    transport: "Metro y caminata"
+    freeTimeHours: 1
+    morning:
+      - "SEG Plaza y mercados de electrónica."
+    afternoon:
+      - "Robots, drones, IA, componentes e impresión 3D."
+    evening:
+      - "Futian y distrito financiero."
+    notes:
+      - "No concentrarse únicamente en comprar."
+    images:
+      - src: null
+        alt: "Mercados de Huaqiangbei"
+        caption: "Tecnología que se puede tocar"
+        status: pending
+
+  - day: 11
+    city: "Shenzhen"
+    title: "Shenzhen futurista y costera"
+    summary: "Nanshan, Shenzhen Bay y alternativa en Shekou."
+    intensity: relaxed
+    transport: "Metro y caminata"
+    freeTimeHours: 3
+    morning:
+      - "Nanshan y Shenzhen Bay."
+    afternoon:
+      - "Houhai, tiendas insignia o Shekou."
+    evening:
+      - "Última noche sin cambiar de hotel."
+    notes:
+      - "Elegir entre una jornada moderna o una alternativa más relajada."
+    images:
+      - src: null
+        alt: "Shenzhen Bay y skyline"
+        caption: "La ciudad más allá de Huaqiangbei"
+        status: pending
+
+  - day: 12
+    city: "Shenzhen / Hong Kong"
+    title: "Mañana libre y salida"
+    summary: "Compras finales, descanso y traslado al aeropuerto."
+    intensity: relaxed
+    transport: "Metro, tren o traslado aeroportuario"
+    freeTimeHours: 3
+    morning:
+      - "Mañana libre."
+    afternoon:
+      - "Traslado a SZX o HKG."
+    evening:
+      - "Vuelo de regreso."
+    notes:
+      - "No programar una excursión importante."
+    images: []
+```
+
+---
+
+# 8. Presupuesto resumido
+
+```yaml
+budget:
+  currency: USD
+  travelers: 1
+  priceBasis: per-person
+  disclaimer: "Los importes no verificables se dejan pendientes. El alojamiento solo incorpora cifras cuando Booking permite mostrar una referencia pública; mayo de 2027 todavía no dispone de tarifas finales verificables."
+  lastUpdated: 2026-06-30
+
+  items:
+    - category: flights
+      label: "Vuelo internacional"
+      amountPerPerson: 1600
+      note: "Referencia indicada por el usuario para mayo de 2027; falta confirmar ruta, equipaje y aeropuertos."
+      status: estimated
+
+    - category: accommodation
+      label: "Hospedaje"
+      amountPerPerson: null
+      note: "Pendiente hasta cargar fechas concretas de mayo de 2027 en Booking para Beijing, Wulingyuan, Zhangjiajie ciudad y Shenzhen."
+      status: pending
+
+    - category: transport
+      label: "Transporte interno"
+      amountPerPerson: null
+      note: "Incluye vuelo Beijing–Zhangjiajie, tren Zhangjiajie–Shenzhen, traslados y transporte urbano."
+      status: pending
+
+    - category: food
+      label: "Comida"
+      amountPerPerson: 300
+      note: "Referencia de USD 25 diarios para comida local y algunas cenas más completas."
+      status: estimated
+
+    - category: activities
+      label: "Entradas y actividades"
+      amountPerPerson: null
+      note: "Pendiente de validar Ciudad Prohibida, Mutianyu, Zhangjiajie, Tianmen, ascensores y teleféricos."
+      status: pending
+
+    - category: insurance
+      label: "Seguro de viaje"
+      amountPerPerson: 80
+      note: "Referencia básica; depende de edad y cobertura."
+      status: estimated
+
+    - category: visa
+      label: "Visa"
+      amountPerPerson: null
+      note: "La situación para mayo de 2027 debe reconfirmarse."
+      status: pending
+
+    - category: extras
+      label: "Extras"
+      amountPerPerson: 100
+      note: "Lavandería, snacks y pequeñas diferencias. No incluye compras tecnológicas."
+      status: estimated
+
+  contingency:
+    amountPerPerson: null
+    percentage: 10
+    note: "Se calculará cuando transporte, alojamiento y entradas tengan valores verificables."
+
+  calculatedTotals:
+    subtotalKnownPerPerson: 2080
+    totalPerPerson: null
+    totalGroup: null
+```
+
+---
+
+# 9. Detalle opcional de vuelos
+
+```yaml
+flights:
+  - type: international
+    from: "Buenos Aires"
+    to: "Beijing"
+    departureDate: null
+    arrivalDate: null
+    airline: null
+    stops: null
+    duration: null
+    baggageIncluded: null
+    amountPerPerson: 1600
+    source: "Turismo City, referencia indicada por el usuario"
+    status: estimated
+
+  - type: domestic
+    from: "Beijing"
+    to: "Zhangjiajie"
+    departureDate: null
+    arrivalDate: null
+    airline: null
+    stops: null
+    duration: "2 h 25 a 2 h 40, orientativo"
+    baggageIncluded: null
+    amountPerPerson: null
+    source: null
+    status: pending
+```
+
+---
+
+# 10. Detalle opcional de alojamientos
+
+```yaml
+accommodations:
+  - city: "Beijing"
+    nights: 4
+    type: "Hotel local con habitación privada y baño privado"
+    area: "Dongcheng, Wangfujing o cerca de una línea directa de metro"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: null
+    amountPerNight: null
+    amountPerPerson: null
+    totalAmount: null
+    source: "Booking.com"
+    status: pending
+    notes:
+      - "Booking muestra hoteles en Beijing desde USD 34, pero no una tarifa válida para mayo de 2027."
+      - "No usar el promedio de hoteles de tres estrellas como precio de la propuesta."
+
+  - city: "Wulingyuan"
+    nights: 3
+    type: "Hotel o guesthouse con habitación privada"
+    area: "Cerca de la entrada este del parque"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: null
+    amountPerNight: null
+    amountPerPerson: null
+    totalAmount: null
+    source: "Booking.com"
+    status: pending
+    notes:
+      - "Booking exige ingresar fechas para mostrar precios."
+      - "Priorizar valoración superior a 8 y ubicación caminable."
+
+  - city: "Zhangjiajie ciudad"
+    nights: 1
+    type: "Hotel local con baño privado"
+    area: "Cerca del teleférico de Tianmen o estación"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: null
+    amountPerNight: null
+    amountPerPerson: null
+    totalAmount: null
+    source: "Booking.com"
+    status: pending
+    notes:
+      - "No definir precio hasta cargar la fecha exacta."
+
+  - city: "Shenzhen"
+    nights: 3
+    type: "Hotel local de gama media"
+    area: "Huaqiangbei, Futian o línea directa de metro"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: null
+    amountPerNight: null
+    amountPerPerson: null
+    totalAmount: null
+    source: "Booking.com"
+    status: pending
+    notes:
+      - "Booking lista hoteles bien valorados en Huaqiangbei, pero no expone una tarifa verificable para mayo de 2027."
+```
+
+---
+
+# 11. Detalle opcional de transportes
+
+```yaml
+transports:
+  - from: "Beijing"
+    to: "Zhangjiajie"
+    type: flight
+    duration: "2 h 25 a 2 h 40"
+    overnight: false
+    amountPerPerson: null
+    source: null
+    status: pending
+    notes: "Reservar junto con los vuelos principales."
+
+  - from: "Zhangjiajie"
+    to: "Shenzhen"
+    type: train
+    duration: "6 a 7 horas"
+    overnight: false
+    amountPerPerson: null
+    source: null
+    status: pending
+    notes: "Segunda clase."
+
+  - from: "Shenzhen"
+    to: "Hong Kong"
+    type: train
+    duration: "Variable"
+    overnight: false
+    amountPerPerson: null
+    source: null
+    status: pending
+    notes: "Solo si el vuelo sale desde HKG."
+
+  - from: "Varias ciudades"
+    to: "Atracciones y estaciones"
+    type: local-transport
+    duration: null
+    overnight: false
+    amountPerPerson: null
+    source: null
+    status: pending
+    notes: "Metro, buses y traslados regionales."
+```
+
+---
+
+# 12. Ritmo del viaje
+
+```yaml
+paceSummary:
+  relaxedDays: 4
+  moderateDays: 7
+  intenseDays: 1
+  accommodationChanges: 2
+  longTransfers: 1
+  activityNights: 6
+  freeTimeDays: 3
+  description: "El itinerario está equilibrado. Beijing concentra el único día claramente intenso. Zhangjiajie dispone de margen y Shenzhen tiene un último día completo flexible."
+```
+
+---
+
+# 13. Vida nocturna
+
+```yaml
+nightlifeSummary:
+  overview: "La noche acompaña el viaje sin convertirlo en un recorrido de fiesta."
+  quietNights: 6
+  urbanNights: 5
+  partyOptionalNights: 1
+
+  experiences:
+    - city: "Beijing"
+      name: "Houhai y hutongs"
+      type: "paseo nocturno"
+      description: "Lagos, calles tradicionales, bares y restaurantes."
+      optional: true
+      estimatedCostPerPerson: null
+      status: pending
+
+    - city: "Shenzhen"
+      name: "Futian y Civic Center"
+      type: "arquitectura nocturna"
+      description: "Skyline y espacios urbanos contemporáneos."
+      optional: false
+      estimatedCostPerPerson: 0
+      status: estimated
+```
+
+---
+
+# 14. Gastronomía
+
+```yaml
+gastronomy:
+  overview: "Tres regiones con perfiles diferentes: cocina imperial y del norte, sabores picantes de Hunan y cocina cantonesa."
+  dailyBudgetLow: 15
+  dailyBudgetMedium: 25
+  dailyBudgetComfortable: 40
+
+  experiences:
+    - city: "Beijing"
+      name: "Pato laqueado"
+      type: "gastronomía tradicional"
+      description: "Cena clásica para compartir o en porción individual."
+      estimatedCostPerPerson: null
+      status: pending
+
+    - city: "Zhangjiajie"
+      name: "Cocina de Hunan"
+      type: "regional picante"
+      description: "Platos especiados, arroz, carnes y vegetales."
+      estimatedCostPerPerson: null
+      status: pending
+
+    - city: "Shenzhen"
+      name: "Dim sum y cocina cantonesa"
+      type: "regional"
+      description: "Platos menos picantes, carnes asadas, arroz y mariscos."
+      estimatedCostPerPerson: null
+      status: pending
+
+  possibleDifficulties:
+    - "Menús sin traducción."
+    - "Nivel de picante elevado en Hunan."
+    - "Pedidos mediante aplicaciones locales."
+```
+
+---
+
+# 15. Logística y requisitos
+
+```yaml
+logistics:
+  internationalFlightDuration:
+    value: null
+    status: pending
+  internalFlights: 1
+  trainTrips: 1
+  busTrips: 2
+  longestTransfer: "Zhangjiajie–Shenzhen"
+  accommodationChanges: 2
+
+requirements:
+  visa:
+    value: "Pendiente para mayo de 2027."
+    status: pending
+    validAsOf: 2026-06-30
+  passport:
+    value: "Pasaporte vigente durante toda la estadía; confirmar vigencia mínima."
+    status: estimated
+  vaccines:
+    value: null
+    status: pending
+  travelInsurance:
+    value: "Recomendado con cobertura médica y actividades de montaña."
+    status: estimated
+  connectivity:
+    value: "eSIM o roaming, mapas sin conexión y traductor."
+    status: estimated
+  paymentMethods:
+    value: "Configurar Alipay o WeChat Pay y llevar una tarjeta alternativa."
+    status: estimated
+  language:
+    value: "Mandarín; guardar direcciones y nombres en chino."
+    status: estimated
+  restrictions:
+    value: "Verificar baterías, drones, garantía y límites aduaneros."
+    status: estimated
+```
+
+---
+
+# 16. Fortalezas y concesiones
+
+```yaml
+strengths:
+  - "Incluye la Ciudad Prohibida y la Gran Muralla."
+  - "Mantiene Zhangjiajie y Tianmen."
+  - "Mantiene Shenzhen y Huaqiangbei."
+  - "Solo tres bases."
+  - "Cada destino tiene días y noches reales."
+  - "El vuelo interno evita perder un día completo."
+
+tradeoffs:
+  - "Se elimina Chongqing."
+  - "No incluye Xi’an, Shanghai ni Wangxian Valley."
+  - "El presupuesto final queda incompleto hasta que Booking publique tarifas para las fechas."
+  - "Requiere reservas prioritarias."
+
+risks:
+  - title: "Disponibilidad de la Ciudad Prohibida"
+    description: "Las entradas tienen cupos y deben reservarse."
+    impact: high
+    status: estimated
+
+  - title: "Vuelo interno"
+    description: "Una mala combinación puede consumir más del día 5."
+    impact: medium
+    status: pending
+
+  - title: "Clima en Zhangjiajie"
+    description: "La niebla puede reducir la visibilidad."
+    impact: medium
+    status: estimated
+
+  - title: "Visa para 2027"
+    description: "Debe confirmarse antes de emitir pasajes."
+    impact: high
+    status: pending
+```
+
+---
+
+# 17. Alternativas
+
+```yaml
+alternatives:
+  moreRelaxed:
+    description: "Agregar dos días manteniendo la misma ruta."
+    changes:
+      - "Agregar una noche extra en Beijing."
+      - "Agregar una noche extra en Shenzhen."
+
+  cheaper:
+    description: "Mantener la ruta y reducir costos sin sacrificar las tres experiencias."
+    changes:
+      - "Elegir hotel fuera de Wangfujing, pero conectado por metro."
+      - "Usar traslado compartido a Mutianyu."
+      - "Alojarse fuera del centro de Futian."
+
+  moreComplete:
+    description: "Extender a 15 o 16 días."
+    changes:
+      - "Agregar Chongqing entre Zhangjiajie y Shenzhen."
+      - "O agregar Xi’an entre Beijing y Zhangjiajie."
+```
+
+---
+
+# 18. Datos específicos para comparación
+
+```yaml
+comparison:
+  durationDays: 12
+  durationNights: 11
+  countriesCount: 1
+  citiesCount: 3
+  accommodationChanges: 2
+  longTransfers: 1
+  internationalFlightHours: null
+  requiresVisa: null
+  organizationDifficulty: 4
+  languageBarrier: 5
+  comfort: 4
+  freeTime: 3
+  experienceVariety: 5
+  totalPerPerson: null
+  budgetLevel: medium
+  pace: moderate
+```
+
+---
+
+# 19. Slides de la presentación
+
+```yaml
+slides:
+  - id: cover
+    type: cover
+    order: 1
+    title: "China clásica y tecnológica"
+    subtitle: "Historia imperial, paisajes fantásticos y tecnología"
+    eyebrow: "12 días · Mayo de 2027"
+    text: null
+    layout: full-bleed
+    image: null
+    images: []
+    sourceRef: "visual.coverImage"
+
+  - id: concept
+    type: editorial
+    order: 2
+    title: "Tres imágenes esenciales de China"
+    subtitle: null
+    eyebrow: "Concepto"
+    text: "Beijing imperial, Zhangjiajie natural y Shenzhen tecnológica."
+    layout: text-left
+    image: null
+    images: []
+    sourceRef: "4.1"
+
+  - id: route
+    type: route
+    order: 3
+    title: "El recorrido"
+    subtitle: "Beijing → Zhangjiajie → Shenzhen"
+    eyebrow: "Tres bases"
+    text: null
+    layout: default
+    image: null
+    images: []
+    sourceRef: "route"
+
+  - id: beijing
+    type: city
+    order: 4
+    title: "Beijing"
+    subtitle: "La China imperial"
+    eyebrow: "Cuatro noches"
+    text: null
+    layout: hero-with-thumbs
+    image: null
+    images: []
+    sourceRef: "destinations.beijing.images"
+
+  - id: forbidden-city
+    type: gallery
+    order: 5
+    title: "La Ciudad Prohibida"
+    subtitle: "Palacios, patios y una vista desde Jingshan"
+    eyebrow: "Día 2"
+    text: null
+    layout: collage
+    image: null
+    images: []
+    sourceRef: "itinerary.day2"
+
+  - id: great-wall
+    type: full-image
+    order: 6
+    title: "La Gran Muralla"
+    subtitle: "Mutianyu"
+    eyebrow: "Día 3"
+    text: null
+    layout: full-bleed
+    image: null
+    images: []
+    sourceRef: "itinerary.day3"
+
+  - id: zhangjiajie
+    type: gallery
+    order: 7
+    title: "Zhangjiajie"
+    subtitle: "Pilares de piedra y paisajes de fantasía"
+    eyebrow: "Cuatro noches"
+    text: null
+    layout: masonry
+    image: null
+    images: []
+    sourceRef: "destinations.zhangjiajie.images"
+
+  - id: tianmen
+    type: highlight
+    order: 8
+    title: "Tianmen Mountain"
+    subtitle: "La Puerta del Cielo"
+    eyebrow: "Día 8"
+    text: null
+    layout: side-by-side
+    image: null
+    images: []
+    sourceRef: "itinerary.day8"
+
+  - id: shenzhen
+    type: city
+    order: 9
+    title: "Shenzhen"
+    subtitle: "Tecnología y ciudad futurista"
+    eyebrow: "Tres noches"
+    text: null
+    layout: hero-with-thumbs
+    image: null
+    images: []
+    sourceRef: "destinations.shenzhen.images"
+
+  - id: huaqiangbei
+    type: gallery
+    order: 10
+    title: "Huaqiangbei"
+    subtitle: "Robots, drones, componentes e IA"
+    eyebrow: "Tecnología tangible"
+    text: null
+    layout: grid
+    image: null
+    images: []
+    sourceRef: "itinerary.day10"
+
+  - id: itinerary
+    type: itinerary
+    order: 11
+    title: "12 días equilibrados"
+    subtitle: "Tres bases y un solo vuelo interno"
+    eyebrow: "Día por día"
+    text: null
+    layout: default
+    image: null
+    images: []
+    sourceRef: "itinerary"
+
+  - id: gastronomy
+    type: gastronomy
+    order: 12
+    title: "Tres cocinas regionales"
+    subtitle: "Beijing, Hunan y Guangdong"
+    eyebrow: "Gastronomía"
+    text: null
+    layout: collage
+    image: null
+    images: []
+    sourceRef: "gastronomy"
+
+  - id: budget
+    type: budget
+    order: 13
+    title: "Presupuesto pendiente de completar"
+    subtitle: "Solo se muestran valores verificables"
+    eyebrow: "Una persona"
+    text: "Vuelo orientativo USD 1.600 · Comida USD 300 · Seguro USD 80 · Extras USD 100"
+    layout: default
+    image: null
+    images: []
+    sourceRef: "budget"
+
+  - id: pros-cons
+    type: pros-cons
+    order: 14
+    title: "Lo que incluye y lo que queda afuera"
+    subtitle: null
+    eyebrow: "Decisión"
+    text: null
+    layout: grid
+    image: null
+    images: []
+    sourceRef: "strengths, tradeoffs"
+
+  - id: comparison
+    type: comparison-summary
+    order: 15
+    title: "La alternativa más clásica"
+    subtitle: "Más historia, menos ciudad cyberpunk"
+    eyebrow: "Comparación"
+    text: null
+    layout: side-by-side
+    image: null
+    images: []
+    sourceRef: "comparison"
+
+  - id: closing
+    type: closing
+    order: 16
+    title: "China en tres experiencias"
+    subtitle: "Historia, naturaleza y tecnología"
+    eyebrow: "Propuesta preliminar"
+    text: "Siguiente paso: fijar fechas y cotizar Booking con esos días."
+    layout: full-bleed
+    image: null
+    images: []
+    sourceRef: "catalog"
+```
+
+---
+
+# 20. Galería general
+
+```yaml
+gallery:
+  - src: null
+    alt: "Ciudad Prohibida vista desde Tiananmén"
+    caption: "El núcleo imperial"
+    city: "Beijing"
+    category: history
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Tejados de la Ciudad Prohibida desde Jingshan"
+    caption: "La vista panorámica de Beijing"
+    city: "Beijing"
+    category: history
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Gran Muralla en Mutianyu"
+    caption: "El ícono histórico del recorrido"
+    city: "Beijing"
+    category: history
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Hutong tradicional de Beijing"
+    caption: "La escala cotidiana de la capital"
+    city: "Beijing"
+    category: culture
+    orientation: portrait
+    status: pending
+  - src: null
+    alt: "Templo del Cielo"
+    caption: "Arquitectura ceremonial"
+    city: "Beijing"
+    category: culture
+    orientation: portrait
+    status: pending
+  - src: null
+    alt: "Pilares de Zhangjiajie entre nubes"
+    caption: "El gran paisaje natural"
+    city: "Zhangjiajie"
+    category: nature
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Ascensor Bailong"
+    caption: "Infraestructura dentro del parque"
+    city: "Zhangjiajie"
+    category: adventure
+    orientation: portrait
+    status: pending
+  - src: null
+    alt: "Tianzi Mountain"
+    caption: "Segundo día de naturaleza"
+    city: "Zhangjiajie"
+    category: nature
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Puerta del Cielo de Tianmen"
+    caption: "Tianmen Cave"
+    city: "Zhangjiajie"
+    category: adventure
+    orientation: portrait
+    status: pending
+  - src: null
+    alt: "Teleférico de Tianmen"
+    caption: "La gran vista panorámica"
+    city: "Zhangjiajie"
+    category: adventure
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Mercados de Huaqiangbei"
+    caption: "Tecnología que se puede tocar"
+    city: "Shenzhen"
+    category: technology
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Robots y drones en Shenzhen"
+    caption: "Productos y prototipos"
+    city: "Shenzhen"
+    category: technology
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Distrito de Futian iluminado"
+    caption: "La ciudad futurista"
+    city: "Shenzhen"
+    category: urban
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Shenzhen Bay"
+    caption: "La cara costera de la ciudad"
+    city: "Shenzhen"
+    category: urban
+    orientation: landscape
+    status: pending
+  - src: null
+    alt: "Shekou Sea World"
+    caption: "La alternativa relajada"
+    city: "Shenzhen"
+    category: relaxation
+    orientation: landscape
+    status: pending
+```
+
+---
+
+# 21. Fuentes
+
+```yaml
+sources:
+  - topic: "Propuesta original"
+    name: "Itinerario China 12 días clásico turístico"
+    url: null
+    accessedAt: 2026-06-30
+    notes: "Documento aportado por el usuario."
+
+  - topic: "Alojamiento en Beijing"
+    name: "Booking.com — Hoteles en Beijing"
+    url: "https://www.booking.com/city/cn/beijing.html"
+    accessedAt: 2026-06-30
+    notes: "Booking muestra hoteles desde USD 34 y promedios actuales, pero no tarifas válidas para mayo de 2027."
+
+  - topic: "Alojamiento en Wulingyuan"
+    name: "Booking.com — Zhangjiajie Wulingyuan Integrity Hotel"
+    url: "https://www.booking.com/hotel/cn/tian-ya-zhi-cheng-jiu-dian.html"
+    accessedAt: 2026-06-30
+    notes: "El alojamiento tiene ubicación 9,4 y valoración 8,3, pero Booking exige ingresar fechas para mostrar el precio."
+
+  - topic: "Alojamiento cerca del parque"
+    name: "Booking.com — Hoteles cerca de Zhangjiajie National Forest Park"
+    url: "https://www.booking.com/landmark/cn/zhangjiajie-national-park.html"
+    accessedAt: 2026-06-30
+    notes: "Hay varias opciones bien valoradas; falta precio para mayo de 2027."
+
+  - topic: "Alojamiento en Shenzhen"
+    name: "Booking.com — Hoteles en Huaqiangbei"
+    url: "https://www.booking.com/district/cn/shenzhen/huaqiangbei.html"
+    accessedAt: 2026-06-30
+    notes: "Booking lista opciones bien valoradas, pero no expone una tarifa verificable para mayo de 2027."
+```
+
+---
+
+# 22. Datos faltantes
+
+```yaml
+missingInformation:
+  - field: "Fechas exactas"
+    reason: "Booking necesita fechas concretas para cotizar correctamente."
+    priority: blocking
+    suggestedAction: "Elegir una ventana de 12 días en la segunda mitad de mayo de 2027."
+
+  - field: "Alojamiento"
+    reason: "No hay tarifas verificables para mayo de 2027."
+    priority: blocking
+    suggestedAction: "Cargar las fechas exactas en Booking y elegir habitaciones privadas con nota superior a 8."
+
+  - field: "Vuelo Beijing–Zhangjiajie"
+    reason: "Falta tarifa y horario."
+    priority: high
+    suggestedAction: "Cotizar junto con el vuelo internacional."
+
+  - field: "Tren Zhangjiajie–Shenzhen"
+    reason: "La venta abre cerca de la fecha."
+    priority: high
+    suggestedAction: "Revisar segunda clase cuando se habilite."
+
+  - field: "Entradas y actividades"
+    reason: "Los sistemas y tarifas pueden cambiar antes de mayo de 2027."
+    priority: high
+    suggestedAction: "Revalidar Ciudad Prohibida, Mutianyu, Zhangjiajie y Tianmen."
+
+  - field: "Visa para mayo de 2027"
+    reason: "Todavía no está confirmada."
+    priority: blocking
+    suggestedAction: "Revisar antes de emitir pasajes."
+
+  - field: "Imágenes definitivas"
+    reason: "Los sliders están definidos, pero faltan archivos y licencias."
+    priority: high
+    suggestedAction: "Seleccionar imágenes autorizadas y completar src."
+```
+
+---
+
+# 23. Validaciones obligatorias
+
+```text
+[x] La suma de noches coincide con durationNights: 11.
+[x] La cantidad de días coincide con durationDays: 12.
+[x] Todos los destinos del itinerario existen en route.
+[ ] El total completo del presupuesto no puede calcularse porque hay valores pendientes.
+[x] Todos los precios tienen estado.
+[x] Todas las imágenes tienen alt.
+[x] Todas las fuentes tienen fecha de consulta.
+[x] Los puntajes están entre 1 y 5.
+[x] organizationDifficulty está interpretado correctamente.
+[x] budgetAccessibility está interpretado correctamente.
+[x] No se inventaron importes de alojamiento.
+[x] Los datos pendientes están marcados.
+[x] La propuesta puede renderizarse sin HTML específico.
+[x] La cantidad de slides es coherente con el contenido.
+[x] La propuesta tiene resumen, recorrido, presupuesto, fortalezas y concesiones.
+```
+
+---
+
+# 24. Informe de calidad
+
+```yaml
+qualityReport:
+  completenessPercentage: 82
+  readyForWebsite: false
+  blockingIssues:
+    - "Faltan fechas exactas."
+    - "Booking no permite verificar todavía las tarifas de alojamiento para mayo de 2027."
+    - "Falta confirmar visa para 2027."
+    - "Faltan imágenes definitivas."
+  pendingResearch:
+    - "Hoteles exactos en Beijing, Wulingyuan, Zhangjiajie ciudad y Shenzhen."
+    - "Vuelo Beijing–Zhangjiajie."
+    - "Tren Zhangjiajie–Shenzhen."
+    - "Entradas y excursión a Mutianyu."
+  assumptions:
+    - "Una sola persona."
+    - "Viaje en la segunda mitad de mayo de 2027."
+    - "Vuelo internacional estimado en USD 1.600 según referencia del usuario."
+    - "Habitaciones privadas con baño privado y nota superior a 8."
+  validationErrors:
+    - "El total general no puede calcularse hasta completar alojamiento, transporte y actividades."
+```

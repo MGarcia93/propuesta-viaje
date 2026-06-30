@@ -1,0 +1,219 @@
+---
+import type { TripComparisonProjection } from '../../lib/types';
+import ScoreIndicator from './ScoreIndicator.astro';
+
+export interface Props {
+  trips: TripComparisonProjection[];
+}
+
+const { trips } = Astro.props;
+
+const paceLabel: Record<string, string> = {
+  relaxed: 'Relajado',
+  moderate: 'Moderado',
+  intense: 'Intenso',
+};
+
+const budgetLabel: Record<string, string> = {
+  low: 'Económico',
+  medium: 'Moderado',
+  high: 'Elevado',
+  premium: 'Premium',
+};
+
+// Collect all score dimensions across trips
+const allScoreKeys = new Set<string>();
+for (const trip of trips) {
+  if (trip.scores) {
+    Object.keys(trip.scores).forEach((k) => allScoreKeys.add(k));
+  }
+}
+const scoreKeys = Array.from(allScoreKeys).filter(
+  (k) => trips.some((t) => typeof t.scores?.[k as keyof typeof t.scores] === 'number'),
+);
+---
+
+<div class="hidden md:block overflow-x-auto">
+  <table class="w-full border-collapse">
+    <!-- Header row -->
+    <thead>
+      <tr class="border-b border-surface-border">
+        <th class="sticky left-0 bg-surface px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-dim min-w-[140px]">
+          Categoría
+        </th>
+        {trips.map((trip) => (
+          <th key={trip.slug} class="px-4 py-3 text-left min-w-[200px]">
+            <div class="flex items-center gap-3">
+              {trip.visual?.coverImage && (
+                <img
+                  src={trip.visual.coverImage}
+                  alt={trip.catalog.title}
+                  class="h-10 w-10 rounded-lg object-cover"
+                />
+              )}
+              <div>
+                <a
+                  href={`/viajes/${trip.slug}`}
+                  class="font-display font-bold text-text-primary hover:text-brand-orange transition-colors text-sm"
+                >
+                  {trip.catalog.title}
+                </a>
+              </div>
+            </div>
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Score rows -->
+      {scoreKeys.length > 0 && (
+        <>
+          <tr class="border-b border-surface-border/50">
+            <td colspan={trips.length + 1} class="px-4 py-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-text-dim">Puntajes</span>
+            </td>
+          </tr>
+          {scoreKeys.map((key) => {
+            const values = trips.map((t) => ({
+              slug: t.slug,
+              value: (t.scores as Record<string, number | null | undefined>)?.[key] ?? null,
+            }));
+            const maxVal = Math.max(...values.map((v) => v.value ?? 0), 0);
+
+            return (
+              <tr key={key} class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+                <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary capitalize">
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                </td>
+                {values.map((v) => {
+                  const isMax = v.value === maxVal && v.value > 0;
+                  return (
+                    <td key={v.slug} class="px-4 py-2.5">
+                      {v.value != null ? (
+                        <div class="flex items-center gap-2">
+                          <div class="flex-1 max-w-[120px]">
+                            <div class="h-1.5 rounded-full bg-surface-border overflow-hidden">
+                              <div
+                                class={`h-full rounded-full transition-all ${
+                                  isMax ? 'bg-brand-orange' : 'bg-text-dim'
+                                }`}
+                                style={{ width: `${(v.value / 5) * 100}%` }}
+                              />
+                            </div>
+                          </div>
+                          <span class={`text-xs font-bold tabular-nums ${
+                            isMax ? 'text-brand-orange' : 'text-text-primary'
+                          }`}>
+                            {v.value}
+                          </span>
+                        </div>
+                      ) : (
+                        <span class="text-text-dim text-xs">—</span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </>
+      )}
+
+      <!-- Duration -->
+      <tr class="border-b border-surface-border/50">
+        <td colspan={trips.length + 1} class="px-4 py-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-text-dim">Duración</span>
+        </td>
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Días</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-primary tabular-nums">{t.durationDays}</td>
+        ))}
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Noches</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-primary tabular-nums">{t.durationNights}</td>
+        ))}
+      </tr>
+
+      <!-- Budget -->
+      <tr class="border-b border-surface-border/50">
+        <td colspan={trips.length + 1} class="px-4 py-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-text-dim">Presupuesto</span>
+        </td>
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Nivel</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-primary">
+            {budgetLabel[t.budgetLevel] ?? t.budgetLevel}
+          </td>
+        ))}
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Total por persona</td>
+        {trips.map((t) => {
+          const cheapest = trips.reduce((a, b) =>
+            (a.budgetTotals.totalPerPerson ?? Infinity) < (b.budgetTotals.totalPerPerson ?? Infinity)
+              ? a : b
+          );
+          const isCheapest = t.slug === cheapest.slug && t.budgetTotals.totalPerPerson != null;
+          return (
+            <td key={t.slug} class="px-4 py-2.5">
+              {t.budgetTotals.totalPerPerson != null ? (
+                <span class={`text-sm font-bold tabular-nums ${isCheapest ? 'text-green-400' : 'text-text-primary'}`}>
+                  USD {t.budgetTotals.totalPerPerson.toLocaleString()}
+                  {t.budgetTotals.pendingItems && (
+                    <span class="ml-1 text-[10px] text-yellow-500/80">*</span>
+                  )}
+                </span>
+              ) : (
+                <span class="text-text-dim text-xs">Pendiente</span>
+              )}
+            </td>
+          );
+        })}
+      </tr>
+
+      <!-- Pace -->
+      <tr class="border-b border-surface-border/50">
+        <td colspan={trips.length + 1} class="px-4 py-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-text-dim">Ritmo</span>
+        </td>
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Ritmo general</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-primary capitalize">
+            {paceLabel[t.catalog.pace] ?? t.catalog.pace}
+          </td>
+        ))}
+      </tr>
+
+      <!-- Best argument / Main concession -->
+      <tr class="border-b border-surface-border/50">
+        <td colspan={trips.length + 1} class="px-4 py-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-text-dim">Argumentos</span>
+        </td>
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Mejor argumento</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-secondary">
+            {t.catalog.bestArgument ?? <span class="text-text-dim italic">—</span>}
+          </td>
+        ))}
+      </tr>
+      <tr class="border-b border-surface-border/30 hover:bg-surface-hover/50">
+        <td class="sticky left-0 bg-surface px-4 py-2.5 text-sm text-text-secondary">Principal concesión</td>
+        {trips.map((t) => (
+          <td key={t.slug} class="px-4 py-2.5 text-sm text-text-secondary">
+            {t.catalog.mainConcession ?? <span class="text-text-dim italic">—</span>}
+          </td>
+        ))}
+      </tr>
+    </tbody>
+  </table>
+</div>

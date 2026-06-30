@@ -1,0 +1,65 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { resolveSlideSource } from '../../lib/slides';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+// Resolve reasons from sourceRef or use slide's own content, fall back to trip.concept.reasons
+const source = slide.sourceRef
+  ? resolveSlideSource(trip, slide.sourceRef)
+  : null;
+
+const reasons = source?.type === 'reference' && Array.isArray(source.data)
+  ? source.data as Trip['concept']['reasons']
+  : slide.text
+    ? [{ title: slide.title ?? '', description: slide.text }]
+    : trip.concept?.reasons ?? [];
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2 leading-tight">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    {reasons.length > 0 ? (
+      <div class="grid gap-6 md:grid-cols-2">
+        {reasons.map((reason, i) => (
+          <div
+            key={i}
+            class="rounded-xl border border-surface-border bg-surface-card p-5 transition-colors hover:border-brand-coral/20"
+          >
+            <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-brand-coral/10 text-brand-orange text-sm font-bold">
+              {i + 1}
+            </div>
+            <h3 class="font-display text-lg font-bold text-text-primary mb-2">
+              {reason.title}
+            </h3>
+            {reason.description && (
+              <p class="text-sm text-text-secondary leading-relaxed">
+                {reason.description}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="text-text-muted italic">No hay razones disponibles.</p>
+    )}
+  </div>
+</section>

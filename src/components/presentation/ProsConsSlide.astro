@@ -1,0 +1,95 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { resolveSlideSource } from '../../lib/slides';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+// Resolve from sourceRef or use trip defaults
+let strengths: string[] = [];
+let tradeoffs: string[] = [];
+
+if (slide.sourceRef) {
+  const source = resolveSlideSource(trip, slide.sourceRef);
+  if (source.type === 'reference' && source.data && typeof source.data === 'object') {
+    const data = source.data as Record<string, unknown>;
+    if (Array.isArray(data.strengths)) strengths = data.strengths as string[];
+    if (Array.isArray(data.tradeoffs)) tradeoffs = data.tradeoffs as string[];
+  }
+}
+
+if (strengths.length === 0) strengths = trip.strengths ?? [];
+if (tradeoffs.length === 0) tradeoffs = trip.tradeoffs ?? [];
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Strengths -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-500/20">
+            <svg class="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-text-primary">Fortalezas</h3>
+        </div>
+        {strengths.length > 0 ? (
+          <ul class="space-y-2">
+            {strengths.map((s, i) => (
+              <li key={i} class="flex items-start gap-2 rounded-lg border border-green-500/10 bg-green-500/5 p-3">
+                <span class="mt-0.5 text-green-400 text-sm">✓</span>
+                <span class="text-sm text-text-secondary">{s}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-text-muted italic text-sm">No hay fortalezas listadas.</p>
+        )}
+      </div>
+
+      <!-- Tradeoffs / Concessions -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-coral/20">
+            <svg class="h-4 w-4 text-brand-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-text-primary">Concesiones</h3>
+        </div>
+        {tradeoffs.length > 0 ? (
+          <ul class="space-y-2">
+            {tradeoffs.map((t, i) => (
+              <li key={i} class="flex items-start gap-2 rounded-lg border border-brand-coral/10 bg-brand-coral/5 p-3">
+                <span class="mt-0.5 text-brand-coral text-sm">✦</span>
+                <span class="text-sm text-text-secondary">{t}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-text-muted italic text-sm">No hay concesiones listadas.</p>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

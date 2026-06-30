@@ -1,0 +1,117 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const scores = trip.scores;
+const comparison = trip.comparison;
+const bestArgument = trip.catalog?.bestArgument;
+const mainConcession = trip.catalog?.mainConcession;
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    <!-- Best argument / Main concession -->
+    <div class="grid gap-4 md:grid-cols-2 mb-10">
+      {bestArgument && (
+        <div class="rounded-xl border border-green-500/20 bg-green-500/5 p-5">
+          <span class="text-xs font-semibold uppercase tracking-wider text-green-400">Mejor argumento</span>
+          <p class="mt-2 text-text-primary font-display font-bold text-lg">{bestArgument}</p>
+        </div>
+      )}
+      {mainConcession && (
+        <div class="rounded-xl border border-brand-coral/20 bg-brand-coral/5 p-5">
+          <span class="text-xs font-semibold uppercase tracking-wider text-brand-coral">Principal concesión</span>
+          <p class="mt-2 text-text-primary font-display font-bold text-lg">{mainConcession}</p>
+        </div>
+      )}
+    </div>
+
+    <!-- Scores quick view -->
+    {scores && (
+      <div class="mb-10">
+        <h3 class="font-display font-bold text-text-primary mb-4">Puntajes</h3>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {Object.entries(scores)
+            .filter(([, val]) => typeof val === 'number' && val > 0)
+            .map(([key, val]) => (
+              <div key={key} class="flex items-center gap-3">
+                <span class="w-24 text-sm text-text-secondary capitalize">{key}</span>
+                <div class="flex-1 budget-bar">
+                  <div
+                    class="budget-bar-fill"
+                    style={{ width: `${((val as number) / 5) * 100}%` }}
+                  />
+                </div>
+                <span class="text-sm font-bold text-text-primary w-6 text-right">{val}</span>
+              </div>
+            ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Quick comparison data -->
+    {comparison && (
+      <div class="rounded-xl border border-surface-border bg-surface-card p-5">
+        <h3 class="font-display font-bold text-text-primary mb-3">Datos comparativos</h3>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {comparison.durationDays != null && (
+            <div>
+              <span class="text-xs text-text-muted">Duración</span>
+              <p class="text-sm text-text-primary">{comparison.durationDays} días</p>
+            </div>
+          )}
+          {comparison.countriesCount != null && (
+            <div>
+              <span class="text-xs text-text-muted">Países</span>
+              <p class="text-sm text-text-primary">{comparison.countriesCount}</p>
+            </div>
+          )}
+          {comparison.citiesCount != null && (
+            <div>
+              <span class="text-xs text-text-muted">Ciudades</span>
+              <p class="text-sm text-text-primary">{comparison.citiesCount}</p>
+            </div>
+          )}
+          {comparison.organizationDifficulty != null && (
+            <div>
+              <span class="text-xs text-text-muted">Dificultad organización</span>
+              <p class="text-sm text-text-primary">{comparison.organizationDifficulty}/5</p>
+            </div>
+          )}
+          {comparison.languageBarrier != null && (
+            <div>
+              <span class="text-xs text-text-muted">Barrera idiomática</span>
+              <p class="text-sm text-text-primary">{comparison.languageBarrier}/5</p>
+            </div>
+          )}
+          {comparison.pace && (
+            <div>
+              <span class="text-xs text-text-muted">Ritmo</span>
+              <p class="text-sm text-text-primary capitalize">{comparison.pace}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+  </div>
+</section>

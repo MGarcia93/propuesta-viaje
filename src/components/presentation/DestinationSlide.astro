@@ -1,0 +1,104 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { resolveSlideSource, resolveDestination } from '../../lib/slides';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+// If sourceRef points to a specific destination, use it
+let destination: Trip['destinations'][number] | undefined;
+if (slide.sourceRef) {
+  const dotMatch = slide.sourceRef.match(/^destinations\.(.+)$/);
+  if (dotMatch) {
+    destination = resolveDestination(trip, dotMatch[1]);
+  }
+}
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {destination ? (
+      <>
+        <div class="mb-8">
+          {slide.eyebrow && (
+            <span class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-orange">
+              {slide.eyebrow}
+            </span>
+          )}
+
+          <h2 class="font-display text-display-md text-text-primary mt-1 leading-tight">
+            {slide.title ?? destination.city}
+          </h2>
+
+          {destination.description && (
+            <p class="mt-3 text-text-secondary leading-relaxed">
+              {destination.description}
+            </p>
+          )}
+
+          {destination.whyIncluded && (
+            <blockquote class="mt-4 border-l-2 border-brand-coral pl-4 text-sm text-text-muted italic">
+              {destination.whyIncluded}
+            </blockquote>
+          )}
+        </div>
+
+        {destination.activities && destination.activities.length > 0 && (
+          <div class="mb-6">
+            <h3 class="font-display font-bold text-text-primary mb-3">Actividades</h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+              {destination.activities.map((act, i) => (
+                <div key={i} class="rounded-lg border border-surface-border bg-surface-card p-3">
+                  <div class="flex items-start justify-between gap-2">
+                    <span class="text-sm text-text-primary font-medium">{act.name}</span>
+                    {act.optional && (
+                      <span class="text-[10px] text-text-dim uppercase tracking-wider">Opcional</span>
+                    )}
+                  </div>
+                  {act.description && (
+                    <p class="mt-1 text-xs text-text-secondary">{act.description}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </>
+    ) : (
+      <>
+        <h2 class="font-display text-display-md text-text-primary mb-4">
+          {slide.title ?? 'Destino'}
+        </h2>
+
+        {slide.text && (
+          <div class="text-text-secondary leading-relaxed">
+            {slide.text.split('\n').map((p) => (
+              <p class="mb-3">{p}</p>
+            ))}
+          </div>
+        )}
+
+        {slide.image && (
+          <figure class="mt-6">
+            <img src={slide.image} alt={slide.title ?? ''} class="w-full rounded-xl" loading="lazy" />
+          </figure>
+        )}
+      </>
+    )}
+
+    {destination?.freeTime && (
+      <div class="mt-6 rounded-lg bg-surface-card border border-surface-border p-4">
+        <span class="text-xs font-semibold uppercase tracking-wider text-text-muted">Tiempo libre</span>
+        <p class="mt-1 text-sm text-text-secondary">{destination.freeTime}</p>
+      </div>
+    )}
+  </div>
+</section>

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComparisonDesktop from '../components/comparison/ComparisonDesktop.astro';
+import ComparisonMobile from '../components/comparison/ComparisonMobile.astro';
+import ComparisonSummary from '../components/comparison/ComparisonSummary.astro';
+import { getTripComparisonProjections } from '../lib/trips';
+import { buildComparisonSummary } from '../lib/comparison';
+
+const trips = await getTripComparisonProjections();
+const summary = buildComparisonSummary(trips);
+---
+
+<Layout
+  title="Comparar propuestas — Viaje Tanto"
+  description="Compará las propuestas de viaje lado a lado: precios, ritmo, duración, puntajes y más."
+>
+  <div class="mx-auto max-w-7xl px-6 py-12 md:py-16">
+    <!-- Header -->
+    <div class="mb-10">
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-sm text-text-muted hover:text-text-primary transition-colors mb-6"
+      >
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Volver al catálogo
+      </a>
+
+      <h1 class="font-display text-display-lg text-text-primary mb-4">
+        Comparar sin matar la emoción
+      </h1>
+      <p class="text-text-secondary max-w-2xl">
+        La comparación muestra el final práctico: precio, ritmo y decisión
+        sin romper la magia de cada propuesta.
+      </p>
+    </div>
+
+    <!-- Summary cards -->
+    <div class="mb-10">
+      <ComparisonSummary summary={summary} />
+    </div>
+
+    <!-- Desktop comparison table -->
+    <div class="mb-10">
+      <h2 class="font-display text-display-sm text-text-primary mb-6">
+        Comparación detallada
+      </h2>
+      <ComparisonDesktop trips={trips} />
+    </div>
+
+    <!-- Mobile comparison -->
+    <ComparisonMobile trips={trips} />
+
+    <!-- Footer info -->
+    {trips.some((t) => t.budgetTotals.pendingItems) && (
+      <p class="mt-8 text-xs text-yellow-500/80 text-center">
+        * Los valores marcados con asterisco incluyen costos pendientes de confirmar.
+        Los totales mostrados solo consideran costos confirmados y estimados.
+      </p>
+    )}
+  </div>
+</Layout>

@@ -1,0 +1,97 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+const gastro = trip.gastronomy;
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    {gastro ? (
+      <>
+        {gastro.overview && (
+          <p class="text-text-secondary leading-relaxed mb-8 max-w-2xl">
+            {gastro.overview}
+          </p>
+        )}
+
+        {(gastro.dailyBudgetLow != null || gastro.dailyBudgetMedium != null || gastro.dailyBudgetComfortable != null) && (
+          <div class="mb-8">
+            <h3 class="font-display font-bold text-text-primary mb-3">Presupuesto diario de comida</h3>
+            <div class="flex flex-wrap gap-3">
+              {gastro.dailyBudgetLow != null && (
+                <div class="rounded-lg border border-green-500/20 bg-green-500/10 px-4 py-3">
+                  <span className="text-xs text-green-400">Económico</span>
+                  <p class="text-sm font-bold text-text-primary">~USD {gastro.dailyBudgetLow}</p>
+                </div>
+              )}
+              {gastro.dailyBudgetMedium != null && (
+                <div class="rounded-lg border border-yellow-500/20 bg-yellow-500/10 px-4 py-3">
+                  <span className="text-xs text-yellow-400">Moderado</span>
+                  <p class="text-sm font-bold text-text-primary">~USD {gastro.dailyBudgetMedium}</p>
+                </div>
+              )}
+              {gastro.dailyBudgetComfortable != null && (
+                <div class="rounded-lg border border-purple-500/20 bg-purple-500/10 px-4 py-3">
+                  <span className="text-xs text-purple-400">Cómodo</span>
+                  <p class="text-sm font-bold text-text-primary">~USD {gastro.dailyBudgetComfortable}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {gastro.experiences && gastro.experiences.length > 0 && (
+          <>
+            <h3 class="font-display font-bold text-text-primary mb-3">Experiencias gastronómicas</h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+              {gastro.experiences.map((exp, i) => (
+                <div key={i} class="rounded-lg border border-surface-border bg-surface-card p-3">
+                  <span class="text-sm font-medium text-text-primary">{exp.name}</span>
+                  {exp.city && <span class="text-xs text-text-muted ml-2">{exp.city}</span>}
+                  {exp.type && <span class="block text-[10px] text-text-dim uppercase tracking-wider">{exp.type}</span>}
+                  {exp.description && <p class="mt-1 text-xs text-text-secondary">{exp.description}</p>}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {gastro.possibleDifficulties && gastro.possibleDifficulties.length > 0 && (
+          <div class="mt-6">
+            <h3 class="font-display font-bold text-text-primary mb-3 text-sm">Posibles dificultades</h3>
+            <ul class="space-y-1">
+              {gastro.possibleDifficulties.map((d, i) => (
+                <li key={i} class="text-sm text-text-muted flex items-start gap-2">
+                  <span class="text-brand-coral mt-0.5">•</span>
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </>
+    ) : (
+      <p class="text-text-muted italic">No hay información gastronómica disponible.</p>
+    )}
+  </div>
+</section>

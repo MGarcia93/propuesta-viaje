@@ -1,0 +1,77 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const bestArgument = trip.catalog?.bestArgument;
+const mainConcession = trip.catalog?.mainConcession;
+const overview = trip.concept?.overview;
+const accentColor = trip.visual?.accentColor ?? '#FF553D';
+---
+
+<section
+  id={slideId}
+  class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 py-16"
+>
+  <!-- Background -->
+  {slide.image ? (
+    <img
+      src={slide.image}
+      alt={slide.title ?? ''}
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="lazy"
+    />
+  ) : (
+    <div class="absolute inset-0 bg-gradient-to-b from-surface-darker to-surface" />
+  )}
+
+  <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/30" />
+
+  <div class="relative z-10 flex w-full max-w-3xl flex-col items-center text-center">
+    {slide.eyebrow && (
+      <span
+        class="text-xs font-semibold uppercase tracking-[0.2em] mb-4"
+        style={{ color: accentColor }}
+      >
+        {slide.eyebrow}
+      </span>
+    )}
+
+    <h2 class="font-display text-display-md text-text-primary mb-6 leading-tight">
+      {slide.title ?? '¿Te animás?'}
+    </h2>
+
+    {slide.subtitle && (
+      <p class="text-lg text-text-secondary mb-6 max-w-xl">
+        {slide.subtitle}
+      </p>
+    )}
+
+    {overview && (
+      <blockquote class="text-text-secondary leading-relaxed italic max-w-xl mb-8 border-l-2 border-brand-coral pl-4 text-left">
+        "{overview}"
+      </blockquote>
+    )}
+
+    <div class="grid gap-4 sm:grid-cols-2 w-full max-w-xl">
+      {bestArgument && (
+        <div class="rounded-xl border border-green-500/20 bg-green-500/5 p-4 text-left">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-green-400">Lo mejor</span>
+          <p class="mt-1 text-sm text-text-primary">{bestArgument}</p>
+        </div>
+      )}
+      {mainConcession && (
+        <div class="rounded-xl border border-brand-coral/20 bg-brand-coral/5 p-4 text-left">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-coral">A considerar</span>
+          <p class="mt-1 text-sm text-text-primary">{mainConcession}</p>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,126 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  trip: Trip;
+  totalSlides: number;
+  returnUrl?: string;
+}
+
+const { trip, totalSlides, returnUrl } = Astro.props;
+const accentColor = trip.visual?.accentColor ?? '#FF553D';
+---
+
+<!-- Progress bar -->
+<div
+  class="slide-progress"
+  id="slide-progress"
+  style="width: 0%"
+  role="progressbar"
+  aria-valuenow="0"
+  aria-valuemin="0"
+  aria-valuemax={totalSlides}
+  aria-label="Progreso de la presentación"
+  data-progress
+></div>
+
+<!-- Top bar: close / back -->
+<div class="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-4 py-3">
+  <a
+    href={returnUrl ?? '/'}
+    class="flex items-center gap-2 rounded-full bg-surface/80 backdrop-blur-md border border-surface-border px-3 py-1.5 text-xs text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-coral"
+    aria-label={returnUrl ? 'Volver al catálogo' : 'Volver al inicio'}
+    data-close
+  >
+    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    <span class="hidden sm:inline">{returnUrl ? 'Volver' : 'Inicio'}</span>
+  </a>
+</div>
+
+<!-- Slide counter -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40">
+  <span class="inline-flex items-center gap-1 rounded-full bg-surface/80 backdrop-blur-md border border-surface-border px-3 py-1.5 text-xs text-text-muted" data-slide-counter>
+    <span id="slide-current" data-current>1</span>
+    <span>/</span>
+    <span id="slide-total" data-total>{totalSlides}</span>
+  </span>
+</div>
+
+<!-- Navigation arrows -->
+<button
+  class="fixed left-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-surface/80 backdrop-blur-md border border-surface-border text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-coral disabled:opacity-30 disabled:cursor-not-allowed"
+  id="slide-prev"
+  aria-label="Slide anterior"
+  data-prev
+  disabled
+>
+  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+  </svg>
+</button>
+
+<button
+  class="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-surface/80 backdrop-blur-md border border-surface-border text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-coral disabled:opacity-30 disabled:cursor-not-allowed"
+  id="slide-next"
+  aria-label="Slide siguiente"
+  data-next
+>
+  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+</button>
+
+<script>
+  // Vanilla JS controller — will be augmented by PresentationController.ts
+  // This ensures basic nav works even without the TypeScript controller
+  const slides = document.querySelectorAll('[data-slide]');
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+
+  let current = 0;
+  const prevBtn = document.getElementById('slide-prev');
+  const nextBtn = document.getElementById('slide-next');
+  const progress = document.getElementById('slide-progress');
+  const currentEl = document.getElementById('slide-current');
+
+  function showSlide(index: number) {
+    slides.forEach((s, i) => {
+      (s as HTMLElement).style.display = i === index ? 'flex' : 'none';
+    });
+    current = index;
+    if (currentEl) currentEl.textContent = String(index + 1);
+    if (progress) {
+      progress.style.width = `${((index + 1) / totalSlides) * 100}%`;
+      progress.setAttribute('aria-valuenow', String(index + 1));
+    }
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === totalSlides - 1;
+  }
+
+  function navigate(delta: number) {
+    const next = current + delta;
+    if (next >= 0 && next < totalSlides) showSlide(next);
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => navigate(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => navigate(1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') navigate(-1);
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+  }, { passive: true });
+
+  showSlide(0);
+</script>

@@ -1,0 +1,35 @@
+---
+import type { TripCardProjection } from '../../lib/types';
+import TripCard from './TripCard.astro';
+
+export interface Props {
+  trips: TripCardProjection[];
+}
+
+const { trips } = Astro.props;
+---
+
+{
+  trips.length > 0 ? (
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {trips.map((trip) => (
+        <TripCard trip={trip} />
+      ))}
+    </div>
+  ) : (
+    <div class="flex flex-col items-center justify-center py-24 text-center">
+      <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-surface-card border border-surface-border">
+        <svg class="h-8 w-8 text-text-dim" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+      <h3 class="font-display text-display-sm text-text-primary mb-2">
+        Próximamente
+      </h3>
+      <p class="text-text-secondary max-w-md">
+        Aún no hay propuestas publicadas. Las propuestas aparecerán aquí
+        cuando estén listas para mostrarse.
+      </p>
+    </div>
+  )
+}

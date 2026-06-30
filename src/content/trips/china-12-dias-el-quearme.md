@@ -1,0 +1,1798 @@
+# PROPUESTA DE VIAJE
+
+## 2.1 Identificación
+
+```yaml
+id: china-tecnologia-paisajes-12d
+slug: china-tecnologia-paisajes-12-dias
+name: "China: tecnología, ciudades verticales y paisajes de fantasía"
+shortName: "China futurista y natural"
+status: draft
+version: 1
+lastUpdated: 2026-06-30
+
+countries:
+  - China
+regions:
+  - Shanghai
+  - Jiangxi
+  - Hunan
+  - Chongqing
+  - Guangdong
+  - Hong Kong
+
+durationDays: 12
+durationNights: 11
+
+estimatedDates:
+  month: November
+  year: 2026
+  status: estimated
+recommendedSeason:
+  value: "Otoño; noviembre"
+  status: estimated
+  note: "Noviembre ofrece un buen equilibrio entre menor cantidad de visitantes, clima más seco en Zhangjiajie y precios generalmente inferiores a los períodos festivos. Requiere abrigo por capas."
+
+travelers: 1
+departureCity:
+  value: "Buenos Aires"
+  status: estimated
+arrivalCity:
+  value: "Shanghai"
+  status: estimated
+returnCity:
+  value: "Hong Kong"
+  status: estimated
+```
+
+## 2.2 Resumen para catálogo
+
+```yaml
+catalog:
+  title: "China vertical: montañas de fantasía y megaciudades futuristas"
+  subtitle: "Wangxian Valley, Zhangjiajie, Tianmen, Chongqing y Shenzhen en 12 días"
+  summary: "Un recorrido intenso por algunos de los paisajes más cinematográficos de China y sus ciudades más futuristas, combinando trenes, naturaleza, tecnología y noches urbanas."
+  tags:
+    - naturaleza
+    - tecnología
+    - ciudades futuristas
+    - trenes
+    - fotografía
+    - gastronomía
+    - vida nocturna
+  pace: intense
+  budgetLevel: medium
+  bestArgument: "Combina paisajes únicos, una megaciudad vertical y el principal ecosistema comercial de hardware de China sin sumar ciudades de relleno."
+  mainConcession: "Dos jornadas de traslado son largas y el margen ante mal clima es reducido."
+```
+
+## 2.3 Identidad visual
+
+```yaml
+visual:
+  accentColor: "#E34B32"
+  textColor: "#F6F2EA"
+  coverImage: null
+  cardImage: null
+  socialImage: null
+  imageStyle: "mixto, natural, futurista y nocturno"
+```
+
+---
+
+# 3. Puntajes comparativos
+
+```yaml
+scores:
+  culture: 4
+  nature: 5
+  nightlife: 4
+  gastronomy: 4
+  relaxation: 2
+  adventure: 4
+  technology: 5
+  comfort: 3
+  organizationDifficulty: 5
+  budgetAccessibility: 3
+  variety: 5
+  visualImpact: 5
+
+scoreRationale:
+  culture: "La arquitectura inspirada en estilos tradicionales y los barrios históricos aportan cultura, aunque el viaje no se centra en monumentos imperiales."
+  nature: "Zhangjiajie, Tianmen y Wangxian son el núcleo del viaje."
+  nightlife: "Chongqing y Shenzhen ofrecen recorridos nocturnos muy fuertes, sin depender de discotecas."
+  gastronomy: "Hay cocinas regionales diferentes, con Chongqing como punto destacado."
+  relaxation: "El itinerario es exigente y tiene pocos días libres."
+  adventure: "Teleféricos, senderos de montaña, acantilados y largas jornadas de exploración."
+  technology: "Shenzhen y Huaqiangbei constituyen una experiencia tecnológica central."
+  comfort: "Los trenes son cómodos, pero hay cambios de alojamiento y dos traslados largos."
+  organizationDifficulty: "Requiere coordinar estaciones, reservas de parques, medios de pago y conexiones regionales."
+  budgetAccessibility: "China permite comer y moverse a costos razonables, pero las entradas y los largos trayectos elevan el total."
+  variety: "Combina naturaleza, urbanismo, tecnología, gastronomía y vida nocturna."
+  visualImpact: "Todos los destinos fueron elegidos por su fuerza visual."
+```
+
+---
+
+# 4. Concepto narrativo
+
+## 4.1 Idea general
+
+Esta propuesta busca mostrar una China que cambia de escala constantemente. Comienza con arquitectura de fantasía integrada a un valle, continúa entre los pilares de arenisca de Zhangjiajie y la Puerta del Cielo de Tianmen, y luego pasa a la densidad urbana de Chongqing y al ecosistema tecnológico de Shenzhen.
+
+No se trata de una ruta clásica por palacios y ciudades históricas. El viaje prioriza experiencias visuales, paisajes extremos, infraestructura contemporánea y tecnología cotidiana. Shanghai funciona principalmente como puerta de entrada, mientras que Hong Kong se usa como salida internacional cuando resulte conveniente.
+
+El ritmo es intenso. Funciona mejor para una persona con equipaje moderado, interés por caminar, disposición a usar trenes y flexibilidad frente al clima de montaña. La versión de 12 días es viable, pero no debe presentarse como relajada.
+
+## 4.2 Por qué elegirlo
+
+```yaml
+reasons:
+  - title: "Paisajes que no se repiten"
+    description: "Wangxian Valley, Zhangjiajie y Tianmen ofrecen tres experiencias naturales y visuales claramente distintas."
+  - title: "La ciudad más vertical del recorrido"
+    description: "Chongqing combina desniveles, monorriel, puentes, rascacielos y un skyline nocturno difícil de comparar con otra ciudad."
+  - title: "Tecnología tangible"
+    description: "Huaqiangbei permite recorrer el ecosistema de componentes, reparación, prototipos, drones, impresión 3D y electrónica."
+  - title: "Ruta sin destinos de relleno"
+    description: "Cada parada cumple una función concreta dentro del concepto general."
+  - title: "Costo interno controlable"
+    description: "Los trenes de segunda clase, hoteles simples bien ubicados y comida local permiten mantener un gasto razonable."
+```
+
+## 4.3 Ideal para
+
+```yaml
+idealFor:
+  - "Viajeros interesados en paisajes dramáticos y fotografía."
+  - "Personas atraídas por megaciudades, tecnología y urbanismo."
+  - "Quienes aceptan caminar bastante y realizar traslados largos."
+  - "Una persona que prefiera experiencias visuales y nocturnas antes que turismo histórico tradicional."
+```
+
+## 4.4 No ideal para
+
+```yaml
+notIdealFor:
+  - "Quienes buscan un viaje lento o con muchas mañanas libres."
+  - "Personas con dificultades importantes para caminar, subir escaleras o tolerar desniveles."
+  - "Viajeros que consideran imprescindibles Beijing, la Gran Muralla, Xi'an o los principales monumentos imperiales."
+  - "Quienes no desean cambiar de hotel varias veces."
+```
+
+---
+
+# 5. Recorrido general
+
+```yaml
+route:
+  - order: 1
+    city: "Shanghai"
+    country: "China"
+    nights: 1
+    role: "Puerta de entrada y recuperación inicial."
+    description: "Llegada internacional y conexión segura hacia Shangrao al día siguiente."
+    transportFromPrevious: "Vuelo internacional"
+    transferDuration: null
+    arrivalMethod: "Vuelo"
+    departureMethod: "Tren de alta velocidad"
+
+  - order: 2
+    city: "Shangrao / Wangxian Valley"
+    country: "China"
+    nights: 1
+    role: "Experiencia de arquitectura de fantasía y valle iluminado."
+    description: "Visita desde la tarde hasta la noche, priorizando el encendido y los miradores."
+    transportFromPrevious: "Tren y traslado regional"
+    transferDuration: "Aproximadamente 3 a 5 horas en total, según conexión"
+    arrivalMethod: "Tren + bus o vehículo compartido"
+    departureMethod: "Bus o vehículo compartido + tren"
+
+  - order: 3
+    city: "Zhangjiajie / Wulingyuan"
+    country: "China"
+    nights: 3
+    role: "Núcleo natural del viaje."
+    description: "Dos días en el parque de Wulingyuan y una jornada separada para Tianmen Mountain."
+    transportFromPrevious: "Tren, posiblemente con combinación"
+    transferDuration: "Aproximadamente 6 a 8 horas"
+    arrivalMethod: "Tren"
+    departureMethod: "Tren"
+
+  - order: 4
+    city: "Chongqing"
+    country: "China"
+    nights: 3
+    role: "Megaciudad vertical, gastronomía y vida nocturna."
+    description: "Dos días completos y una primera noche para explorar la ciudad sin reducirla a una sola postal."
+    transportFromPrevious: "Tren"
+    transferDuration: "Aproximadamente 3 a 5 horas"
+    arrivalMethod: "Tren"
+    departureMethod: "Tren de alta velocidad"
+
+  - order: 5
+    city: "Shenzhen"
+    country: "China"
+    nights: 3
+    role: "Tecnología, arquitectura contemporánea y salida por el sur."
+    description: "Huaqiangbei, Futian, Nanshan y conexión final con Hong Kong."
+    transportFromPrevious: "Tren de alta velocidad"
+    transferDuration: "Aproximadamente 6 a 8 horas"
+    arrivalMethod: "Tren"
+    departureMethod: "Tren o cruce terrestre hacia Hong Kong"
+```
+
+---
+
+# 6. Etapas o destinos detallados
+
+```yaml
+destinations:
+  - id: shanghai-entry
+    city: "Shanghai"
+    country: "China"
+    nights: 1
+    pace: relaxed
+    role: "Entrada logística"
+    description: "Primera noche para absorber retrasos del vuelo y evitar una conexión ferroviaria demasiado ajustada."
+    whyIncluded: "Reduce el riesgo de perder un tren y permite descansar después del vuelo intercontinental."
+    freeTime: "Solo si el horario de llegada lo permite."
+    notes:
+      - "No se considera una visita completa a Shanghai."
+    activities:
+      - name: "Paseo breve opcional"
+        category: urban
+        description: "Recorrido cercano al alojamiento o cena en una zona bien conectada."
+        estimatedDuration: "1 a 2 horas"
+        optional: true
+        estimatedCostPerPerson: 10
+        status: estimated
+    nightlife: []
+    foodHighlights:
+      - name: "Primera cena local"
+        type: "comida casual"
+        description: "Plato sencillo cerca del hotel o estación."
+        estimatedCostPerPerson: 8
+        status: estimated
+    images:
+      - src: null
+        alt: "Skyline nocturno de Shanghai visto desde el río"
+        caption: "Shanghai como puerta de entrada al viaje"
+        size: wide
+        orientation: landscape
+        status: pending
+
+  - id: wangxian-valley
+    city: "Shangrao / Wangxian Valley"
+    country: "China"
+    nights: 1
+    pace: moderate
+    role: "China de fantasía"
+    description: "Valle con arquitectura inspirada en estilos tradicionales, cascadas, río, senderos e iluminación nocturna."
+    whyIncluded: "Su atmósfera no se repite en los demás destinos y es uno de los principales argumentos visuales del viaje."
+    freeTime: "Limitado; la visita se concentra entre la tarde y la noche."
+    notes:
+      - "Conviene comparar alojamiento dentro del complejo contra pensiones próximas."
+      - "Confirmar el último transporte regional si no se duerme dentro."
+    activities:
+      - name: "Recorrido de Wangxian Valley"
+        category: culture
+        description: "Calles, talleres, cascadas, casas sobre el acantilado y miradores."
+        estimatedDuration: "5 a 7 horas"
+        optional: false
+        estimatedCostPerPerson: 17
+        status: estimated
+      - name: "Iluminación nocturna"
+        category: nightlife
+        description: "Permanecer hasta el encendido para ver el valle iluminado."
+        estimatedDuration: "1 a 2 horas"
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+    nightlife:
+      - name: "Wangxian iluminado"
+        type: "paseo nocturno"
+        description: "Recorrido por puentes, río y arquitectura iluminada."
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+    foodHighlights:
+      - name: "Comida regional de Jiangxi"
+        type: "cocina local"
+        description: "Platos sencillos dentro o cerca del valle."
+        estimatedCostPerPerson: 12
+        status: estimated
+    images:
+      - src: null
+        alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
+        caption: "Wangxian Valley al anochecer"
+        size: large
+        orientation: portrait
+        status: pending
+      - src: null
+        alt: "Río, puente y construcciones tradicionales en Wangxian Valley"
+        caption: "El valle antes del encendido nocturno"
+        size: medium
+        orientation: landscape
+        status: pending
+
+  - id: zhangjiajie
+    city: "Zhangjiajie / Wulingyuan"
+    country: "China"
+    nights: 3
+    pace: intense
+    role: "Gran experiencia natural"
+    description: "Bosque de pilares de arenisca, miradores, buses internos, teleféricos y la jornada separada de Tianmen Mountain."
+    whyIncluded: "Es el principal destino natural y necesita al menos dos días de parque más Tianmen."
+    freeTime: "Bajo; se concentra en las noches."
+    notes:
+      - "El orden de Yuanjiajie y Tianzi Mountain debe ajustarse según visibilidad."
+      - "En noviembre pueden presentarse niebla, frío y cambios rápidos de clima."
+    activities:
+      - name: "Yuanjiajie y ascensor Bailong"
+        category: nature
+        description: "Circuito de miradores y pilares verticales."
+        estimatedDuration: "7 a 9 horas"
+        optional: false
+        estimatedCostPerPerson: 45
+        status: estimated
+      - name: "Tianzi Mountain"
+        category: nature
+        description: "Segundo día completo en el parque, ajustando el circuito según clima y colas."
+        estimatedDuration: "7 a 9 horas"
+        optional: false
+        estimatedCostPerPerson: 20
+        status: estimated
+      - name: "Tianmen Mountain"
+        category: adventure
+        description: "Teleférico, pasarelas, Tianmen Cave y 999 escalones."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: 40
+        status: estimated
+    nightlife:
+      - name: "Centro de Zhangjiajie"
+        type: "paseo y cena"
+        description: "Noche tranquila después de las jornadas de montaña."
+        optional: true
+        estimatedCostPerPerson: 10
+        status: estimated
+    foodHighlights:
+      - name: "Comida de Hunan"
+        type: "cocina regional picante"
+        description: "Platos especiados, arroz y especialidades locales."
+        estimatedCostPerPerson: 12
+        status: estimated
+    images:
+      - src: null
+        alt: "Pilares de arenisca de Zhangjiajie entre nubes"
+        caption: "Los paisajes verticales de Wulingyuan"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Puerta del Cielo en Tianmen Mountain"
+        caption: "Tianmen Cave y los 999 escalones"
+        size: large
+        orientation: portrait
+        status: pending
+      - src: null
+        alt: "Teleférico de Tianmen sobre las montañas"
+        caption: "La jornada de montaña más espectacular del viaje"
+        size: medium
+        orientation: landscape
+        status: pending
+
+  - id: chongqing
+    city: "Chongqing"
+    country: "China"
+    nights: 3
+    pace: moderate
+    role: "Ciudad vertical y nocturna"
+    description: "Megaciudad montañosa de varios niveles, con monorriel, puentes, ríos y un skyline muy potente."
+    whyIncluded: "Es la experiencia urbana más extrema y visual del itinerario."
+    freeTime: "Medio; permite improvisar barrios y miradores."
+    notes:
+      - "La topografía vuelve engañosas las distancias."
+      - "Evitar sobrecargar ambos días completos."
+    activities:
+      - name: "Liziba y Eling"
+        category: urban
+        description: "Monorriel atravesando un edificio, miradores y desniveles urbanos."
+        estimatedDuration: "4 a 5 horas"
+        optional: false
+        estimatedCostPerPerson: 5
+        status: estimated
+      - name: "Jiefangbei y Hongya Cave"
+        category: nightlife
+        description: "Centro urbano y recorrido nocturno junto al río."
+        estimatedDuration: "3 a 4 horas"
+        optional: false
+        estimatedCostPerPerson: 5
+        status: estimated
+      - name: "Ciqikou o Huguang Guild Hall"
+        category: culture
+        description: "Una experiencia histórica y de barrio para equilibrar el perfil futurista."
+        estimatedDuration: "3 a 5 horas"
+        optional: true
+        estimatedCostPerPerson: 12
+        status: estimated
+      - name: "Teleférico del Yangtsé"
+        category: urban
+        description: "Cruce panorámico sujeto a operación y colas."
+        estimatedDuration: "1 a 2 horas"
+        optional: true
+        estimatedCostPerPerson: 4
+        status: estimated
+    nightlife:
+      - name: "Hongya Cave y riberas"
+        type: "paseo nocturno"
+        description: "Arquitectura iluminada, puentes y vistas sobre los ríos."
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+      - name: "Crucero nocturno"
+        type: "paseo fluvial"
+        description: "Vista opcional del skyline desde el agua."
+        optional: true
+        estimatedCostPerPerson: 25
+        status: estimated
+    foodHighlights:
+      - name: "Hot pot de Chongqing"
+        type: "gastronomía regional"
+        description: "Experiencia central de la ciudad; ajustar nivel de picante."
+        estimatedCostPerPerson: 20
+        status: estimated
+      - name: "Xiaomian"
+        type: "fideos"
+        description: "Comida económica y típica para desayuno o almuerzo."
+        estimatedCostPerPerson: 4
+        status: estimated
+    images:
+      - src: null
+        alt: "Skyline nocturno de Chongqing junto a los ríos"
+        caption: "La megaciudad vertical de noche"
+        size: full
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Monorriel de Liziba atravesando un edificio"
+        caption: "Infraestructura y densidad urbana en Chongqing"
+        size: medium
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Hongya Cave iluminada"
+        caption: "Una de las noches visualmente más fuertes del viaje"
+        size: large
+        orientation: portrait
+        status: pending
+
+  - id: shenzhen
+    city: "Shenzhen"
+    country: "China"
+    nights: 3
+    pace: moderate
+    role: "Tecnología y cierre contemporáneo"
+    description: "Huaqiangbei, Futian, Nanshan, Shenzhen Bay y conexión hacia Hong Kong."
+    whyIncluded: "Permite observar tecnología y fabricación electrónica como parte de la vida cotidiana."
+    freeTime: "Medio durante el último día, condicionado por el horario de salida."
+    notes:
+      - "Verificar compatibilidad, garantía y restricciones aduaneras antes de comprar tecnología."
+    activities:
+      - name: "Huaqiangbei"
+        category: technology
+        description: "Recorrido por SEG Plaza y centros de electrónica, componentes, reparación, drones y robótica."
+        estimatedDuration: "6 a 8 horas"
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+      - name: "Futian nocturno"
+        category: urban
+        description: "Arquitectura contemporánea y paseo por el centro cívico."
+        estimatedDuration: "2 a 3 horas"
+        optional: false
+        estimatedCostPerPerson: 5
+        status: estimated
+      - name: "Nanshan y Shenzhen Bay"
+        category: urban
+        description: "Zona moderna, espacios públicos y cierre del viaje."
+        estimatedDuration: "4 a 6 horas"
+        optional: true
+        estimatedCostPerPerson: 8
+        status: estimated
+    nightlife:
+      - name: "Futian iluminado"
+        type: "paseo urbano"
+        description: "Arquitectura, centros comerciales y espacios públicos nocturnos."
+        optional: false
+        estimatedCostPerPerson: 0
+        status: estimated
+    foodHighlights:
+      - name: "Cocina cantonesa casual"
+        type: "gastronomía regional"
+        description: "Dim sum, carnes asadas, arroz y platos menos picantes que en Chongqing."
+        estimatedCostPerPerson: 15
+        status: estimated
+    images:
+      - src: null
+        alt: "Mercados de electrónica de Huaqiangbei"
+        caption: "El ecosistema de hardware de Shenzhen"
+        size: large
+        orientation: landscape
+        status: pending
+      - src: null
+        alt: "Distrito de Futian iluminado de noche"
+        caption: "El cierre futurista del recorrido"
+        size: wide
+        orientation: landscape
+        status: pending
+```
+
+---
+
+# 7. Itinerario día por día
+
+```yaml
+itinerary:
+  - day: 1
+    city: "Shanghai"
+    title: "Llegada a China"
+    summary: "Ingreso al país, traslado al alojamiento y descanso."
+    intensity: relaxed
+    transport: "Vuelo internacional y transporte urbano"
+    freeTimeHours: 1
+    morning: []
+    afternoon:
+      - "Llegada y trámites migratorios."
+      - "Traslado al hotel."
+    evening:
+      - "Cena sencilla y preparación del tren del día siguiente."
+    notes:
+      - "No reservar una conexión ferroviaria ajustada después del vuelo."
+    images:
+      - src: null
+        alt: "Shanghai de noche"
+        caption: "Primera escala del recorrido"
+        status: pending
+
+  - day: 2
+    city: "Shangrao / Wangxian Valley"
+    title: "El valle de fantasía"
+    summary: "Tren a Shangrao, traslado regional y visita hasta la iluminación nocturna."
+    intensity: intense
+    transport: "Tren de alta velocidad + bus o vehículo compartido"
+    freeTimeHours: 0
+    morning:
+      - "Tren desde Shanghai hacia Shangrao."
+    afternoon:
+      - "Traslado a Wangxian Valley."
+      - "Recorrido de río, cascadas, calles y miradores."
+    evening:
+      - "Iluminación nocturna y cena."
+    notes:
+      - "Dormir en el valle o en una pensión próxima para no depender del último bus."
+    images:
+      - src: null
+        alt: "Wangxian Valley iluminado"
+        caption: "La China de fantasía"
+        status: pending
+
+  - day: 3
+    city: "Zhangjiajie / Wulingyuan"
+    title: "La jornada logística más larga"
+    summary: "Regreso a Shangrao y viaje hacia Zhangjiajie."
+    intensity: intense
+    transport: "Traslado regional + tren, posiblemente con combinación"
+    freeTimeHours: 0
+    morning:
+      - "Salida de Wangxian Valley."
+    afternoon:
+      - "Viaje ferroviario hacia Zhangjiajie."
+    evening:
+      - "Check-in y cena cerca del alojamiento."
+    notes:
+      - "Llevar comida y agua para el trayecto."
+    images: []
+
+  - day: 4
+    city: "Wulingyuan"
+    title: "Yuanjiajie y los pilares verticales"
+    summary: "Primer día completo en Zhangjiajie."
+    intensity: intense
+    transport: "Buses internos, ascensor y caminata"
+    freeTimeHours: 0
+    morning:
+      - "Ingreso temprano al parque."
+      - "Ascensor Bailong."
+    afternoon:
+      - "Miradores de Yuanjiajie y circuito interno."
+    evening:
+      - "Cena y descanso."
+    notes:
+      - "Cambiar el orden con el día 5 si la visibilidad es mejor en otra zona."
+    images:
+      - src: null
+        alt: "Pilares de Zhangjiajie"
+        caption: "El gran paisaje natural del viaje"
+        status: pending
+
+  - day: 5
+    city: "Wulingyuan"
+    title: "Tianzi Mountain"
+    summary: "Segundo día de parque con nuevos miradores y sectores complementarios."
+    intensity: intense
+    transport: "Buses internos, teleférico y caminata"
+    freeTimeHours: 0
+    morning:
+      - "Ingreso temprano y traslado al sector elegido."
+    afternoon:
+      - "Tianzi Mountain y miradores complementarios."
+    evening:
+      - "Traslado o alojamiento en Zhangjiajie ciudad, según la logística de Tianmen."
+    notes:
+      - "No intentar cubrir cada sendero; priorizar vistas y conexiones eficientes."
+    images:
+      - src: null
+        alt: "Montañas de Tianzi entre nubes"
+        caption: "Segundo día de naturaleza vertical"
+        status: pending
+
+  - day: 6
+    city: "Zhangjiajie"
+    title: "Tianmen Mountain y la Puerta del Cielo"
+    summary: "Teleférico, pasarelas, cueva y 999 escalones."
+    intensity: intense
+    transport: "Teleférico, buses internos y caminata"
+    freeTimeHours: 0
+    morning:
+      - "Ingreso en el horario reservado."
+      - "Ascenso por teleférico o circuito asignado."
+    afternoon:
+      - "Senderos de acantilado, Tianmen Cave y descenso."
+    evening:
+      - "Cena y descanso."
+    notes:
+      - "No combinar con un tren temprano esa misma tarde."
+    images:
+      - src: null
+        alt: "Puerta del Cielo de Tianmen"
+        caption: "La jornada de montaña más espectacular"
+        status: pending
+
+  - day: 7
+    city: "Chongqing"
+    title: "De las montañas a la megaciudad"
+    summary: "Tren a Chongqing y primera salida nocturna."
+    intensity: moderate
+    transport: "Tren + metro"
+    freeTimeHours: 1
+    morning:
+      - "Tren hacia Chongqing."
+    afternoon:
+      - "Check-in y paseo por Jiefangbei."
+    evening:
+      - "Hongya Cave y vistas nocturnas sobre los ríos."
+    notes:
+      - "Confirmar la estación exacta de llegada."
+    images:
+      - src: null
+        alt: "Chongqing iluminado"
+        caption: "Cambio total de escala"
+        status: pending
+
+  - day: 8
+    city: "Chongqing"
+    title: "Chongqing vertical"
+    summary: "Monorriel, desniveles urbanos y arquitectura contemporánea."
+    intensity: moderate
+    transport: "Metro, monorriel y caminata"
+    freeTimeHours: 1
+    morning:
+      - "Liziba."
+      - "Eling o mirador equivalente."
+    afternoon:
+      - "Barrios de varios niveles y Raffles City."
+    evening:
+      - "Paseo ribereño o crucero nocturno opcional."
+    notes:
+      - "La topografía puede volver lento un recorrido que parece corto en el mapa."
+    images:
+      - src: null
+        alt: "Monorriel de Chongqing"
+        caption: "La ciudad construida en varios niveles"
+        status: pending
+
+  - day: 9
+    city: "Chongqing"
+    title: "Barrios, historia y segunda noche"
+    summary: "Día más flexible para profundizar la ciudad."
+    intensity: moderate
+    transport: "Metro y caminata"
+    freeTimeHours: 2
+    morning:
+      - "Ciqikou o Huguang Guild Hall."
+    afternoon:
+      - "Zona ribereña y teleférico del Yangtsé si está operativo."
+    evening:
+      - "Hot pot y último recorrido nocturno."
+    notes:
+      - "Puede convertirse en medio día de descanso si aparece cansancio acumulado."
+    images:
+      - src: null
+        alt: "Hot pot y calles de Chongqing"
+        caption: "La ciudad también se entiende a través de su comida"
+        status: pending
+
+  - day: 10
+    city: "Shenzhen"
+    title: "Tren hacia el sur tecnológico"
+    summary: "Traslado largo a Shenzhen y paseo breve por Futian."
+    intensity: intense
+    transport: "Tren de alta velocidad + metro"
+    freeTimeHours: 0
+    morning:
+      - "Salida temprana desde Chongqing."
+    afternoon:
+      - "Continuación del viaje y llegada a Shenzhen."
+    evening:
+      - "Check-in y paseo por Futian."
+    notes:
+      - "Llevar comida y entretenimiento para el tren."
+    images:
+      - src: null
+        alt: "Distrito de Futian"
+        caption: "Llegada a la China tecnológica"
+        status: pending
+
+  - day: 11
+    city: "Shenzhen"
+    title: "Huaqiangbei"
+    summary: "Día completo dedicado al ecosistema de hardware."
+    intensity: moderate
+    transport: "Metro y caminata"
+    freeTimeHours: 1
+    morning:
+      - "SEG Plaza y primeros centros comerciales de electrónica."
+    afternoon:
+      - "Componentes, reparación, impresión 3D, drones y robótica."
+    evening:
+      - "Cena y paseo urbano."
+    notes:
+      - "No dedicar el día solo a comprar; observar cómo se organiza el ecosistema."
+    images:
+      - src: null
+        alt: "Tiendas de electrónica de Huaqiangbei"
+        caption: "Tecnología tangible y cotidiana"
+        status: pending
+
+  - day: 12
+    city: "Shenzhen / Hong Kong"
+    title: "Shenzhen moderna y salida"
+    summary: "Nanshan o Shenzhen Bay según horario y conexión final con Hong Kong."
+    intensity: moderate
+    transport: "Metro + tren o cruce terrestre"
+    freeTimeHours: 2
+    morning:
+      - "Paseo por Nanshan o Shenzhen Bay, si el horario lo permite."
+    afternoon:
+      - "Traslado hacia Hong Kong."
+    evening:
+      - "Vuelo de regreso o noche adicional no incluida."
+    notes:
+      - "Reservar margen amplio para frontera, equipaje y aeropuerto."
+    images:
+      - src: null
+        alt: "Shenzhen Bay y skyline moderno"
+        caption: "Cierre contemporáneo del viaje"
+        status: pending
+```
+
+---
+
+# 8. Presupuesto resumido
+
+```yaml
+budget:
+  currency: USD
+  travelers: 1
+  priceBasis: per-person
+  disclaimer: "Estimación orientativa para noviembre de 2026, viajando sola y ocupando habitación individual. No incluye compras personales ni el vuelo internacional, que queda pendiente hasta definir fechas concretas."
+  lastUpdated: 2026-06-30
+
+  items:
+    - category: flights
+      label: "Vuelos internacionales"
+      amountPerPerson: null
+      note: "Buenos Aires–Shanghai y Hong Kong–Buenos Aires. Debe cotizarse con fechas exactas; es la variable principal del viaje."
+      status: pending
+
+    - category: accommodation
+      label: "Hospedaje"
+      amountPerPerson: 405
+      note: "11 noches en habitación privada, bien ubicada, con baño privado y buenas reseñas, tomando tarifas locales visibles para mayo y evitando tanto lo más barato como cadenas internacionales. Rango razonable: USD 350–460 por persona."
+      status: estimated
+
+    - category: transport
+      label: "Transporte interno"
+      amountPerPerson: 310
+      note: "Trenes de segunda clase, conexión a Wangxian, traslado Shenzhen–Hong Kong y transporte urbano. Rango razonable: USD 260–370."
+      status: estimated
+
+    - category: food
+      label: "Comida"
+      amountPerPerson: 300
+      note: "Promedio de USD 25 diarios, mezclando comida local económica con algunas cenas más completas."
+      status: estimated
+
+    - category: activities
+      label: "Entradas y actividades"
+      amountPerPerson: 180
+      note: "Wangxian Valley, Zhangjiajie, teleféricos o ascensores, Tianmen y actividades urbanas opcionales."
+      status: estimated
+
+    - category: insurance
+      label: "Seguro de viaje"
+      amountPerPerson: 80
+      note: "Estimación básica; depende de edad, cobertura y duración total incluyendo vuelos."
+      status: estimated
+
+    - category: visa
+      label: "Visa"
+      amountPerPerson: 0
+      note: "Para pasaporte argentino ordinario, la política vigente permite hasta 30 días sin visa durante 2026. Debe reconfirmarse antes de comprar."
+      status: estimated
+
+    - category: extras
+      label: "Extras"
+      amountPerPerson: 100
+      note: "Lavandería, snacks, pequeñas diferencias tarifarias y gastos no previstos. No incluye compras tecnológicas."
+      status: estimated
+
+  contingency:
+    amountPerPerson: 138
+    percentage: 10
+    note: "Margen aproximado del 10 % sobre el subtotal terrestre para cambios de precio o transportes adicionales."
+
+  calculatedTotals:
+    subtotalPerPerson: 1375
+    totalPerPerson: 1513
+    totalGroup: 1513
+    internationalFlightsIncluded: false
+```
+
+### Lectura rápida del presupuesto
+
+- **Hospedaje:** aproximadamente **USD 405 por persona**.
+- **Comida:** aproximadamente **USD 300 por persona**.
+- **Transporte interno:** aproximadamente **USD 310 por persona**.
+- **Entradas:** aproximadamente **USD 180 por persona**.
+- **Total terrestre con seguro, extras y contingencia:** aproximadamente **USD 1.513 por persona**.
+- **Total para una persona, sin vuelos internacionales:** aproximadamente **USD 1.513**.
+
+---
+
+# 9. Detalle opcional de vuelos
+
+```yaml
+flights:
+  - type: international
+    from: "Buenos Aires"
+    to: "Shanghai"
+    departureDate: null
+    arrivalDate: null
+    airline: null
+    stops: null
+    duration: null
+    baggageIncluded: null
+    amountPerPerson: null
+    source: null
+    status: pending
+
+  - type: international
+    from: "Hong Kong"
+    to: "Buenos Aires"
+    departureDate: null
+    arrivalDate: null
+    airline: null
+    stops: null
+    duration: null
+    baggageIncluded: null
+    amountPerPerson: null
+    source: null
+    status: pending
+```
+
+---
+
+# 10. Detalle opcional de alojamientos
+
+> Nota de plataforma: Airbnb suspendió las publicaciones de alojamientos dentro de China continental. Para esta ruta se recomienda comparar Booking.com con Trip.com y, cuando resulte accesible, Tujia. Los importes siguientes son referencias de gama media y no tarifas confirmadas para fechas específicas.
+
+
+```yaml
+accommodations:
+  - city: "Shanghai"
+    nights: 1
+    type: "Hotel cómodo de gama media"
+    area: "Cerca de una estación con conexión hacia Hongqiao"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: false
+    amountPerNight: 50
+    amountPerPerson: 50
+    totalAmount: 50
+    source: "Estimación de mercado"
+    status: estimated
+    notes: "Priorizar logística por encima de atractivo turístico."
+
+  - city: "Wangxian Valley / alrededores"
+    nights: 1
+    type: "Pensión u hotel con buenas reseñas"
+    area: "Zona próxima al valle"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: false
+    amountPerNight: 35
+    amountPerPerson: 35
+    totalAmount: 35
+    source: "Estimación de mercado"
+    status: estimated
+    notes: "Dormir dentro del complejo puede aumentar mucho el precio."
+
+  - city: "Wulingyuan / Zhangjiajie"
+    nights: 3
+    type: "Hotel local o guesthouse de gama media"
+    area: "Cerca de la entrada de Wulingyuan y luego Zhangjiajie ciudad si conviene"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: false
+    amountPerNight: 25
+    amountPerPerson: 75
+    totalAmount: 75
+    source: "Estimación basada en tarifas publicadas para hoteles próximos a Wulingyuan"
+    status: estimated
+    notes: "La ubicación correcta ahorra tiempo de buses y taxis."
+
+  - city: "Chongqing"
+    nights: 3
+    type: "Hotel local moderno con buenas reseñas"
+    area: "Jiefangbei o zona conectada por metro"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: false
+    amountPerNight: 30
+    amountPerPerson: 90
+    totalAmount: 90
+    source: "Estimación basada en promedios publicados de hoteles 3 estrellas"
+    status: estimated
+    notes: "Evitar ubicaciones que parezcan cercanas en el mapa pero exijan grandes desniveles."
+
+  - city: "Shenzhen"
+    nights: 3
+    type: "Hotel local de gama media"
+    area: "Futian o cerca de Huaqiangbei"
+    rooms: 1
+    peoplePerRoom: 1
+    breakfastIncluded: false
+    amountPerNight: 52
+    amountPerPerson: 156
+    totalAmount: 156
+    source: "Estimación de mercado"
+    status: estimated
+    notes: "Priorizar acceso al metro y conexión final a Hong Kong."
+```
+
+---
+
+# 11. Detalle opcional de transportes
+
+```yaml
+transports:
+  - from: "Shanghai"
+    to: "Shangrao"
+    type: train
+    duration: "2.5 a 4 horas"
+    overnight: false
+    amountPerPerson: 55
+    source: "Estimación de tarifa de segunda clase"
+    status: estimated
+    notes: "Confirmar estación exacta y horario al abrirse la venta."
+
+  - from: "Shangrao"
+    to: "Wangxian Valley"
+    type: bus
+    duration: "1 a 1.5 horas por tramo"
+    overnight: false
+    amountPerPerson: 15
+    source: "Estimación regional"
+    status: estimated
+    notes: "Puede reemplazarse por vehículo compartido."
+
+  - from: "Shangrao"
+    to: "Zhangjiajie"
+    type: train
+    duration: "5.5 a 8 horas"
+    overnight: false
+    amountPerPerson: 75
+    source: "Estimación de tarifa con posible combinación"
+    status: estimated
+    notes: "Es el tramo menos directo del recorrido."
+
+  - from: "Zhangjiajie"
+    to: "Chongqing"
+    type: train
+    duration: "3 a 5 horas"
+    overnight: false
+    amountPerPerson: 45
+    source: "Estimación de segunda clase"
+    status: estimated
+    notes: "Confirmar estación de salida y llegada."
+
+  - from: "Chongqing"
+    to: "Shenzhen"
+    type: train
+    duration: "6 a 8 horas"
+    overnight: false
+    amountPerPerson: 80
+    source: "Estimación de segunda clase"
+    status: estimated
+    notes: "Salida temprana recomendada."
+
+  - from: "Shenzhen"
+    to: "Hong Kong"
+    type: train
+    duration: "1 a 2.5 horas según ruta y frontera"
+    overnight: false
+    amountPerPerson: 25
+    source: "Estimación"
+    status: estimated
+    notes: "Agregar margen migratorio y traslado al aeropuerto."
+
+  - from: "Varias ciudades"
+    to: "Atracciones y estaciones"
+    type: local-transport
+    duration: null
+    overnight: false
+    amountPerPerson: 15
+    source: "Estimación consolidada"
+    status: estimated
+    notes: "Metro, buses y algunos taxis o vehículos por aplicación."
+```
+
+---
+
+# 12. Ritmo del viaje
+
+```yaml
+paceSummary:
+  relaxedDays: 1
+  moderateDays: 5
+  intenseDays: 6
+  accommodationChanges: 4
+  longTransfers: 2
+  activityNights: 6
+  freeTimeDays: 0
+  description: "El cansancio se concentra en el traslado Wangxian–Zhangjiajie, los tres días consecutivos de montaña y el tren Chongqing–Shenzhen. Chongqing aporta el único margen real para reducir actividades sin afectar el concepto. Para relajar el viaje habría que sumar dos días o eliminar una noche urbana y reorganizar la entrada."
+```
+
+---
+
+# 13. Vida nocturna
+
+```yaml
+nightlifeSummary:
+  overview: "La noche forma parte del contenido visual del viaje: Wangxian iluminado, Hongya Cave, skyline de Chongqing y Futian."
+  quietNights: 5
+  urbanNights: 5
+  partyOptionalNights: 1
+
+  experiences:
+    - city: "Wangxian Valley"
+      name: "Valle iluminado"
+      type: "paseo nocturno"
+      description: "Puentes, río y construcciones sobre el acantilado."
+      optional: false
+      estimatedCostPerPerson: 0
+      status: estimated
+
+    - city: "Chongqing"
+      name: "Hongya Cave y riberas"
+      type: "paseo urbano"
+      description: "La principal noche fotográfica del recorrido."
+      optional: false
+      estimatedCostPerPerson: 0
+      status: estimated
+
+    - city: "Chongqing"
+      name: "Crucero nocturno"
+      type: "paseo fluvial"
+      description: "Vista del skyline desde los ríos."
+      optional: true
+      estimatedCostPerPerson: 25
+      status: estimated
+
+    - city: "Shenzhen"
+      name: "Futian nocturno"
+      type: "arquitectura contemporánea"
+      description: "Centro cívico, rascacielos y espacios urbanos iluminados."
+      optional: false
+      estimatedCostPerPerson: 0
+      status: estimated
+```
+
+---
+
+# 14. Gastronomía
+
+```yaml
+gastronomy:
+  overview: "La comida puede mantenerse económica, con el mayor gasto concentrado en hot pot y algunas cenas completas."
+  dailyBudgetLow: 15
+  dailyBudgetMedium: 25
+  dailyBudgetComfortable: 40
+
+  experiences:
+    - city: "Shangrao / Wangxian"
+      name: "Cocina de Jiangxi"
+      type: "regional"
+      description: "Platos de arroz, vegetales, carnes y preparaciones especiadas."
+      estimatedCostPerPerson: 12
+      status: estimated
+
+    - city: "Zhangjiajie"
+      name: "Cocina de Hunan"
+      type: "regional picante"
+      description: "Sabores intensos y platos adecuados para recuperar energía después del parque."
+      estimatedCostPerPerson: 12
+      status: estimated
+
+    - city: "Chongqing"
+      name: "Hot pot"
+      type: "experiencia gastronómica"
+      description: "La comida más representativa de la ciudad."
+      estimatedCostPerPerson: 20
+      status: estimated
+
+    - city: "Chongqing"
+      name: "Xiaomian"
+      type: "fideos"
+      description: "Opción típica y económica."
+      estimatedCostPerPerson: 4
+      status: estimated
+
+    - city: "Shenzhen"
+      name: "Dim sum y cocina cantonesa"
+      type: "regional"
+      description: "Cierre menos picante y con buena variedad de platos para compartir."
+      estimatedCostPerPerson: 15
+      status: estimated
+
+  possibleDifficulties:
+    - "Barreras de idioma en menús pequeños."
+    - "Nivel de picante elevado en Hunan y Chongqing."
+    - "Algunos pagos o pedidos pueden depender de aplicaciones locales."
+```
+
+---
+
+# 15. Logística y requisitos
+
+```yaml
+logistics:
+  internationalFlightDuration:
+    value: null
+    status: pending
+    note: "Depende de la combinación elegida desde Buenos Aires."
+  internalFlights: 0
+  trainTrips: 5
+  busTrips: 2
+  longestTransfer: "Chongqing–Shenzhen o Shangrao–Zhangjiajie, según el horario final"
+  accommodationChanges: 4
+
+requirements:
+  visa:
+    value: "Exención de visa por hasta 30 días para titulares de pasaporte argentino ordinario durante la política vigente en 2026."
+    status: estimated
+    validAsOf: 2026-06-30
+    note: "Reconfirmar antes de emitir vuelos porque las políticas migratorias pueden cambiar."
+  passport:
+    value: "Pasaporte ordinario vigente durante toda la estadía; se recomienda margen adicional de vigencia."
+    status: estimated
+    validAsOf: 2026-06-30
+  vaccines:
+    value: "No se incorporan vacunas obligatorias específicas en esta propuesta."
+    status: pending
+    note: "Consultar requisitos sanitarios según escalas aéreas y situación personal."
+  travelInsurance:
+    value: "Recomendado con cobertura médica, demoras y actividades de montaña."
+    status: estimated
+  connectivity:
+    value: "eSIM o roaming compatible, mapas sin conexión, traductor y direcciones guardadas en chino."
+    status: estimated
+  paymentMethods:
+    value: "Configurar Alipay y/o WeChat Pay con tarjeta internacional y llevar una alternativa."
+    status: estimated
+  language:
+    value: "Mandarín; guardar nombres de estaciones, hoteles y atracciones en chino."
+    status: estimated
+  restrictions:
+    value: "Verificar compatibilidad, garantía, baterías, drones y límites aduaneros antes de comprar electrónica."
+    status: estimated
+```
+
+---
+
+# 16. Fortalezas y concesiones
+
+```yaml
+strengths:
+  - "Selección de destinos coherente y sin paradas agregadas solo por fama."
+  - "Muy alto impacto visual."
+  - "Equilibrio entre naturaleza, urbanismo y tecnología."
+  - "No necesita vuelos internos."
+  - "Comida y transporte urbano relativamente accesibles."
+
+tradeoffs:
+  - "Ritmo intenso y poco margen meteorológico."
+  - "Dos traslados largos consumen gran parte del día."
+  - "No incluye Beijing, la Gran Muralla ni Xi'an."
+  - "El costo final depende mucho del vuelo internacional."
+  - "Requiere varias reservas y buena organización digital."
+
+risks:
+  - title: "Niebla o baja visibilidad"
+    description: "Puede reducir las vistas en Zhangjiajie y Tianmen."
+    impact: high
+    status: estimated
+
+  - title: "Conexión ferroviaria compleja"
+    description: "El tramo Shangrao–Zhangjiajie puede exigir combinación y sufrir cambios de horario."
+    impact: medium
+    status: estimated
+
+  - title: "Cansancio acumulado"
+    description: "Las jornadas de montaña aparecen antes de dos ciudades grandes."
+    impact: medium
+    status: estimated
+
+  - title: "Cambio de política migratoria"
+    description: "La exención de visa debe revisarse antes de emitir pasajes."
+    impact: high
+    status: pending
+
+  - title: "Cruce Shenzhen–Hong Kong"
+    description: "Una conexión demasiado ajustada podría comprometer el vuelo internacional."
+    impact: high
+    status: estimated
+```
+
+---
+
+# 17. Alternativas
+
+```yaml
+alternatives:
+  moreRelaxed:
+    description: "Extender el viaje a 14 días."
+    changes:
+      - "Agregar una noche en Shangrao antes de Wangxian."
+      - "Agregar un día flexible en Zhangjiajie."
+      - "Mantener tres noches en Chongqing y dos en Shenzhen."
+
+  cheaper:
+    description: "Mantener 12 días con alojamientos fuera de zonas premium y reducir actividades opcionales."
+    changes:
+      - "Dormir fuera del complejo de Wangxian Valley."
+      - "Usar hoteles simples próximos al metro o entradas del parque."
+      - "Eliminar crucero nocturno y teleférico opcional."
+      - "Reducir taxis y compras tecnológicas."
+
+  moreComplete:
+    description: "Extender a 15 o 16 días y sumar Beijing o una escala real en Shanghai."
+    changes:
+      - "Agregar Beijing y la Gran Muralla antes de volar o tomar tren hacia el sur."
+      - "O dedicar dos días completos a Shanghai sin alterar el núcleo del viaje."
+```
+
+---
+
+# 18. Datos específicos para comparación
+
+```yaml
+comparison:
+  durationDays: 12
+  durationNights: 11
+  countriesCount: 1
+  citiesCount: 5
+  accommodationChanges: 4
+  longTransfers: 2
+  internationalFlightHours: null
+  requiresVisa: false
+  organizationDifficulty: 5
+  languageBarrier: 5
+  comfort: 3
+  freeTime: 1
+  experienceVariety: 5
+  totalPerPerson: 1513
+  internationalFlightsIncluded: false
+  budgetLevel: medium
+  pace: intense
+```
+
+---
+
+# 19. Slides de la presentación
+
+```yaml
+slides:
+  - id: cover
+    type: cover
+    order: 1
+    title: "China vertical"
+    subtitle: "Tecnología, ciudades imposibles y paisajes de fantasía"
+    eyebrow: "12 días · Noviembre"
+    text: null
+    layout: full-bleed
+    image: null
+    images: []
+    sourceRef: "visual.coverImage"
+
+  - id: concept
+    type: editorial
+    order: 2
+    title: "Una China que cambia de escala"
+    subtitle: null
+    eyebrow: "Concepto"
+    text: "Del valle iluminado a los pilares de arenisca, y de allí a megaciudades verticales y mercados de hardware."
+    layout: text-left
+    image: null
+    images: []
+    sourceRef: "4.1"
+
+  - id: reasons
+    type: reasons
+    order: 3
+    title: "Por qué elegir este viaje"
+    subtitle: null
+    eyebrow: "Argumentos"
+    text: null
+    layout: grid
+    image: null
+    images: []
+    sourceRef: "reasons"
+
+  - id: route
+    type: route
+    order: 4
+    title: "El recorrido"
+    subtitle: "Shanghai → Wangxian → Zhangjiajie → Chongqing → Shenzhen → Hong Kong"
+    eyebrow: "Ruta"
+    text: null
+    layout: default
+    image: null
+    images: []
+    sourceRef: "route"
+
+  - id: wangxian
+    type: destination
+    order: 5
+    title: "Wangxian Valley"
+    subtitle: "La China de fantasía"
+    eyebrow: "Jiangxi"
+    text: "Arquitectura, río, cascadas y luces nocturnas."
+    layout: hero-with-thumbs
+    image: null
+    images: []
+    sourceRef: "destinations.wangxian-valley"
+
+  - id: zhangjiajie
+    type: gallery
+    order: 6
+    title: "Zhangjiajie"
+    subtitle: "Dos días entre pilares de arenisca"
+    eyebrow: "Hunan"
+    text: null
+    layout: collage
+    image: null
+    images: []
+    sourceRef: "destinations.zhangjiajie"
+
+  - id: tianmen
+    type: highlight
+    order: 7
+    title: "Tianmen Mountain"
+    subtitle: "La Puerta del Cielo"
+    eyebrow: "Jornada especial"
+    text: "Teleférico, senderos de acantilado y 999 escalones."
+    layout: side-by-side
+    image: null
+    images: []
+    sourceRef: "itinerary.day6"
+
+  - id: chongqing
+    type: city
+    order: 8
+    title: "Chongqing"
+    subtitle: "La megaciudad vertical"
+    eyebrow: "Tres noches"
+    text: "Monorriel, puentes, desniveles y skyline nocturno."
+    layout: masonry
+    image: null
+    images: []
+    sourceRef: "destinations.chongqing"
+
+  - id: shenzhen
+    type: city
+    order: 9
+    title: "Shenzhen"
+    subtitle: "Tecnología que se puede tocar"
+    eyebrow: "Huaqiangbei"
+    text: "Componentes, reparación, drones, robótica y arquitectura contemporánea."
+    layout: hero-with-thumbs
+    image: null
+    images: []
+    sourceRef: "destinations.shenzhen"
+
+  - id: itinerary
+    type: itinerary
+    order: 10
+    title: "12 días"
+    subtitle: "Un itinerario intenso y sin destinos de relleno"
+    eyebrow: "Día por día"
+    text: null
+    layout: default
+    image: null
+    images: []
+    sourceRef: "itinerary"
+
+  - id: nightlife
+    type: nightlife
+    order: 11
+    title: "La noche también es parte del viaje"
+    subtitle: "Wangxian, Chongqing y Futian"
+    eyebrow: "Después del atardecer"
+    text: null
+    layout: grid
+    image: null
+    images: []
+    sourceRef: "nightlifeSummary"
+
+  - id: gastronomy
+    type: gastronomy
+    order: 12
+    title: "De Hunan al hot pot"
+    subtitle: "Comer bien sin romper el presupuesto"
+    eyebrow: "Gastronomía"
+    text: null
+    layout: collage
+    image: null
+    images: []
+    sourceRef: "gastronomy"
+
+  - id: budget
+    type: budget
+    order: 13
+    title: "Presupuesto estimado"
+    subtitle: "USD 1.513 por persona, sin vuelos internacionales"
+    eyebrow: "Dos viajeros"
+    text: "Hospedaje USD 405 · Transporte USD 310 · Comida USD 300 · Entradas USD 180"
+    layout: default
+    image: null
+    images: []
+    sourceRef: "budget"
+
+  - id: pace
+    type: pace
+    order: 14
+    title: "Un viaje intenso"
+    subtitle: "Seis días exigentes y dos traslados largos"
+    eyebrow: "Ritmo"
+    text: "La recompensa es una variedad visual muy alta en solo 12 días."
+    layout: side-by-side
+    image: null
+    images: []
+    sourceRef: "paceSummary"
+
+  - id: pros-cons
+    type: pros-cons
+    order: 15
+    title: "Lo mejor y lo que se sacrifica"
+    subtitle: null
+    eyebrow: "Decisión"
+    text: null
+    layout: grid
+    image: null
+    images: []
+    sourceRef: "strengths, tradeoffs"
+
+  - id: closing
+    type: closing
+    order: 16
+    title: "China vertical en noviembre"
+    subtitle: "Naturaleza imposible, noches urbanas y tecnología"
+    eyebrow: "Propuesta preliminar"
+    text: "Siguiente paso: definir fechas exactas y cotizar vuelos."
+    layout: full-bleed
+    image: null
+    images: []
+    sourceRef: "catalog"
+```
+
+---
+
+# 20. Galería general
+
+```yaml
+gallery:
+  - src: null
+    alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
+    caption: "Wangxian Valley al anochecer"
+    city: "Wangxian Valley"
+    category: culture
+    orientation: portrait
+    status: pending
+
+  - src: null
+    alt: "Río y puente dentro de Wangxian Valley"
+    caption: "El valle antes de la noche"
+    city: "Wangxian Valley"
+    category: nature
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Pilares de arenisca de Zhangjiajie"
+    caption: "El paisaje principal del viaje"
+    city: "Zhangjiajie"
+    category: nature
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Pilares de Zhangjiajie cubiertos por niebla"
+    caption: "La atmósfera de montaña en noviembre"
+    city: "Zhangjiajie"
+    category: nature
+    orientation: portrait
+    status: pending
+
+  - src: null
+    alt: "Ascensor Bailong en Zhangjiajie"
+    caption: "Infraestructura dentro del paisaje"
+    city: "Zhangjiajie"
+    category: adventure
+    orientation: portrait
+    status: pending
+
+  - src: null
+    alt: "Puerta del Cielo de Tianmen Mountain"
+    caption: "Tianmen Cave"
+    city: "Zhangjiajie"
+    category: nature
+    orientation: portrait
+    status: pending
+
+  - src: null
+    alt: "Teleférico de Tianmen Mountain"
+    caption: "Ascenso sobre las montañas"
+    city: "Zhangjiajie"
+    category: adventure
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Skyline nocturno de Chongqing"
+    caption: "La megaciudad vertical"
+    city: "Chongqing"
+    category: urban
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Hongya Cave iluminada"
+    caption: "Chongqing después del atardecer"
+    city: "Chongqing"
+    category: nightlife
+    orientation: portrait
+    status: pending
+
+  - src: null
+    alt: "Monorriel de Liziba atravesando un edificio"
+    caption: "Infraestructura urbana extrema"
+    city: "Chongqing"
+    category: technology
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Hot pot de Chongqing"
+    caption: "La experiencia gastronómica central"
+    city: "Chongqing"
+    category: gastronomy
+    orientation: square
+    status: pending
+
+  - src: null
+    alt: "Mercados de electrónica de Huaqiangbei"
+    caption: "El ecosistema de hardware de Shenzhen"
+    city: "Shenzhen"
+    category: technology
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Componentes electrónicos y puestos de reparación en Shenzhen"
+    caption: "Tecnología cotidiana"
+    city: "Shenzhen"
+    category: technology
+    orientation: square
+    status: pending
+
+  - src: null
+    alt: "Distrito de Futian iluminado"
+    caption: "Shenzhen contemporánea"
+    city: "Shenzhen"
+    category: urban
+    orientation: landscape
+    status: pending
+
+  - src: null
+    alt: "Shenzhen Bay y skyline"
+    caption: "Último día del recorrido"
+    city: "Shenzhen"
+    category: urban
+    orientation: landscape
+    status: pending
+```
+
+---
+
+# 21. Fuentes
+
+```yaml
+sources:
+  - topic: "Propuesta original"
+    name: "Propuesta de viaje a China: tecnología, ciudades verticales y paisajes de fantasía"
+    url: null
+    accessedAt: 2026-06-30
+    notes: "Documento aportado por el usuario."
+
+  - topic: "Temporada y clima"
+    name: "Trip.com — Zhangjiajie weather in November"
+    url: "https://au.trip.com/guide/info/zhangjiajie-weather.html"
+    accessedAt: 2026-06-30
+    notes: "Referencia orientativa de temperaturas, lluvia, visibilidad y menor afluencia."
+
+  - topic: "Temporada y clima"
+    name: "China Highlights — Zhangjiajie weather in November"
+    url: "https://www.chinahighlights.com/zhangjiajie/weather/november.htm"
+    accessedAt: 2026-06-30
+    notes: "Noviembre indicado como período más seco y con menor cantidad de visitantes."
+
+  - topic: "Wangxian Valley"
+    name: "Asia Odyssey Travel — Best time for Wangxian Valley"
+    url: "https://www.asiaodysseytravel.com/jiangxi/best-time-for-wangxian-valley.html"
+    accessedAt: 2026-06-30
+    notes: "Otoño, de septiembre a noviembre, como estación favorable."
+
+  - topic: "Requisitos migratorios"
+    name: "Embajada de China en Argentina — FAQs de entrada sin visa"
+    url: "https://ar.china-embassy.gov.cn/esp/lszl/sggg/202511/t20251111_11750516.htm"
+    accessedAt: 2026-06-30
+    notes: "Incluye a Argentina en la política unilateral de exención por estadías de hasta 30 días."
+
+  - topic: "Zhangjiajie"
+    name: "Zhangjiajie tourism-related entrance fee information 2026"
+    url: "https://www.cn-zhangjiajie.com/view-1-4736.html"
+    accessedAt: 2026-06-30
+    notes: "Referencia orientativa para el pase de cuatro días; servicios adicionales pueden cobrarse aparte."
+
+  - topic: "Alojamiento"
+    name: "Trip.com — Hotels near Wulingyuan"
+    url: "https://www.trip.com/hotels/zhangjiajie-wulingyuan-sign-gate/hotels-c27m13542774/"
+    accessedAt: 2026-06-30
+    notes: "Referencia de tarifas variables cerca de la entrada del parque."
+
+  - topic: "Alojamiento"
+    name: "Trip.com — Chongqing hotels"
+    url: "https://www.trip.com/hotels/chongqing-hotels-list-4/"
+    accessedAt: 2026-06-30
+    notes: "Referencia de promedios publicados para hoteles de tres y cuatro estrellas."
+
+  - topic: "Trenes"
+    name: "Trip.com — Zhangjiajie to Shangrao high-speed train"
+    url: "https://au.trip.com/trains/china/route/zhangjiajie-to-shangrao/"
+    accessedAt: 2026-06-30
+    notes: "Referencia para duración mínima y existencia de servicios; horarios y tarifas deben reconfirmarse."
+```
+
+---
+
+# 22. Datos faltantes
+
+```yaml
+missingInformation:
+  - field: "Fechas exactas"
+    reason: "Solo se definió noviembre como mes recomendado."
+    priority: blocking
+    suggestedAction: "Elegir una ventana concreta dentro de noviembre para cotizar vuelos, trenes y hoteles."
+
+  - field: "Vuelos internacionales"
+    reason: "El precio y la duración dependen de las fechas, escalas y equipaje."
+    priority: blocking
+    suggestedAction: "Comparar entrada por Shanghai o Hangzhou y salida por Hong Kong o Shenzhen."
+
+  - field: "Imágenes definitivas y licencias"
+    reason: "Se definió el inventario visual, pero no se descargaron ni validaron derechos de uso."
+    priority: high
+    suggestedAction: "Seleccionar fotos propias, con licencia comercial o de bancos permitidos y completar src."
+
+  - field: "Horarios ferroviarios"
+    reason: "La venta y los números de tren se publican cerca de la fecha."
+    priority: high
+    suggestedAction: "Revalidar todos los trayectos cuando abra la venta."
+
+  - field: "Alojamiento exacto"
+    reason: "Solo se estimaron áreas y precios."
+    priority: medium
+    suggestedAction: "Elegir hoteles con cancelación y puntuación suficiente cuando se definan fechas."
+
+  - field: "Seguro de viaje"
+    reason: "Faltan edad y cobertura deseada."
+    priority: medium
+    suggestedAction: "Cotizar una póliza que cubra toda la duración desde la salida de Argentina."
+
+  - field: "Requisitos sanitarios"
+    reason: "Dependen de escalas y situación personal."
+    priority: medium
+    suggestedAction: "Revisar con fuentes oficiales antes de viajar."
+```
+
+---
+
+# 23. Validaciones obligatorias
+
+```text
+[x] La suma de noches coincide con durationNights: 11.
+[x] La cantidad de días coincide con durationDays: 12.
+[x] Todos los destinos del itinerario existen en route.
+[x] Los totales del presupuesto coinciden con el desglose.
+[x] Todos los precios tienen estado.
+[x] Todas las imágenes tienen alt.
+[x] Todas las fuentes tienen fecha de consulta.
+[x] Los puntajes están entre 1 y 5.
+[x] organizationDifficulty está interpretado correctamente.
+[x] budgetAccessibility está interpretado correctamente.
+[x] No se inventaron datos faltantes como confirmados.
+[x] Los datos pendientes están marcados.
+[x] La propuesta puede renderizarse sin HTML específico.
+[x] La cantidad de slides es coherente con el contenido.
+[x] La propuesta tiene resumen, recorrido, presupuesto, fortalezas y concesiones.
+```
+
+---
+
+# 24. Informe de calidad
+
+```yaml
+qualityReport:
+  completenessPercentage: 88
+  readyForWebsite: false
+  blockingIssues:
+    - "Faltan fechas exactas."
+    - "Falta cotizar el vuelo internacional."
+    - "Faltan imágenes definitivas con licencia y rutas src."
+  pendingResearch:
+    - "Horarios y precios reales de trenes para noviembre de 2026."
+    - "Hoteles concretos con cancelación."
+    - "Reconfirmación de requisitos migratorios y sanitarios."
+    - "Entradas exactas y paquetes de teleféricos."
+  assumptions:
+    - "Dos viajeros viajando sola y ocupando habitación individual."
+    - "Salida desde Buenos Aires."
+    - "Entrada por Shanghai y regreso desde Hong Kong."
+    - "Viaje durante noviembre de 2026."
+    - "Presupuesto terrestre sin vuelos internacionales."
+  validationErrors: []
+```

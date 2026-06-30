@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TripCatalog from '../components/home/TripCatalog.astro';
+import { getTripCardProjections } from '../lib/trips';
+import { buildComparisonSummary } from '../lib/comparison';
+
+const trips = await getTripCardProjections();
+const summary = buildComparisonSummary(trips);
+---
+
+<Layout
+  title="Viaje Tanto — ¿A dónde nos vamos?"
+  description="Tres propuestas, tres formas completamente distintas de viajar y una sola decisión. Explorá, compará y encontrá tu próximo viaje."
+>
+  <!-- Hero section -->
+  <section class="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-surface-darker">
+    <!-- Hero background dimmed -->
+    <div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/50 to-surface">
+      <div class="absolute inset-0 opacity-[0.04] bg-gradient-to-br from-brand-orange via-brand-coral to-transparent" />
+    </div>
+
+    <div class="relative z-10 flex w-full max-w-5xl flex-col items-center px-6 text-center">
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand-orange mb-6">
+        El próximo viaje se decide acá
+      </span>
+
+      <h1 class="font-display text-display-xl text-text-primary leading-none mb-6">
+        ¿A dónde nos vamos?
+      </h1>
+
+      <p class="max-w-2xl text-lg text-text-secondary mb-10">
+        Tres propuestas, tres formas completamente distintas de viajar y una sola decisión.
+        Explorá cada una, comparalas y encontrá la que más te representa.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="#catalog"
+          class="inline-flex items-center gap-2 rounded-full bg-brand-coral px-6 py-3 text-sm font-semibold text-white hover:bg-brand-coral/90 transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+        >
+          Explorar propuestas
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+        <a
+          href="/comparar"
+          class="inline-flex items-center gap-2 rounded-full border border-surface-border px-6 py-3 text-sm font-semibold text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+        >
+          Compararlas
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="h-5 w-5 text-text-dim" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Catalog section -->
+  <section id="catalog" class="w-full px-6 py-16 md:px-12 md:py-24">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex flex-col gap-2 mb-10">
+        <h2 class="font-display text-display-lg text-text-primary">
+          Las propuestas
+        </h2>
+        <p class="text-text-secondary max-w-2xl">
+          Hacé clic en cualquiera. En lugar de abrir una ficha común, entrás en una presentación
+          pensada para que el viaje se sienta antes de vivirlo.
+        </p>
+      </div>
+
+      <TripCatalog trips={trips} />
+    </div>
+  </section>
+
+  <!-- Quick comparison section -->
+  {trips.length > 0 && (
+    <section class="w-full px-6 py-16 md:px-12 md:py-24 bg-surface-darker">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-2 mb-10">
+          <h2 class="font-display text-display-lg text-text-primary">
+            Así se vería
+          </h2>
+          <p class="text-text-secondary max-w-2xl">
+            Un vistazo rápido para entender cada viaje en segundos.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          {trips.slice(0, 3).map((trip) => (
+            <div key={trip.slug} class="rounded-xl border border-surface-border bg-surface-card p-5">
+              {trip.visual?.coverImage && (
+                <img
+                  src={trip.visual.coverImage}
+                  alt={trip.catalog.title}
+                  class="w-full h-32 object-cover rounded-lg mb-4"
+                  loading="lazy"
+                />
+              )}
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-orange">
+                {trip.catalog.tags?.[0] ?? 'Propuesta'}
+              </span>
+              <h3 class="font-display text-display-sm text-text-primary mt-1 leading-tight">
+                {trip.catalog.title}
+              </h3>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-xs text-text-muted">
+                <span>{trip.durationDays} días</span>
+                {trip.budgetTotals.totalPerPerson != null && (
+                  <span class="text-brand-orange font-semibold">
+                    ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                  </span>
+                )}
+                {trip.catalog.pace && (
+                  <span>
+                    Ritmo: {trip.catalog.pace === 'relaxed' ? 'Relajado' : trip.catalog.pace === 'moderate' ? 'Medio' : 'Intenso'}
+                  </span>
+                )}
+              </div>
+              <a
+                href={`/viajes/${trip.slug}`}
+                class="mt-4 inline-flex text-sm text-brand-orange hover:text-brand-coral transition-colors"
+              >
+                Ver propuesta →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA section -->
+  {trips.length > 0 && (
+    <section class="w-full px-6 py-16 md:px-12 md:py-24">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="font-display text-display-md text-text-primary mb-4">
+          ¿Te quedaste con dudas?
+        </h2>
+        <p class="text-text-secondary mb-8 max-w-xl mx-auto">
+          Comparamos precio, ritmo, duración y perfiles lado a lado para que
+          la decisión sea más fácil.
+        </p>
+        <a
+          href="/comparar"
+          class="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-border px-6 py-3 text-sm font-semibold text-text-primary hover:bg-surface-hover transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+        >
+          Ir al comparador completo
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Navigation footer -->
+  <footer class="w-full border-t border-surface-border px-6 py-8 md:px-12">
+    <div class="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
+      <span>&copy; {new Date().getFullYear()} Viaje Tanto</span>
+      <nav class="flex gap-4">
+        <a href="/" class="hover:text-text-primary transition-colors">Inicio</a>
+        <a href="/comparar" class="hover:text-text-primary transition-colors">Comparar</a>
+      </nav>
+    </div>
+  </footer>
+</Layout>

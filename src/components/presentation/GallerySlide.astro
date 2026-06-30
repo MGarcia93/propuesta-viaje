@@ -1,0 +1,78 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+// Gallery images: use slide.images if available, fall back to trip.gallery
+const images = slide.images && slide.images.length > 0
+  ? slide.images
+  : trip.gallery ?? [];
+
+const layout = slide.layout ?? 'grid';
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-6xl">
+    {slide.title && (
+      <h2 class="font-display text-display-sm text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-6">{slide.subtitle}</p>
+    )}
+
+    {images.length > 0 ? (
+      <div class={`grid gap-3 ${
+        layout === 'collage'
+          ? 'grid-cols-2 md:grid-cols-3'
+          : layout === 'masonry'
+            ? 'columns-2 md:columns-3 gap-3 space-y-3'
+            : layout === 'side-by-side'
+              ? 'grid-cols-1 md:grid-cols-2'
+              : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+      }`}>
+        {images.map((img, i) => (
+          <figure
+            key={i}
+            class={`overflow-hidden rounded-lg bg-surface-card ${
+              layout === 'collage' && i === 0 ? 'row-span-2 col-span-2' : ''
+            }`}
+          >
+            {img.src ? (
+              <img
+                src={img.src}
+                alt={img.alt}
+                class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+              />
+            ) : (
+              <div class="flex aspect-[4/3] items-center justify-center bg-surface-darker">
+                <span class="text-xs text-text-dim">{img.alt}</span>
+              </div>
+            )}
+            {img.caption && (
+              <figcaption class="p-2 text-xs text-text-muted">
+                {img.caption}
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    ) : (
+      <div class="flex items-center justify-center py-16 text-text-muted">
+        <p>No hay imágenes disponibles para esta galería.</p>
+      </div>
+    )}
+  </div>
+</section>

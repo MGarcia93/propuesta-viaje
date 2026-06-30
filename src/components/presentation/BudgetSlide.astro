@@ -1,0 +1,142 @@
+---
+import type { Trip } from '../../schemas/trip.schema';
+import { calculateBudgetTotal } from '../../lib/budget';
+
+export interface Props {
+  slide: Trip['slides'][number];
+  trip: Trip;
+}
+
+const { slide, trip } = Astro.props;
+const slideId = `slide-${slide.id}`;
+
+const budget = trip.budget;
+const totals = calculateBudgetTotal(budget);
+const items = budget?.items ?? [];
+
+// Group items by category for display
+const categories = new Map<string, Trip['budget']['items']>();
+for (const item of items) {
+  const cat = item.category || 'Otros';
+  if (!categories.has(cat)) categories.set(cat, []);
+  categories.get(cat)!.push(item);
+}
+---
+
+<section
+  id={slideId}
+  class="slide-container items-center justify-center px-6 py-16 md:px-12"
+>
+  <div class="w-full max-w-4xl">
+    {slide.title && (
+      <h2 class="font-display text-display-md text-text-primary mb-2">
+        {slide.title}
+      </h2>
+    )}
+
+    {slide.subtitle && (
+      <p class="text-text-secondary mb-8">{slide.subtitle}</p>
+    )}
+
+    {budget?.disclaimer && (
+      <p class="text-xs text-text-muted mb-6 italic">{budget.disclaimer}</p>
+    )}
+
+    {items.length > 0 ? (
+      <div class="space-y-6">
+        {Array.from(categories.entries()).map(([category, catItems]) => {
+          const catTotal = catItems
+            .filter((i) => i.status !== 'pending' && i.amountPerPerson != null)
+            .reduce((sum, i) => sum + (i.amountPerPerson ?? 0), 0);
+
+          const maxAmount = Math.max(...items
+            .filter((i) => i.status !== 'pending' && i.amountPerPerson != null)
+            .map((i) => i.amountPerPerson ?? 0), 1);
+
+          return (
+            <div key={category}>
+              <h3 class="font-display font-bold text-text-primary mb-3 text-lg">
+                {category}
+              </h3>
+              <div class="space-y-2">
+                {catItems.map((item, i) => {
+                  const pct = (item.amountPerPerson ?? 0) / maxAmount * 100;
+                  return (
+                    <div key={i} class="flex items-center gap-3">
+                      <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                          <span class="text-sm text-text-primary">{item.label}</span>
+                          <span class={`text-sm font-medium ${
+                            item.status === 'pending' ? 'text-yellow-500/80' : 'text-text-primary'
+                          }`}>
+                            {item.amountPerPerson != null
+                              ? `USD ${item.amountPerPerson.toLocaleString()}`
+                              : '—'}
+                            {item.status === 'pending' && (
+                              <span class="ml-1 text-[10px] text-yellow-500/60">(pendiente)</span>
+                            )}
+                          </span>
+                        </div>
+                        <div class="budget-bar">
+                          {item.status !== 'pending' && item.amountPerPerson != null && (
+                            <div
+                              class="budget-bar-fill transition-all duration-500"
+                              style={{ width: `${Math.max(pct, 4)}%` }}
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+
+        <!-- Totals section -->
+        <div class="mt-8 rounded-xl border border-surface-border bg-surface-card p-6">
+          <h3 class="font-display font-bold text-text-primary mb-4 text-lg">Totales</h3>
+          <div class="grid gap-4 sm:grid-cols-3">
+            {totals.subtotalPerPerson != null && (
+              <div>
+                <span class="text-xs text-text-muted uppercase tracking-wider">Subtotal por persona</span>
+                <p class="text-lg font-bold text-text-primary">
+                  USD {totals.subtotalPerPerson.toLocaleString()}
+                </p>
+              </div>
+            )}
+            {totals.totalPerPerson != null && (
+              <div>
+                <span class="text-xs text-text-muted uppercase tracking-wider">Total por persona</span>
+                <p class="text-xl font-bold text-brand-orange">
+                  USD {totals.totalPerPerson.toLocaleString()}
+                </p>
+              </div>
+            )}
+            {totals.totalGroup != null && (
+              <div>
+                <span class="text-xs text-text-muted uppercase tracking-wider">Total grupo ({budget?.travelers ?? 1} viajero{budget?.travelers !== 1 ? 's' : ''})</span>
+                <p class="text-lg font-bold text-text-primary">
+                  USD {totals.totalGroup.toLocaleString()}
+                </p>
+              </div>
+            )}
+          </div>
+          {totals.pendingItems && (
+            <p class="mt-3 text-xs text-yellow-500/80">
+              * Algunos costos están pendientes. Los totales incluyen solo costos confirmados y estimados.
+            </p>
+          )}
+          {budget?.contingency?.note && (
+            <p class="mt-2 text-xs text-text-muted italic">
+              Incluye contingencia: {budget.contingency.note}
+            </p>
+          )}
+        </div>
+      </div>
+    ) : (
+      <p class="text-text-muted italic">No hay información de presupuesto disponible.</p>
+    )}
+  </div>
+</section>
