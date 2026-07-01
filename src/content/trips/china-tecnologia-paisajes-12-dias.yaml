@@ -71,9 +71,9 @@ catalog:
 visual:
   accentColor: "#E34B32"
   textColor: "#F6F2EA"
-  coverImage: null
-  cardImage: null
-  socialImage: null
+  coverImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
+  cardImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
+  socialImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
   imageStyle: "mixto, natural, futurista y nocturno"
 
 # ──────────────────────────────────────────────
@@ -1260,7 +1260,7 @@ slides:
     eyebrow: "12 días · Noviembre"
     text: null
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: null
 
@@ -1272,7 +1272,7 @@ slides:
     eyebrow: "Concepto"
     text: "Del valle iluminado a los pilares de arenisca, y de allí a megaciudades verticales y mercados de hardware."
     layout: text-left
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: null
 
@@ -1284,7 +1284,7 @@ slides:
     eyebrow: "Argumentos"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
@@ -1296,7 +1296,7 @@ slides:
     eyebrow: "Ruta"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: "route"
 
@@ -1308,7 +1308,7 @@ slides:
     eyebrow: "Jiangxi"
     text: "Arquitectura, río, cascadas y luces nocturnas."
     layout: hero-with-thumbs
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: "destinations.wangxian-valley"
 
@@ -1320,7 +1320,7 @@ slides:
     eyebrow: "Hunan"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "destinations.zhangjiajie"
 
@@ -1332,7 +1332,7 @@ slides:
     eyebrow: "Jornada especial"
     text: "Teleférico, senderos de acantilado y 999 escalones."
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "itinerary.days-6-7"
 
@@ -1344,7 +1344,7 @@ slides:
     eyebrow: "Tres noches"
     text: "Monorriel, puentes, desniveles y skyline nocturno."
     layout: masonry
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
     images: []
     sourceRef: "destinations.chongqing"
 
@@ -1356,7 +1356,7 @@ slides:
     eyebrow: "Huaqiangbei"
     text: "Componentes, reparación, drones, robótica y arquitectura contemporánea."
     layout: hero-with-thumbs
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     images: []
     sourceRef: "destinations.shenzhen"
 
@@ -1368,7 +1368,7 @@ slides:
     eyebrow: "Día por día"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_Skyline_At_Night_%28214551663%29.jpeg/1920px-Shenzhen_Skyline_At_Night_%28214551663%29.jpeg"
     images: []
     sourceRef: null
 
@@ -1380,7 +1380,7 @@ slides:
     eyebrow: "Después del atardecer"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
     images: []
     sourceRef: null
 
@@ -1392,7 +1392,7 @@ slides:
     eyebrow: "Gastronomía"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: null
 
@@ -1404,7 +1404,7 @@ slides:
     eyebrow: "Dos viajeros"
     text: "Hospedaje USD 405 · Transporte USD 310 · Comida USD 300 · Entradas USD 180"
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Three_dim_sum_in_steamer_basket.jpg/1920px-Three_dim_sum_in_steamer_basket.jpg"
     images: []
     sourceRef: "budget"
 
@@ -1416,7 +1416,7 @@ slides:
     eyebrow: "Ritmo"
     text: "La recompensa es una variedad visual muy alta en solo 12 días."
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg/1920px-2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg"
     images: []
     sourceRef: null
 
@@ -1428,7 +1428,7 @@ slides:
     eyebrow: "Decisión"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     images: []
     sourceRef: "strengths, tradeoffs"
 
@@ -1440,7 +1440,7 @@ slides:
     eyebrow: "Propuesta preliminar"
     text: "Siguiente paso: definir fechas exactas y cotizar vuelos."
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: null
 

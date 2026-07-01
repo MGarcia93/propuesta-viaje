@@ -69,9 +69,9 @@ catalog:
 visual:
   accentColor: "#B63B32"
   textColor: "#F5F0E8"
-  coverImage: null
-  cardImage: null
-  socialImage: null
+  coverImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg/1920px-China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg"
+  cardImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
+  socialImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_of_the_Forbidden_City_2006.JPG/1920px-Sunset_of_the_Forbidden_City_2006.JPG"
   imageStyle: "histórico, natural, futurista y nocturno"
 
 # ──────────────────────────────────────────────
@@ -1103,7 +1103,7 @@ slides:
     eyebrow: "12 días · Mayo de 2027"
     text: null
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg/1920px-China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg"
     images: []
     sourceRef: null
 
@@ -1115,7 +1115,7 @@ slides:
     eyebrow: "Concepto"
     text: "Beijing imperial, Zhangjiajie natural y Shenzhen tecnológica."
     layout: text-left
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_of_the_Forbidden_City_2006.JPG/1920px-Sunset_of_the_Forbidden_City_2006.JPG"
     images: []
     sourceRef: null
 
@@ -1127,7 +1127,7 @@ slides:
     eyebrow: "Tres bases"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
     images: []
     sourceRef: "route"
 
@@ -1139,7 +1139,7 @@ slides:
     eyebrow: "Cuatro noches"
     text: null
     layout: hero-with-thumbs
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg/1920px-China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg"
     images: []
     sourceRef: "destinations.beijing.images"
 
@@ -1151,7 +1151,7 @@ slides:
     eyebrow: "Día 2"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_of_the_Forbidden_City_2006.JPG/1920px-Sunset_of_the_Forbidden_City_2006.JPG"
     images: []
     sourceRef: "itinerary.days-2-3"
 
@@ -1163,7 +1163,7 @@ slides:
     eyebrow: "Día 3"
     text: null
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
     images: []
     sourceRef: "itinerary.days-3-4"
 
@@ -1175,7 +1175,7 @@ slides:
     eyebrow: "Cuatro noches"
     text: null
     layout: masonry
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "destinations.zhangjiajie.images"
 
@@ -1187,7 +1187,7 @@ slides:
     eyebrow: "Día 8"
     text: null
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
     images: []
     sourceRef: "itinerary.days-8-9"
 
@@ -1199,7 +1199,7 @@ slides:
     eyebrow: "Tres noches"
     text: null
     layout: hero-with-thumbs
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_Skyline_At_Night_%28214551663%29.jpeg/1920px-Shenzhen_Skyline_At_Night_%28214551663%29.jpeg"
     images: []
     sourceRef: "destinations.shenzhen.images"
 
@@ -1211,7 +1211,7 @@ slides:
     eyebrow: "Tecnología tangible"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
     images: []
     sourceRef: "itinerary.days-10-11"
 
@@ -1223,7 +1223,7 @@ slides:
     eyebrow: "Día por día"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
@@ -1235,7 +1235,7 @@ slides:
     eyebrow: "Gastronomía"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Peking_duck_by_Mr_Wabu_in_Beijing.jpg/1920px-Peking_duck_by_Mr_Wabu_in_Beijing.jpg"
     images: []
     sourceRef: null
 
@@ -1247,7 +1247,7 @@ slides:
     eyebrow: "Una persona"
     text: "Vuelo orientativo USD 1.600 · Comida USD 300 · Seguro USD 80 · Extras USD 100"
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg/1920px-Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg"
     images: []
     sourceRef: "budget"
 
@@ -1259,7 +1259,7 @@ slides:
     eyebrow: "Decisión"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
     images: []
     sourceRef: "strengths, tradeoffs"
 
@@ -1271,7 +1271,7 @@ slides:
     eyebrow: "Comparación"
     text: null
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_of_the_Forbidden_City_2006.JPG/1920px-Sunset_of_the_Forbidden_City_2006.JPG"
     images: []
     sourceRef: "comparison"
 
@@ -1283,7 +1283,7 @@ slides:
     eyebrow: "Propuesta preliminar"
     text: "Siguiente paso: fijar fechas y cotizar Booking con esos días."
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg/1920px-China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg"
     images: []
     sourceRef: null
 

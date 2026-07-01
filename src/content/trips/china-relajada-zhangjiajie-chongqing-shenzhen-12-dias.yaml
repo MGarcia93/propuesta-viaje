@@ -69,9 +69,9 @@ catalog:
 visual:
   accentColor: "#37A0A8"
   textColor: "#F4F2EA"
-  coverImage: null
-  cardImage: null
-  socialImage: null
+  coverImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
+  cardImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
+  socialImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
   imageStyle: "natural, futurista, urbano y nocturno"
 
 # ──────────────────────────────────────────────
@@ -1155,7 +1155,7 @@ slides:
     eyebrow: "12 días · Mayo de 2027"
     text: null
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: null
 
@@ -1167,7 +1167,7 @@ slides:
     eyebrow: "Concepto"
     text: "Naturaleza fantástica, megaciudad vertical y capital tecnológica."
     layout: text-left
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
@@ -1179,7 +1179,7 @@ slides:
     eyebrow: "Solo dos cambios"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: "route"
 
@@ -1191,7 +1191,7 @@ slides:
     eyebrow: "Argumentos"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
@@ -1203,7 +1203,7 @@ slides:
     eyebrow: "Naturaleza"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "destinations.zhangjiajie.images"
 
@@ -1215,7 +1215,7 @@ slides:
     eyebrow: "Día 5"
     text: "Teleférico, pasarelas y 999 escalones."
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
     images: []
     sourceRef: "itinerary.days-5-6"
 
@@ -1227,7 +1227,7 @@ slides:
     eyebrow: "Urbanismo"
     text: null
     layout: masonry
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     images: []
     sourceRef: "destinations.chongqing.images"
 
@@ -1239,7 +1239,7 @@ slides:
     eyebrow: "Después del atardecer"
     text: null
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Hongya_Cave_at_night_20251027_%282%29.jpg"
     images: []
     sourceRef: null
 
@@ -1251,7 +1251,7 @@ slides:
     eyebrow: "Cuatro noches"
     text: null
     layout: hero-with-thumbs
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_Skyline_At_Night_%28214551663%29.jpeg/1920px-Shenzhen_Skyline_At_Night_%28214551663%29.jpeg"
     images: []
     sourceRef: "destinations.shenzhen.images"
 
@@ -1263,7 +1263,7 @@ slides:
     eyebrow: "Tecnología tangible"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
     images: []
     sourceRef: "itinerary.days-10-11"
 
@@ -1275,7 +1275,7 @@ slides:
     eyebrow: "Día por día"
     text: null
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
@@ -1287,7 +1287,7 @@ slides:
     eyebrow: "Ritmo"
     text: null
     layout: side-by-side
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chongqing_hotpot_2.jpg/1920px-Chongqing_hotpot_2.jpg"
     images: []
     sourceRef: null
 
@@ -1299,7 +1299,7 @@ slides:
     eyebrow: "Comida"
     text: null
     layout: collage
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg/1920px-2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg"
     images: []
     sourceRef: null
 
@@ -1311,7 +1311,7 @@ slides:
     eyebrow: "Una persona"
     text: "Hospedaje USD 370 · Transporte USD 360 · Comida USD 300 · Entradas USD 180"
     layout: default
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     images: []
     sourceRef: "budget"
 
@@ -1323,7 +1323,7 @@ slides:
     eyebrow: "Decisión"
     text: null
     layout: grid
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "strengths, tradeoffs"
 
@@ -1335,7 +1335,7 @@ slides:
     eyebrow: "Propuesta preliminar"
     text: "Siguiente paso: elegir la ciudad de entrada y las fechas exactas."
     layout: full-bleed
-    image: null
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
     sourceRef: null
 
