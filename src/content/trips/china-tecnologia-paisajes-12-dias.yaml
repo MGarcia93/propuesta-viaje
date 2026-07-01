@@ -1252,201 +1252,205 @@ comparison:
 # 19. Slides de la presentación
 # ──────────────────────────────────────────────
 slides:
+  # ── 1. GANCHO EMOCIONAL ──
   - id: cover
     type: cover
-    order: 1
+    order: 6
     title: "China vertical"
     subtitle: "Tecnología, ciudades imposibles y paisajes de fantasía"
-    eyebrow: "12 días · Noviembre"
+    eyebrow: "12 días · Noviembre 2026"
     text: null
     layout: full-bleed
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
-    images: []
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
+        alt: "Shanghai Pudong"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
+        alt: "Zhangjiajie"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
+        alt: "Chongqing nocturno"
     sourceRef: null
 
+  # ── 2. ¿ES PARA MÍ? ──
   - id: concept
     type: editorial
-    order: 2
+    order: 7
     title: "Una China que cambia de escala"
-    subtitle: null
+    subtitle: "Del valle iluminado a los pilares de arenisca, y de allí a megaciudades verticales"
     eyebrow: "Concepto"
-    text: "Del valle iluminado a los pilares de arenisca, y de allí a megaciudades verticales y mercados de hardware."
+    text: "Un viaje intenso con 6 destinos reales y sin relleno."
     layout: text-left
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
-    images: []
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
+        alt: "Zhangjiajie"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Hongya_Cave_at_night_20251027_%282%29.jpg"
+        alt: "Hongya Cave"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
+        alt: "Huaqiangbei"
     sourceRef: null
 
-  - id: reasons
-    type: reasons
-    order: 3
-    title: "Por qué elegir este viaje"
-    subtitle: null
-    eyebrow: "Argumentos"
-    text: null
-    layout: grid
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
-    images: []
-    sourceRef: null
-
+  # ── 3. EL RECORRIDO ──
   - id: route
     type: route
-    order: 4
+    order: 8
     title: "El recorrido"
     subtitle: "Shanghai → Wangxian → Zhangjiajie → Chongqing → Shenzhen → Hong Kong"
-    eyebrow: "Ruta"
+    eyebrow: "6 destinos · 2 traslados largos"
     text: null
     layout: default
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: "route"
 
+  # ── 4-8. DESTINOS ──
   - id: wangxian
     type: destination
-    order: 5
+    order: 9
     title: "Wangxian Valley"
     subtitle: "La China de fantasía"
-    eyebrow: "Jiangxi"
+    eyebrow: "Día 1 · Jiangxi"
     text: "Arquitectura, río, cascadas y luces nocturnas."
     layout: hero-with-thumbs
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
     images: []
     sourceRef: "destinations.wangxian-valley"
 
   - id: zhangjiajie
-    type: gallery
-    order: 6
+    type: highlight
+    order: 10
     title: "Zhangjiajie"
     subtitle: "Dos días entre pilares de arenisca"
-    eyebrow: "Hunan"
-    text: null
-    layout: collage
+    eyebrow: "Días 3-4 · Hunan"
+    text: "Parque Nacional, Tianzi Mountain y teleférico."
+    layout: masonry
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
-    images: []
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
+        alt: "Parque Nacional"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/1_tianzishan_wulingyuan_zhangjiajie_2012.jpg/1920px-1_tianzishan_wulingyuan_zhangjiajie_2012.jpg"
+        alt: "Tianzi Mountain"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
+        alt: "Tianmen Cave"
     sourceRef: "destinations.zhangjiajie"
-
-  - id: tianmen
-    type: highlight
-    order: 7
-    title: "Tianmen Mountain"
-    subtitle: "La Puerta del Cielo"
-    eyebrow: "Jornada especial"
-    text: "Teleférico, senderos de acantilado y 999 escalones."
-    layout: side-by-side
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
-    images: []
-    sourceRef: "itinerary.days-6-7"
 
   - id: chongqing
     type: city
-    order: 8
+    order: 11
     title: "Chongqing"
     subtitle: "La megaciudad vertical"
-    eyebrow: "Tres noches"
+    eyebrow: "Días 6-8 · Tres noches"
     text: "Monorriel, puentes, desniveles y skyline nocturno."
-    layout: masonry
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
-    images: []
+    layout: hero-with-thumbs
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Hongya_Cave_at_night_20251027_%282%29.jpg"
+        alt: "Hongya Cave"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/INSANE-_Subway_Train_Goes_THROUGH_an_Apartment_Building%21_%28LiZiba_Station%2C_Chongqing%29.webm/1920px--INSANE-_Subway_Train_Goes_THROUGH_an_Apartment_Building%21_%28LiZiba_Station%2C_Chongqing%29.webm.jpg"
+        alt: "Monorriel Liziba"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg/1920px-2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg"
+        alt: "Chongqing nocturno"
     sourceRef: "destinations.chongqing"
 
   - id: shenzhen
     type: city
-    order: 9
+    order: 12
     title: "Shenzhen"
     subtitle: "Tecnología que se puede tocar"
-    eyebrow: "Huaqiangbei"
+    eyebrow: "Días 9-11 · Huaqiangbei"
     text: "Componentes, reparación, drones, robótica y arquitectura contemporánea."
     layout: hero-with-thumbs
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
-    images: []
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_Skyline_At_Night_%28214551663%29.jpeg/1920px-Shenzhen_Skyline_At_Night_%28214551663%29.jpeg"
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
+        alt: "Huaqiangbei"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg/1920px-SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg"
+        alt: "Futian nocturno"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg/1920px-Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg"
+        alt: "Shenzhen Bay"
     sourceRef: "destinations.shenzhen"
-
+  # ── ITINERARIO ──
   - id: itinerary
     type: itinerary
-    order: 10
-    title: "12 días"
-    subtitle: "Un itinerario intenso y sin destinos de relleno"
+    order: 13
+    title: "12 días intensos"
+    subtitle: "6 destinos · 2 traslados largos · Sin relleno"
     eyebrow: "Día por día"
-    text: null
+    text: "Shanghai → Wangxian → Zhangjiajie → Chongqing → Shenzhen → Hong Kong"
     layout: default
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_Skyline_At_Night_%28214551663%29.jpeg/1920px-Shenzhen_Skyline_At_Night_%28214551663%29.jpeg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
-    sourceRef: null
+    sourceRef: "itinerary"
 
-  - id: nightlife
-    type: nightlife
-    order: 11
-    title: "La noche también es parte del viaje"
-    subtitle: "Wangxian, Chongqing y Futian"
-    eyebrow: "Después del atardecer"
-    text: null
+
+  # ── 9. ALOJAMIENTO ──
+  - id: accommodation
+    type: editorial
+    order: 14
+    title: "Dónde vas a dormir"
+    subtitle: "Habitación privada con baño, bien ubicada"
+    eyebrow: "Alojamiento"
+    text: "Shanghai: hotel gama media (~USD 50/noche). Wangxian: pensión (~USD 35/noche). Zhangjiajie: guesthouse (~USD 25/noche). Chongqing: hotel centro (~USD 30/noche). Shenzhen: hotel Huaqiangbei (~USD 45/noche)."
     layout: grid
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Beijing_China_Forbidden-City-03.jpg/1920px-Beijing_China_Forbidden-City-03.jpg"
     images: []
     sourceRef: null
 
+  # ── 10. COMIDA ──
   - id: gastronomy
     type: gastronomy
-    order: 12
+    order: 15
     title: "De Hunan al hot pot"
     subtitle: "Comer bien sin romper el presupuesto"
     eyebrow: "Gastronomía"
-    text: null
+    text: "Presupuesto orientativo: USD 25 por día comiendo bien."
     layout: collage
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
-    images: []
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chongqing_hotpot_2.jpg/1920px-Chongqing_hotpot_2.jpg"
+    images:
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chongqing_hotpot_2.jpg/1920px-Chongqing_hotpot_2.jpg"
+        alt: "Hot pot"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Three_dim_sum_in_steamer_basket.jpg/1920px-Three_dim_sum_in_steamer_basket.jpg"
+        alt: "Dim sum"
     sourceRef: null
 
-  - id: budget
-    type: budget
-    order: 13
-    title: "Presupuesto estimado"
-    subtitle: "USD 1.513 por persona, sin vuelos internacionales"
-    eyebrow: "Dos viajeros"
-    text: "Hospedaje USD 405 · Transporte USD 310 · Comida USD 300 · Entradas USD 180"
-    layout: default
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Three_dim_sum_in_steamer_basket.jpg/1920px-Three_dim_sum_in_steamer_basket.jpg"
-    images: []
-    sourceRef: "budget"
-
+  # ── 11. RITMO ──
   - id: pace
     type: pace
-    order: 14
+    order: 16
     title: "Un viaje intenso"
-    subtitle: "Seis días exigentes y dos traslados largos"
+    subtitle: "6 días exigentes · 2 traslados largos"
     eyebrow: "Ritmo"
     text: "La recompensa es una variedad visual muy alta en solo 12 días."
     layout: side-by-side
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg/1920px-2019-11-19_Chongqing_%E9%87%8D%E6%85%B6%2C_China.jpg"
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
-    sourceRef: null
+    sourceRef: "paceSummary"
 
-  - id: pros-cons
-    type: pros-cons
-    order: 15
-    title: "Lo mejor y lo que se sacrifica"
-    subtitle: null
-    eyebrow: "Decisión"
-    text: null
-    layout: grid
+  # ── 12. PRECIO ──
+  - id: budget
+    type: budget
+    order: 17
+    title: "USD 2.715 por persona"
+    subtitle: "Sin vuelos internacionales · Estimación para noviembre 2026"
+    eyebrow: "Inversión"
+    text: "Alojamiento USD 405 · Transporte USD 310 · Comida USD 300 · Entradas USD 180"
+    layout: default
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     images: []
-    sourceRef: "strengths, tradeoffs"
+    sourceRef: "budget"
 
+  # ── 13. CIERRE ──
   - id: closing
     type: closing
-    order: 16
-    title: "China vertical en noviembre"
-    subtitle: "Naturaleza imposible, noches urbanas y tecnología"
-    eyebrow: "Propuesta preliminar"
-    text: "Siguiente paso: definir fechas exactas y cotizar vuelos."
+    order: 18
+    title: "¿Arrancamos?"
+    subtitle: "El siguiente paso es definir fechas y cotizar vuelos"
+    eyebrow: "China vertical en noviembre"
+    text: "Naturaleza imposible, noches urbanas y tecnología."
     layout: full-bleed
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
     images: []
     sourceRef: null
-
-# ──────────────────────────────────────────────
-# 20. Galería general
-# ──────────────────────────────────────────────
 gallery:
   - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
     alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
