@@ -239,31 +239,31 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ciudad-prohibida-vista-desde-la-plaza-de-tiananmen-1.jpg"
         alt: "Ciudad Prohibida vista desde la Plaza de Tiananmén"
         caption: "El núcleo imperial de Beijing"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tejados-de-la-ciudad-prohibida-vistos-desde-jingsh-2.jpg"
         alt: "Tejados de la Ciudad Prohibida vistos desde Jingshan"
         caption: "La vista panorámica del conjunto imperial"
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gran-muralla-en-la-seccion-de-mutianyu-3.jpg"
         alt: "Gran Muralla en la sección de Mutianyu"
         caption: "La gran excursión histórica del viaje"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/calle-tradicional-de-un-hutong-de-beijing-1.jpg"
         alt: "Calle tradicional de un hutong de Beijing"
         caption: "La escala cotidiana de la ciudad"
         size: medium
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/templo-del-cielo-en-beijing-2.jpg"
         alt: "Templo del Cielo en Beijing"
         caption: "Arquitectura ceremonial"
         size: large
@@ -318,19 +318,19 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/zhangjiajie-pillars.jpg"
         alt: "Pilares de arenisca de Zhangjiajie entre nubes"
         caption: "El paisaje principal del viaje"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ascensor-bailong-junto-a-los-acantilados-3.jpg"
         alt: "Ascensor Bailong junto a los acantilados"
         caption: "Infraestructura dentro del paisaje"
         size: medium
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tianzi-mountain-entre-niebla-4.jpg"
         alt: "Tianzi Mountain entre niebla"
         caption: "La segunda jornada del parque"
         size: large
@@ -342,7 +342,7 @@ destinations:
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/teleferico-de-tianmen-sobre-las-montanas-6.jpg"
         alt: "Teleférico de Tianmen sobre las montañas"
         caption: "La experiencia panorámica del día 8"
         size: wide
@@ -404,25 +404,25 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/mercados-de-electronica-de-huaqiangbei-7.jpg"
         alt: "Mercados de electrónica de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/robots-y-drones-expuestos-en-shenzhen-8.jpg"
         alt: "Robots y drones expuestos en Shenzhen"
         caption: "Productos y prototipos del ecosistema tecnológico"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/distrito-de-futian-iluminado-9.jpg"
         alt: "Distrito de Futian iluminado"
         caption: "La Shenzhen futurista"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/shenzhen-bay-y-skyline-moderno-10.jpg"
         alt: "Shenzhen Bay y skyline moderno"
         caption: "La ciudad costera y contemporánea"
         size: wide
@@ -455,7 +455,7 @@ itinerary:
     notes:
       - "No programar una visita importante."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/calle-nocturna-de-beijing-12.jpg"
         alt: "Calle nocturna de Beijing"
         caption: "Primera noche del viaje"
         status: pending
@@ -477,7 +477,7 @@ itinerary:
     notes:
       - "Reservar la Ciudad Prohibida con anticipación."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ciudad-prohibida-y-sus-patios-13.jpg"
         alt: "Ciudad Prohibida y sus patios"
         caption: "El día histórico principal"
         status: pending
@@ -498,7 +498,7 @@ itinerary:
     notes:
       - "Elegir transporte de regreso claramente definido."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gran-muralla-en-mutianyu-14.jpg"
         alt: "Gran Muralla en Mutianyu"
         caption: "Uno de los íconos nacionales del viaje"
         status: pending
@@ -519,7 +519,7 @@ itinerary:
     notes:
       - "No intentar cubrir todas las alternativas."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/templo-del-cielo-15.jpg"
         alt: "Templo del Cielo"
         caption: "La mañana ceremonial de Beijing"
         status: pending
@@ -601,7 +601,7 @@ itinerary:
     notes:
       - "Elegir alternativa mecánica si aparece cansancio."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerta-del-cielo-de-tianmen-18.jpg"
         alt: "Puerta del Cielo de Tianmen"
         caption: "Una experiencia distinta al parque forestal"
         status: pending
@@ -622,7 +622,7 @@ itinerary:
     notes:
       - "No sumar una visita importante."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/futian-iluminado-19.jpg"
         alt: "Futian iluminado"
         caption: "Llegada a la China futurista"
         status: pending
@@ -643,7 +643,7 @@ itinerary:
     notes:
       - "No concentrarse únicamente en comprar."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/mercados-de-huaqiangbei-20.jpg"
         alt: "Mercados de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         status: pending
@@ -664,7 +664,7 @@ itinerary:
     notes:
       - "Elegir entre una jornada moderna o una alternativa más relajada."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/shenzhen-bay-y-skyline-21.jpg"
         alt: "Shenzhen Bay y skyline"
         caption: "La ciudad más allá de Huaqiangbei"
         status: pending
@@ -705,15 +705,15 @@ budget:
 
     - category: accommodation
       label: "Hospedaje"
-      amountPerPerson: null
-      note: "Pendiente hasta cargar fechas concretas de mayo de 2027 en Booking para Beijing, Wulingyuan, Zhangjiajie ciudad y Shenzhen."
-      status: pending
+      amountPerPerson: 415
+      note: "Estimación para 11 noches en habitación privada con baño privado y buenas reseñas: Beijing USD 45 por noche, Wulingyuan USD 25, Zhangjiajie ciudad USD 25 y Shenzhen USD 45."
+      status: estimated
 
     - category: transport
       label: "Transporte interno"
-      amountPerPerson: null
-      note: "Incluye vuelo Beijing–Zhangjiajie, tren Zhangjiajie–Shenzhen, traslados y transporte urbano."
-      status: pending
+      amountPerPerson: 300
+      note: "Incluye vuelo Beijing–Zhangjiajie, tren Zhangjiajie–Shenzhen, traslados aeroportuarios y transporte urbano."
+      status: estimated
 
     - category: food
       label: "Comida"
@@ -723,9 +723,9 @@ budget:
 
     - category: activities
       label: "Entradas y actividades"
-      amountPerPerson: null
-      note: "Pendiente de validar Ciudad Prohibida, Mutianyu, Zhangjiajie, Tianmen, ascensores y teleféricos."
-      status: pending
+      amountPerPerson: 200
+      note: "Estimación para Ciudad Prohibida, Mutianyu, Zhangjiajie, Tianmen, ascensores, teleféricos y actividades menores."
+      status: estimated
 
     - category: insurance
       label: "Seguro de viaje"
@@ -746,14 +746,14 @@ budget:
       status: estimated
 
   contingency:
-    amountPerPerson: null
+    amountPerPerson: 140
     percentage: 10
-    note: "Se calculará cuando transporte, alojamiento y entradas tengan valores verificables."
+    note: "Aproximadamente 10 % sobre los gastos terrestres estimados, sin contar el vuelo internacional ni una eventual visa."
 
   calculatedTotals:
-    subtotalPerPerson: 2080
-    totalPerPerson: null
-    totalGroup: null
+    subtotalPerPerson: 2595
+    totalPerPerson: 3135
+    totalGroup: 3135
 
 # ──────────────────────────────────────────────
 # 9. Detalle opcional de vuelos

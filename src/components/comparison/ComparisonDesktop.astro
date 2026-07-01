@@ -169,7 +169,7 @@ function getScore(scores: unknown, key: string): number | null {
             <td key={t.slug} class="px-4 py-2.5">
               {t.budgetTotals.totalPerPerson != null ? (
                 <span class={`text-sm font-bold tabular-nums ${isCheapest ? 'text-green-400' : 'text-text-primary'}`}>
-                  USD {t.budgetTotals.totalPerPerson.toLocaleString()}
+                  USD {(t.budgetTotals.totalPerPerson ?? 0).toLocaleString()}
                   {t.budgetTotals.pendingItems && (
                     <span class="ml-1 text-[10px] text-yellow-500/80">*</span>
                   )}

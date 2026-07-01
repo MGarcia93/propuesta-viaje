@@ -35,7 +35,9 @@ const { summary } = Astro.props;
             Más económico
           </span>
           <p class="mt-1 text-text-primary font-bold text-sm">
-            ~USD {summary.cheapest.totalPerPerson.toLocaleString()}
+            {summary.cheapest.totalPerPerson != null
+              ? `~USD ${summary.cheapest.totalPerPerson.toLocaleString()}`
+              : 'Pendiente'}
           </p>
           <p class="text-xs text-text-muted">{summary.cheapest.slug}</p>
         </div>
@@ -47,7 +49,9 @@ const { summary } = Astro.props;
             Más costoso
           </span>
           <p class="mt-1 text-text-primary font-bold text-sm">
-            ~USD {summary.mostExpensive.totalPerPerson.toLocaleString()}
+            {summary.mostExpensive.totalPerPerson != null
+              ? `~USD ${summary.mostExpensive.totalPerPerson.toLocaleString()}`
+              : 'Pendiente'}
           </p>
           <p class="text-xs text-text-muted">{summary.mostExpensive.slug}</p>
         </div>

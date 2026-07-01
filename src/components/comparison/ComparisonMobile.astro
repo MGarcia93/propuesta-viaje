@@ -102,7 +102,7 @@ const scoreKeys = Array.from(allScoreKeys).filter(
                   {budgetLabel[trip.budgetLevel] ?? trip.budgetLevel}
                   {trip.budgetTotals.totalPerPerson != null && (
                     <span class="block text-brand-orange font-bold">
-                      ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                      ~USD {(trip.budgetTotals.totalPerPerson ?? 0).toLocaleString()}
                     </span>
                   )}
                 </p>

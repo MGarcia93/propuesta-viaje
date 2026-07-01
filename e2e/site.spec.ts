@@ -113,7 +113,7 @@ test.describe('Comparison page', () => {
     const backLink = page.locator('a[href="/"]').first();
     await backLink.click();
     await page.waitForURL('/');
-    await expect(page.locator('h1')).toContainText('¿A dónde nos vamos?');
+    await expect(page.getByRole('heading', { name: '¿A dónde nos vamos?' })).toBeVisible();
   });
 });
 

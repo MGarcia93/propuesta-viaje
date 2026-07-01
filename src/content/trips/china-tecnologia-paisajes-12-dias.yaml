@@ -774,9 +774,9 @@ budget:
   items:
     - category: flights
       label: "Vuelos internacionales"
-      amountPerPerson: null
+      amountPerPerson: 1600
       note: "Buenos Aires–Shanghai y Hong Kong–Buenos Aires. Debe cotizarse con fechas exactas; es la variable principal del viaje."
-      status: pending
+      status: estimated
 
     - category: accommodation
       label: "Hospedaje"
