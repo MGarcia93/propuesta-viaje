@@ -1265,12 +1265,12 @@ slides:
     layout: default
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
-    sourceRef: "itinerary"
+    sourceRef: null
 
 
   # ── 7. ALOJAMIENTO ──
   - id: accommodation
-    type: accommodation
+    type: editorial
     order: 11
     title: "Dónde vas a dormir"
     subtitle: "Habitación privada con baño, bien ubicada"
@@ -1311,7 +1311,7 @@ slides:
     layout: side-by-side
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
     images: []
-    sourceRef: "paceSummary"
+    sourceRef: null
 
   # ── 10. PRECIO ──
   - id: budget
