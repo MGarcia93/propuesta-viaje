@@ -1,12 +1,15 @@
 ---
 // Hero section — cinematic parallax with brand messaging
+// Background image: set via CSS custom property or replace the URL below
 ---
 
-<section class="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-surface-darker">
-  <!-- Hero background dimmed -->
-  <div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface/50 to-surface">
-    <div class="absolute inset-0 opacity-[0.04] bg-gradient-to-br from-brand-orange via-brand-coral to-transparent" />
-  </div>
+<section class="hero-section relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-surface-darker">
+  <!-- Hero background image -->
+  <div class="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40" />
+  
+  <!-- Gradient overlays for readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-surface/70 via-surface/40 to-surface" />
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/5 via-transparent to-brand-coral/5" />
 
   <div class="relative z-10 flex w-full max-w-5xl flex-col items-center px-6 text-center">
     <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand-orange mb-6">
@@ -51,3 +54,22 @@
     </svg>
   </div>
 </section>
+
+<style>
+  /* 
+   * To set a hero background image, either:
+   * 1. Replace the URL below with your image path
+   * 2. Or set via inline style on .hero-bg: style="background-image: url('/hero.jpg')"
+   */
+  .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80');
+  }
+
+  /* Parallax effect on scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-bg {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+  }
+</style>
