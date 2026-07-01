@@ -22,109 +22,76 @@ const budgetLabel: Record<string, string> = {
 ---
 
 {trips.length > 1 && (
-  <section class="w-full px-6 py-16 md:px-12 md:py-24">
+  <section class="w-full px-6 py-12 md:px-12 md:py-16 bg-surface-darker">
     <div class="mx-auto max-w-7xl">
-      <div class="flex flex-col gap-2 mb-10">
-        <h2 class="font-display text-display-lg text-text-primary">
+      <div class="flex flex-col gap-1 mb-8">
+        <h2 class="font-display text-lg md:text-xl text-text-primary">
           Comparación rápida
         </h2>
-        <p class="text-text-secondary max-w-2xl">
+        <p class="text-sm text-text-secondary">
           Un vistazo lado a lado para entender las diferencias clave.
         </p>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-surface-border">
-        <table class="w-full border-collapse min-w-[600px]">
-          <thead>
-            <tr class="border-b border-surface-border bg-surface-darker">
-              <th class="sticky left-0 bg-surface-darker px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-dim min-w-[140px]">
-                Propuesta
-              </th>
-              {trips.map((trip) => (
-                <th key={trip.slug} class="px-4 py-3 text-center min-w-[160px]">
-                  <a href={`/viajes/${trip.slug}`} class="group">
-                    <span class="text-sm font-display font-bold text-text-primary group-hover:text-brand-orange transition-colors">
-                      {trip.shortName ?? trip.catalog.title}
+      <div class="grid gap-4 md:grid-cols-3">
+        {trips.map((trip) => {
+          const prices = trips.filter((t) => t.budgetTotals.totalPerPerson != null).map((t) => t.budgetTotals.totalPerPerson!);
+          const min = prices.length > 0 ? Math.min(...prices) : 0;
+          const isCheapest = trip.budgetTotals.totalPerPerson === min;
+
+          return (
+            <a
+              href={`/viajes/${trip.slug}`}
+              class="group flex flex-col rounded-xl border border-surface-border bg-surface-card p-4 hover:border-brand-orange/30 transition-colors"
+            >
+              {/* Title */}
+              <h3 class="font-display font-bold text-sm text-text-primary group-hover:text-brand-orange transition-colors mb-3">
+                {trip.shortName ?? trip.catalog.title}
+              </h3>
+
+              {/* Stats */}
+              <div class="flex flex-col gap-2 text-xs flex-1">
+                <div class="flex justify-between">
+                  <span class="text-text-dim">Duración</span>
+                  <span class="text-text-primary font-semibold">{trip.durationDays} días</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-text-dim">Ritmo</span>
+                  <span class="text-text-primary">{paceLabel[trip.catalog.pace] ?? trip.catalog.pace}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-text-dim">Presupuesto</span>
+                  <span class="text-text-primary">{budgetLabel[trip.catalog.budgetLevel] ?? trip.catalog.budgetLevel}</span>
+                </div>
+
+                {/* Price */}
+                <div class="flex justify-between items-center pt-2 border-t border-surface-border/30">
+                  <span class="text-text-dim">Precio</span>
+                  {trip.budgetTotals.totalPerPerson != null ? (
+                    <span class={`text-base font-bold ${isCheapest ? 'text-green-400' : 'text-brand-orange'}`}>
+                      ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                      {trip.budgetTotals.pendingItems && <span class="text-[10px] text-yellow-500/80 ml-0.5">*</span>}
                     </span>
-                  </a>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Duration -->
-            <tr class="border-b border-surface-border/30">
-              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Duración</td>
-              {trips.map((trip) => (
-                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary font-semibold">
-                  {trip.durationDays} días
-                </td>
-              ))}
-            </tr>
+                  ) : (
+                    <span class="text-text-dim">Pendiente</span>
+                  )}
+                </div>
+              </div>
 
-            <!-- Pace -->
-            <tr class="border-b border-surface-border/30">
-              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Ritmo</td>
-              {trips.map((trip) => (
-                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary">
-                  {paceLabel[trip.catalog.pace] ?? trip.catalog.pace}
-                </td>
-              ))}
-            </tr>
+              {/* Best argument */}
+              {trip.catalog.bestArgument && (
+                <p class="mt-3 pt-3 border-t border-surface-border/30 text-[11px] text-text-secondary leading-relaxed line-clamp-2">
+                  {trip.catalog.bestArgument}
+                </p>
+              )}
 
-            <!-- Budget level -->
-            <tr class="border-b border-surface-border/30">
-              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Presupuesto</td>
-              {trips.map((trip) => (
-                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary">
-                  {budgetLabel[trip.catalog.budgetLevel] ?? trip.catalog.budgetLevel}
-                </td>
-              ))}
-            </tr>
-
-            <!-- Price -->
-            <tr class="border-b border-surface-border/30 bg-surface-darker/30">
-              <td class="sticky left-0 bg-surface-darker/30 px-4 py-3 text-sm font-semibold text-text-secondary">Precio estimado</td>
-              {trips.map((trip) => {
-                const prices = trips.filter((t) => t.budgetTotals.totalPerPerson != null).map((t) => t.budgetTotals.totalPerPerson!);
-                const min = Math.min(...prices);
-                const isCheapest = trip.budgetTotals.totalPerPerson === min;
-                return (
-                  <td key={trip.slug} class="px-4 py-3 text-center">
-                    {trip.budgetTotals.totalPerPerson != null ? (
-                      <span class={`text-lg font-bold ${isCheapest ? 'text-green-400' : 'text-brand-orange'}`}>
-                        ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
-                        {trip.budgetTotals.pendingItems && <span class="text-[10px] text-yellow-500/80 ml-1">*</span>}
-                      </span>
-                    ) : (
-                      <span class="text-sm text-text-dim">Pendiente</span>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-
-            <!-- Best argument -->
-            <tr class="border-b border-surface-border/30">
-              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Mejor argumento</td>
-              {trips.map((trip) => (
-                <td key={trip.slug} class="px-4 py-3 text-xs text-text-secondary leading-relaxed">
-                  {trip.catalog.bestArgument ?? '—'}
-                </td>
-              ))}
-            </tr>
-
-            <!-- Main concession -->
-            <tr>
-              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Principal concesión</td>
-              {trips.map((trip) => (
-                <td key={trip.slug} class="px-4 py-3 text-xs text-text-muted leading-relaxed">
-                  {trip.catalog.mainConcession ?? '—'}
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
+              {/* CTA */}
+              <span class="mt-3 text-xs font-semibold text-brand-orange group-hover:text-brand-coral transition-colors">
+                Ver propuesta →
+              </span>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
