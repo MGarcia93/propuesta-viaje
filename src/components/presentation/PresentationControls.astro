@@ -40,8 +40,8 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
 </div>
 
 <!-- Bottom navigation bar — centered, matching OpenPencil design -->
-<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40" data-slider-nav>
-  <div class="flex items-center gap-4 rounded-full bg-surface-card/95 backdrop-blur-md border border-surface-border px-6 py-3 shadow-lg shadow-black/20">
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-2rem)] max-w-sm md:max-w-md md:w-auto" data-slider-nav>
+  <div class="flex items-center justify-between gap-2 md:gap-4 rounded-full bg-surface-card/95 backdrop-blur-md border border-surface-border px-4 py-2.5 md:px-6 md:py-3 shadow-lg shadow-black/20">
     <!-- Previous button -->
     <button
       class="flex items-center gap-1.5 text-sm font-medium text-text-primary hover:text-brand-orange transition-colors disabled:opacity-30 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-brand-coral"
@@ -53,7 +53,7 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
       <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      <span>Anterior</span>
+      <span class="hidden md:inline">Anterior</span>
     </button>
 
     <!-- Slide counter -->
@@ -70,7 +70,7 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
       aria-label="Slide siguiente"
       data-next
     >
-      <span data-next-label>Siguiente</span>
+      <span class="hidden md:inline" data-next-label>Siguiente</span>
       <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
