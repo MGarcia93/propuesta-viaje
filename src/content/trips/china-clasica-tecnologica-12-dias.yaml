@@ -1222,7 +1222,7 @@ slides:
 
   # ── 7. ALOJAMIENTO ──
   - id: accommodation
-    type: editorial
+    type: accommodation
     order: 11
     title: "Dónde vas a dormir"
     subtitle: "Habitación privada con baño, bien ubicada"

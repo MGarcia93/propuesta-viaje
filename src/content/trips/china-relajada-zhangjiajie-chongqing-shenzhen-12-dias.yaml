@@ -1270,7 +1270,7 @@ slides:
 
   # ── 7. ALOJAMIENTO ──
   - id: accommodation
-    type: editorial
+    type: accommodation
     order: 11
     title: "Dónde vas a dormir"
     subtitle: "Habitación privada con baño, bien ubicada"
@@ -1435,7 +1435,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Man_on_a_scooter_pulling_a_cart_with_packages_in_Shenzhen%27s_Huaqiangbei..jpg/1920px-Man_on_a_scooter_pulling_a_cart_with_packages_in_Shenzhen%27s_Huaqiangbei..jpg"
     alt: "Componentes electrónicos en Huaqiangbei"
     caption: "El ecosistema cotidiano de hardware"
     city: "Shenzhen"

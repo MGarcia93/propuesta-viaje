@@ -1385,7 +1385,7 @@ slides:
 
   # ── 9. ALOJAMIENTO ──
   - id: accommodation
-    type: editorial
+    type: accommodation
     order: 14
     title: "Dónde vas a dormir"
     subtitle: "Habitación privada con baño, bien ubicada"
@@ -1460,7 +1460,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Man_on_a_scooter_pulling_a_cart_with_packages_in_Shenzhen%27s_Huaqiangbei..jpg/1920px-Man_on_a_scooter_pulling_a_cart_with_packages_in_Shenzhen%27s_Huaqiangbei..jpg"
     alt: "Río y puente dentro de Wangxian Valley"
     caption: "El valle antes de la noche"
     city: "Wangxian Valley"
@@ -1548,7 +1548,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Entrance_of_Huaqiangbei%2C_2017.jpg/1920px-Entrance_of_Huaqiangbei%2C_2017.jpg"
     alt: "Componentes electrónicos y puestos de reparación en Shenzhen"
     caption: "Tecnología cotidiana"
     city: "Shenzhen"
