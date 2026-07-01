@@ -40,7 +40,7 @@ const hasSlides = totalSlides > 0;
       <!-- Slides container -->
       <div class="slide-track">
         {slides.map((slide) => (
-          <div key={slide.id} data-slide class="min-h-screen w-full" style="display: none;" tabindex="-1">
+          <div key={slide.id} data-slide class="min-h-screen w-full flex justify-center" style="display: none;" tabindex="-1">
             <SlideRenderer slide={slide} trip={trip} />
           </div>
         ))}
