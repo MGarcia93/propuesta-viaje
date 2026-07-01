@@ -28,7 +28,7 @@ const slideId = `slide-${slide.id}`;
   <!-- Dark overlay for text readability -->
   <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-surface/30 to-surface/40" />
 
-  <div class="relative z-10 flex w-full max-w-3xl flex-col items-center justify-center px-6 text-center">
+  <div class="relative z-10 flex w-full max-w-5xl flex-col items-center justify-center px-6 text-center">
     {slide.title && (
       <h2 class="font-display text-display-md text-text-primary mb-3 leading-tight">
         {slide.title}
@@ -40,7 +40,7 @@ const slideId = `slide-${slide.id}`;
     )}
 
     {slide.text && (
-      <p class="max-w-2xl text-text-secondary leading-relaxed">
+      <p class="max-w-5xl text-text-secondary leading-relaxed">
         {slide.text}
       </p>
     )}

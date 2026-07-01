@@ -24,7 +24,7 @@ if (source?.type === 'reference' && source.data && typeof source.data === 'objec
 
 <section
   id={slideId}
-  class="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden px-6 py-16 md:px-12"
+  class="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden px-6 py-16"
 >
   {slide.image && (
     <img
@@ -39,7 +39,7 @@ if (source?.type === 'reference' && source.data && typeof source.data === 'objec
     <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-surface/30" />
   )}
 
-  <div class="relative z-10 w-full max-w-3xl">
+  <div class="relative z-10 w-full max-w-5xl">
     {slide.title && (
       <h2 class="font-display text-display-md text-text-primary mb-3 leading-tight">
         {slide.title}
@@ -53,7 +53,7 @@ if (source?.type === 'reference' && source.data && typeof source.data === 'objec
     )}
 
     {slide.text && (
-      <div class="text-text-secondary leading-relaxed max-w-2xl">
+      <div class="text-text-secondary leading-relaxed max-w-5xl">
         {slide.text.split('\n').map((p) => (
           <p class="mb-3">{p}</p>
         ))}

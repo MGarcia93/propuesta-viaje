@@ -33,7 +33,7 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
 
   <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/30" />
 
-  <div class="relative z-10 flex w-full max-w-3xl flex-col items-center text-center">
+  <div class="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
     {slide.eyebrow && (
       <span
         class="text-xs font-semibold uppercase tracking-[0.2em] mb-4"
@@ -48,18 +48,18 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
     </h2>
 
     {slide.subtitle && (
-      <p class="text-lg text-text-secondary mb-6 max-w-xl">
+      <p class="text-lg text-text-secondary mb-6 max-w-5xl">
         {slide.subtitle}
       </p>
     )}
 
     {overview && (
-      <blockquote class="text-text-secondary leading-relaxed italic max-w-xl mb-8 border-l-2 border-brand-coral pl-4 text-left">
+      <blockquote class="text-text-secondary leading-relaxed italic max-w-5xl mb-8 border-l-2 border-brand-coral pl-4 text-left">
         "{overview}"
       </blockquote>
     )}
 
-    <div class="grid gap-4 sm:grid-cols-2 w-full max-w-xl">
+    <div class="grid gap-4 sm:grid-cols-2 w-full max-w-5xl">
       {bestArgument && (
         <div class="rounded-xl border border-green-500/20 bg-green-500/5 p-4 text-left">
           <span class="text-[10px] font-semibold uppercase tracking-wider text-green-400">Lo mejor</span>

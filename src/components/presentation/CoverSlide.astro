@@ -35,7 +35,7 @@ const slideId = `slide-${slide.id}`;
   <div class="absolute inset-0 bg-gradient-to-r from-surface/40 to-transparent" />
 
   <!-- Content -->
-  <div class="relative z-10 flex w-full max-w-2xl flex-col items-start gap-6 px-6 md:pl-[15%]">
+  <div class="relative z-10 flex w-full max-w-5xl flex-col items-start gap-6 px-6">
     {slide.eyebrow && (
       <span
         class="text-xs font-semibold uppercase tracking-[0.2em]"
@@ -45,12 +45,12 @@ const slideId = `slide-${slide.id}`;
       </span>
     )}
 
-    <h1 class="font-display text-display-lg text-text-primary md:text-display-xl leading-none">
+    <h1 class="max-w-5xl font-display text-display-lg text-text-primary md:text-display-xl leading-none">
       {slide.title ?? trip.catalog.title}
     </h1>
 
     {slide.subtitle && (
-      <p class="max-w-2xl text-lg text-text-secondary md:text-xl">
+      <p class="max-w-5xl text-lg text-text-secondary md:text-xl">
         {slide.subtitle}
       </p>
     )}
