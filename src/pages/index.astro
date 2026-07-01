@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import TripCatalog from '../components/home/TripCatalog.astro';
 import QuickComparison from '../components/home/QuickComparison.astro';
+import QuickComparisonTable from '../components/home/QuickComparisonTable.astro';
 import CallToAction from '../components/home/CallToAction.astro';
 import Footer from '../components/home/Footer.astro';
 import { getTripCardProjections } from '../lib/trips';
@@ -33,6 +34,7 @@ const trips = await getTripCardProjections();
     </div>
   </section>
 
+  <QuickComparisonTable trips={trips} />
   <QuickComparison trips={trips} />
   <CallToAction />
   <Footer />

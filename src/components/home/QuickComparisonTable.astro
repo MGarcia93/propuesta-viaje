@@ -1,0 +1,143 @@
+---
+import type { TripCardProjection } from '../../lib/types';
+
+interface Props {
+  trips: TripCardProjection[];
+}
+
+const { trips } = Astro.props;
+
+const paceLabel: Record<string, string> = {
+  relaxed: 'Relajado',
+  moderate: 'Moderado',
+  intense: 'Intenso',
+};
+
+const budgetLabel: Record<string, string> = {
+  low: 'Económico',
+  medium: 'Moderado',
+  high: 'Elevado',
+  premium: 'Premium',
+};
+---
+
+{trips.length > 1 && (
+  <section class="w-full px-6 py-16 md:px-12 md:py-24">
+    <div class="mx-auto max-w-7xl">
+      <div class="flex flex-col gap-2 mb-10">
+        <h2 class="font-display text-display-lg text-text-primary">
+          Comparación rápida
+        </h2>
+        <p class="text-text-secondary max-w-2xl">
+          Un vistazo lado a lado para entender las diferencias clave.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-surface-border">
+        <table class="w-full border-collapse min-w-[600px]">
+          <thead>
+            <tr class="border-b border-surface-border bg-surface-darker">
+              <th class="sticky left-0 bg-surface-darker px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-dim min-w-[140px]">
+                Propuesta
+              </th>
+              {trips.map((trip) => (
+                <th key={trip.slug} class="px-4 py-3 text-center min-w-[160px]">
+                  <a href={`/viajes/${trip.slug}`} class="group">
+                    <span class="text-sm font-display font-bold text-text-primary group-hover:text-brand-orange transition-colors">
+                      {trip.shortName ?? trip.catalog.title}
+                    </span>
+                  </a>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Duration -->
+            <tr class="border-b border-surface-border/30">
+              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Duración</td>
+              {trips.map((trip) => (
+                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary font-semibold">
+                  {trip.durationDays} días
+                </td>
+              ))}
+            </tr>
+
+            <!-- Pace -->
+            <tr class="border-b border-surface-border/30">
+              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Ritmo</td>
+              {trips.map((trip) => (
+                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary">
+                  {paceLabel[trip.catalog.pace] ?? trip.catalog.pace}
+                </td>
+              ))}
+            </tr>
+
+            <!-- Budget level -->
+            <tr class="border-b border-surface-border/30">
+              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Presupuesto</td>
+              {trips.map((trip) => (
+                <td key={trip.slug} class="px-4 py-3 text-center text-sm text-text-primary">
+                  {budgetLabel[trip.catalog.budgetLevel] ?? trip.catalog.budgetLevel}
+                </td>
+              ))}
+            </tr>
+
+            <!-- Price -->
+            <tr class="border-b border-surface-border/30 bg-surface-darker/30">
+              <td class="sticky left-0 bg-surface-darker/30 px-4 py-3 text-sm font-semibold text-text-secondary">Precio estimado</td>
+              {trips.map((trip) => {
+                const prices = trips.filter((t) => t.budgetTotals.totalPerPerson != null).map((t) => t.budgetTotals.totalPerPerson!);
+                const min = Math.min(...prices);
+                const isCheapest = trip.budgetTotals.totalPerPerson === min;
+                return (
+                  <td key={trip.slug} class="px-4 py-3 text-center">
+                    {trip.budgetTotals.totalPerPerson != null ? (
+                      <span class={`text-lg font-bold ${isCheapest ? 'text-green-400' : 'text-brand-orange'}`}>
+                        ~USD {trip.budgetTotals.totalPerPerson.toLocaleString()}
+                        {trip.budgetTotals.pendingItems && <span class="text-[10px] text-yellow-500/80 ml-1">*</span>}
+                      </span>
+                    ) : (
+                      <span class="text-sm text-text-dim">Pendiente</span>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+
+            <!-- Best argument -->
+            <tr class="border-b border-surface-border/30">
+              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Mejor argumento</td>
+              {trips.map((trip) => (
+                <td key={trip.slug} class="px-4 py-3 text-xs text-text-secondary leading-relaxed">
+                  {trip.catalog.bestArgument ?? '—'}
+                </td>
+              ))}
+            </tr>
+
+            <!-- Main concession -->
+            <tr>
+              <td class="sticky left-0 bg-surface px-4 py-3 text-sm text-text-secondary">Principal concesión</td>
+              {trips.map((trip) => (
+                <td key={trip.slug} class="px-4 py-3 text-xs text-text-muted leading-relaxed">
+                  {trip.catalog.mainConcession ?? '—'}
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a
+          href="/comparar"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-brand-coral transition-colors"
+        >
+          Ver comparación completa
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+)}
