@@ -232,7 +232,7 @@ destinations:
         estimatedCostPerPerson: 8
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/skyline-nocturno-de-shanghai-visto-desde-el-rio-1.jpg"
         alt: "Skyline nocturno de Shanghai visto desde el río"
         caption: "Shanghai como puerta de entrada al viaje"
         size: wide
@@ -280,13 +280,13 @@ destinations:
         estimatedCostPerPerson: 12
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/casas-iluminadas-sobre-los-acantilados-de-wangxian-1.jpg"
         alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
         caption: "Wangxian Valley al anochecer"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/rio-puente-y-construcciones-tradicionales-en-wangx-3.jpg"
         alt: "Río, puente y construcciones tradicionales en Wangxian Valley"
         caption: "El valle antes del encendido nocturno"
         size: medium
@@ -341,19 +341,19 @@ destinations:
         estimatedCostPerPerson: 12
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/pilares-de-arenisca-de-zhangjiajie-entre-nubes-4.jpg"
         alt: "Pilares de arenisca de Zhangjiajie entre nubes"
         caption: "Los paisajes verticales de Wulingyuan"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/puerta-del-cielo-en-tianmen-mountain-5.jpg"
         alt: "Puerta del Cielo en Tianmen Mountain"
         caption: "Tianmen Cave y los 999 escalones"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/teleferico-de-tianmen-sobre-las-montanas-6.jpg"
         alt: "Teleférico de Tianmen sobre las montañas"
         caption: "La jornada de montaña más espectacular del viaje"
         size: medium
@@ -426,19 +426,19 @@ destinations:
         estimatedCostPerPerson: 4
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/skyline-nocturno-de-chongqing-junto-a-los-rios-2.jpg"
         alt: "Skyline nocturno de Chongqing junto a los ríos"
         caption: "La megaciudad vertical de noche"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/monorriel-de-liziba-atravesando-un-edificio-8.jpg"
         alt: "Monorriel de Liziba atravesando un edificio"
         caption: "Infraestructura y densidad urbana en Chongqing"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/hongya-cave-iluminada-9.jpg"
         alt: "Hongya Cave iluminada"
         caption: "Una de las noches visualmente más fuertes del viaje"
         size: large
@@ -492,13 +492,13 @@ destinations:
         estimatedCostPerPerson: 15
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/mercados-de-electronica-de-huaqiangbei-10.jpg"
         alt: "Mercados de electrónica de Huaqiangbei"
         caption: "El ecosistema de hardware de Shenzhen"
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/distrito-de-futian-iluminado-de-noche-11.jpg"
         alt: "Distrito de Futian iluminado de noche"
         caption: "El cierre futurista del recorrido"
         size: wide
@@ -525,7 +525,7 @@ itinerary:
     notes:
       - "No reservar una conexión ferroviaria ajustada después del vuelo."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/shanghai-de-noche-12.jpg"
         alt: "Shanghai de noche"
         caption: "Primera escala del recorrido"
         status: pending
@@ -586,7 +586,7 @@ itinerary:
     notes:
       - "Cambiar el orden con el día 5 si la visibilidad es mejor en otra zona."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/pilares-de-zhangjiajie-14.jpg"
         alt: "Pilares de Zhangjiajie"
         caption: "El gran paisaje natural del viaje"
         status: pending
@@ -607,7 +607,7 @@ itinerary:
     notes:
       - "No intentar cubrir cada sendero; priorizar vistas y conexiones eficientes."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/montanas-de-tianzi-entre-nubes-15.jpg"
         alt: "Montañas de Tianzi entre nubes"
         caption: "Segundo día de naturaleza vertical"
         status: pending
@@ -629,7 +629,7 @@ itinerary:
     notes:
       - "No combinar con un tren temprano esa misma tarde."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/puerta-del-cielo-de-tianmen-16.jpg"
         alt: "Puerta del Cielo de Tianmen"
         caption: "La jornada de montaña más espectacular"
         status: pending
@@ -650,7 +650,7 @@ itinerary:
     notes:
       - "Confirmar la estación exacta de llegada."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/chongqing-iluminado-17.jpg"
         alt: "Chongqing iluminado"
         caption: "Cambio total de escala"
         status: pending
@@ -672,7 +672,7 @@ itinerary:
     notes:
       - "La topografía puede volver lento un recorrido que parece corto en el mapa."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/monorriel-de-chongqing-18.jpg"
         alt: "Monorriel de Chongqing"
         caption: "La ciudad construida en varios niveles"
         status: pending
@@ -714,7 +714,7 @@ itinerary:
     notes:
       - "Llevar comida y entretenimiento para el tren."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/distrito-de-futian-20.jpg"
         alt: "Distrito de Futian"
         caption: "Llegada a la China tecnológica"
         status: pending
@@ -735,7 +735,7 @@ itinerary:
     notes:
       - "No dedicar el día solo a comprar; observar cómo se organiza el ecosistema."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/tiendas-de-electronica-de-huaqiangbei-21.jpg"
         alt: "Tiendas de electrónica de Huaqiangbei"
         caption: "Tecnología tangible y cotidiana"
         status: pending
@@ -756,7 +756,7 @@ itinerary:
     notes:
       - "Reservar margen amplio para frontera, equipaje y aeropuerto."
     images:
-      - src: null
+      - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/shenzhen-bay-y-skyline-moderno-22.jpg"
         alt: "Shenzhen Bay y skyline moderno"
         caption: "Cierre contemporáneo del viaje"
         status: pending
@@ -1528,7 +1528,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/gallery-11.jpg"
     alt: "Hot pot de Chongqing"
     caption: "La experiencia gastronómica central"
     city: "Chongqing"
@@ -1544,7 +1544,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "src/assets/trips/china-tecnologia-paisajes-12-dias/gallery-13.jpg"
     alt: "Componentes electrónicos y puestos de reparación en Shenzhen"
     caption: "Tecnología cotidiana"
     city: "Shenzhen"

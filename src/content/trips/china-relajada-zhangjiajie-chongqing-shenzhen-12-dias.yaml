@@ -235,31 +235,31 @@ destinations:
         estimatedCostPerPerson: 12
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/pilares-de-arenisca-de-zhangjiajie-entre-nubes-1.jpg"
         alt: "Pilares de arenisca de Zhangjiajie entre nubes"
         caption: "El paisaje principal del viaje"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/ascensor-bailong-junto-a-los-acantilados-2.jpg"
         alt: "Ascensor Bailong junto a los acantilados"
         caption: "Infraestructura dentro del paisaje"
         size: medium
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/sendero-de-golden-whip-stream-3.jpg"
         alt: "Sendero de Golden Whip Stream"
         caption: "Una alternativa más tranquila dentro del parque"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/puerta-del-cielo-en-tianmen-mountain-4.jpg"
         alt: "Puerta del Cielo en Tianmen Mountain"
         caption: "Tianmen Cave y los 999 escalones"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/teleferico-de-tianmen-sobre-las-montanas-5.jpg"
         alt: "Teleférico de Tianmen sobre las montañas"
         caption: "La jornada panorámica de Zhangjiajie"
         size: wide
@@ -332,31 +332,31 @@ destinations:
         estimatedCostPerPerson: 4
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/skyline-nocturno-de-chongqing-junto-a-los-rios-2.jpg"
         alt: "Skyline nocturno de Chongqing junto a los ríos"
         caption: "La megaciudad vertical"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/monorriel-de-liziba-atravesando-un-edificio-7.jpg"
         alt: "Monorriel de Liziba atravesando un edificio"
         caption: "Infraestructura urbana extrema"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/hongya-cave-iluminada-8.jpg"
         alt: "Hongya Cave iluminada"
         caption: "La noche más visual del recorrido"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/raffles-city-y-chaotianmen-de-noche-9.jpg"
         alt: "Raffles City y Chaotianmen de noche"
         caption: "Arquitectura contemporánea de Chongqing"
         size: wide
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/hot-pot-tradicional-de-chongqing-10.jpg"
         alt: "Hot pot tradicional de Chongqing"
         caption: "La ciudad también se descubre a través de la comida"
         size: small
@@ -424,31 +424,31 @@ destinations:
         estimatedCostPerPerson: 15
         status: estimated
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/huaqiangbei-alt.jpg"
         alt: "Mercados de electrónica de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/componentes-electronicos-y-puestos-de-reparacion-12.jpg"
         alt: "Componentes electrónicos y puestos de reparación"
         caption: "El ecosistema cotidiano de hardware"
         size: medium
         orientation: square
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/robots-drones-alt.jpg"
         alt: "Robots y drones expuestos en Huaqiangbei"
         caption: "Innovación, prototipos y consumo tecnológico"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/distrito-de-futian-iluminado-de-noche-14.jpg"
         alt: "Distrito de Futian iluminado de noche"
         caption: "La Shenzhen futurista"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/shenzhen-bay-y-skyline-moderno-15.jpg"
         alt: "Shenzhen Bay y skyline moderno"
         caption: "La cara costera y contemporánea de la ciudad"
         size: wide
@@ -493,7 +493,7 @@ itinerary:
     notes:
       - "No intentar cubrir todo el parque."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/yuanjiajie-pillars-alt.jpg"
         alt: "Pilares de Yuanjiajie"
         caption: "Primer día en el parque"
         status: pending
@@ -514,7 +514,7 @@ itinerary:
     notes:
       - "Puede intercambiarse con el día 4."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/tianzi-mountain-entre-niebla-6.jpg"
         alt: "Tianzi Mountain entre niebla"
         caption: "Un día adaptable al clima"
         status: pending
@@ -536,7 +536,7 @@ itinerary:
     notes:
       - "Es el principal colchón meteorológico."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/sendero-tranquilo-dentro-de-zhangjiajie-18.jpg"
         alt: "Sendero tranquilo dentro de Zhangjiajie"
         caption: "Margen real dentro del itinerario"
         status: pending
@@ -557,7 +557,7 @@ itinerary:
     notes:
       - "No combinar con un tren largo."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/puerta-del-cielo-de-tianmen-19.jpg"
         alt: "Puerta del Cielo de Tianmen"
         caption: "La gran jornada panorámica"
         status: pending
@@ -578,7 +578,7 @@ itinerary:
     notes:
       - "Confirmar estación exacta."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/hongya-cave-iluminada-20.jpg"
         alt: "Hongya Cave iluminada"
         caption: "Primera noche en Chongqing"
         status: pending
@@ -600,7 +600,7 @@ itinerary:
     notes:
       - "No es necesario combinar todas las opciones."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/monorriel-de-liziba-21.jpg"
         alt: "Monorriel de Liziba"
         caption: "La infraestructura imposible de Chongqing"
         status: pending
@@ -621,7 +621,7 @@ itinerary:
     notes:
       - "Puede utilizarse como día de recuperación."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/calles-y-comida-de-chongqing-7.jpg"
         alt: "Calles y comida de Chongqing"
         caption: "Un día con margen para improvisar"
         status: pending
@@ -642,7 +642,7 @@ itinerary:
     notes:
       - "No agregar visitas importantes."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/futian-iluminado-23.jpg"
         alt: "Futian iluminado"
         caption: "Llegada a Shenzhen"
         status: pending
@@ -663,7 +663,7 @@ itinerary:
     notes:
       - "No apurar las compras."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/mercados-de-huaqiangbei-24.jpg"
         alt: "Mercados de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         status: pending
@@ -684,7 +684,7 @@ itinerary:
     notes:
       - "Elegir actividades según clima e interés."
     images:
-      - src: null
+      - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/shenzhen-bay-y-skyline-25.jpg"
         alt: "Shenzhen Bay y skyline"
         caption: "Tecnología más allá de Huaqiangbei"
         status: pending
@@ -1351,7 +1351,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/gallery-2.jpg"
     alt: "Ascensor Bailong en Zhangjiajie"
     caption: "Infraestructura dentro del parque"
     city: "Zhangjiajie"
@@ -1423,7 +1423,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/gallery-11.jpg"
     alt: "Hot pot de Chongqing"
     caption: "La experiencia gastronómica central"
     city: "Chongqing"
@@ -1447,7 +1447,7 @@ gallery:
     orientation: square
     status: pending
 
-  - src: null
+  - src: "src/assets/trips/china-relajada-zhangjiajie-chongqing-shenzhen-12-dias/gallery-14.jpg"
     alt: "Robots y drones en Shenzhen"
     caption: "Productos, prototipos y tendencias"
     city: "Shenzhen"

@@ -336,7 +336,7 @@ destinations:
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerta-del-cielo-de-tianmen-mountain-1.jpg"
         alt: "Puerta del Cielo de Tianmen Mountain"
         caption: "Tianmen Cave y los 999 escalones"
         size: large
@@ -428,7 +428,7 @@ destinations:
         size: wide
         orientation: landscape
         status: pending
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerto-y-paseo-de-shekou-sea-world-1.jpg"
         alt: "Puerto y paseo de Shekou Sea World"
         caption: "La alternativa relajada del último día completo"
         size: medium
@@ -559,7 +559,7 @@ itinerary:
     notes:
       - "No intentar completar todo el parque."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/yuanjiajie-pillars-alt.jpg"
         alt: "Pilares de Yuanjiajie"
         caption: "El gran paisaje natural"
         status: pending
@@ -580,7 +580,7 @@ itinerary:
     notes:
       - "Puede reordenarse según niebla y visibilidad."
     images:
-      - src: null
+      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tianzi-mountain-entre-niebla-4.jpg"
         alt: "Tianzi Mountain entre niebla"
         caption: "Segundo día del parque"
         status: pending
@@ -1333,7 +1333,7 @@ gallery:
     category: nature
     orientation: landscape
     status: pending
-  - src: null
+  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-7.jpg"
     alt: "Ascensor Bailong"
     caption: "Infraestructura dentro del parque"
     city: "Zhangjiajie"
@@ -1368,7 +1368,7 @@ gallery:
     category: technology
     orientation: landscape
     status: pending
-  - src: null
+  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-12.jpg"
     alt: "Robots y drones en Shenzhen"
     caption: "Productos y prototipos"
     city: "Shenzhen"
@@ -1389,7 +1389,7 @@ gallery:
     category: urban
     orientation: landscape
     status: pending
-  - src: null
+  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-15.jpg"
     alt: "Shekou Sea World"
     caption: "La alternativa relajada"
     city: "Shenzhen"
