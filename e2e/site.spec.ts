@@ -23,10 +23,10 @@ test.describe('Home page', () => {
     await expect(page.locator('body')).toBeVisible();
   });
 
-  test('shows quick comparison section', async ({ page }) => {
+  test('shows quick comparison table', async ({ page }) => {
     await page.goto('/');
-    const comparison = page.locator('text=Así se vería');
-    await expect(comparison).toBeVisible();
+    const table = page.getByText('Comparación rápida');
+    await expect(table).toBeVisible();
   });
 
   test('shows CTA to comparison page', async ({ page }) => {
