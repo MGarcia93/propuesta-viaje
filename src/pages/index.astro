@@ -14,7 +14,7 @@ const trips = await getTripCardProjections();
   title="Viaje Tanto — ¿A dónde nos vamos?"
   description="Tres propuestas, tres formas completamente distintas de viajar y una sola decisión. Explorá, compará y encontrá tu próximo viaje."
 >
-  <HeroSection />
+  <HeroSection tripCount={trips.length} />
 
   <!-- Catalog section -->
   <section id="catalog" class="w-full px-6 py-16 md:px-12 md:py-24">

@@ -1,6 +1,9 @@
 ---
-// Hero section — cinematic parallax with brand messaging
-// Background image: set via CSS custom property or replace the URL below
+interface Props {
+  tripCount?: number;
+}
+
+const { tripCount = 3 } = Astro.props;
 ---
 
 <section class="hero-section relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-surface-darker">
@@ -21,8 +24,8 @@
     </h1>
 
     <p class="max-w-2xl text-lg text-text-secondary mb-10">
-      Tres propuestas, tres formas completamente distintas de viajar y una sola decisión.
-      Explorá cada una, comparalas y encontrá la que más te representa.
+      {tripCount} {tripCount === 1 ? 'propuesta' : 'propuestas'}, {tripCount === 1 ? 'una forma' : `${tripCount} formas completamente distintas`} de viajar y una sola decisión.
+      Explorá {tripCount === 1 ? 'la propuesta' : 'cada una'}, {tripCount === 1 ? 'descubrila' : 'comparalas'} y encontrá la que más te representa.
     </p>
 
     <div class="flex flex-wrap justify-center gap-4">
@@ -30,20 +33,22 @@
         href="#catalog"
         class="inline-flex items-center gap-2 rounded-full bg-brand-coral px-6 py-3 text-sm font-semibold text-white hover:bg-brand-coral/90 transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
       >
-        Explorar propuestas
+        Explorar {tripCount === 1 ? 'la propuesta' : 'propuestas'}
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </a>
-      <a
-        href="/comparar"
-        class="inline-flex items-center gap-2 rounded-full border border-surface-border px-6 py-3 text-sm font-semibold text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
-      >
-        Compararlas
-        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-        </svg>
-      </a>
+      {tripCount > 1 && (
+        <a
+          href="/comparar"
+          class="inline-flex items-center gap-2 rounded-full border border-surface-border px-6 py-3 text-sm font-semibold text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-orange"
+        >
+          Compararlas
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        </a>
+      )}
     </div>
   </div>
 
