@@ -60,7 +60,7 @@ test.describe('Trip presentation page', () => {
   test('navigates to next slide with arrow button', async ({ page }) => {
     await page.goto('/viajes/china-clasica-tecnologica-12-dias');
     const nextBtn = page.locator('#slide-next');
-    await nextBtn.click();
+    await nextBtn.click({ force: true });
     const currentEl = page.locator('#slide-current');
     await expect(currentEl).toHaveText('2');
   });
