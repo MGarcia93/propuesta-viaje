@@ -39,42 +39,47 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
   </a>
 </div>
 
-<!-- Slide counter -->
-<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40">
-  <span class="inline-flex items-center gap-1 rounded-full bg-surface/80 backdrop-blur-md border border-surface-border px-3 py-1.5 text-xs text-text-muted" data-slide-counter>
-    <span id="slide-current" data-current>1</span>
-    <span>/</span>
-    <span id="slide-total" data-total>{totalSlides}</span>
-  </span>
+<!-- Bottom navigation bar — centered, matching OpenPencil design -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40" data-slider-nav>
+  <div class="flex items-center gap-4 rounded-full bg-surface/90 backdrop-blur-md border border-surface-border px-5 py-2.5">
+    <!-- Previous button -->
+    <button
+      class="flex items-center gap-1.5 text-xs font-medium text-text-secondary hover:text-text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-brand-coral"
+      id="slide-prev"
+      aria-label="Slide anterior"
+      data-prev
+      disabled
+    >
+      <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      <span>Anterior</span>
+    </button>
+
+    <!-- Slide counter -->
+    <span class="text-xs text-text-muted tabular-nums" data-slide-counter>
+      <span id="slide-current" data-current>1</span>
+      <span>/</span>
+      <span id="slide-total" data-total>{totalSlides}</span>
+    </span>
+
+    <!-- Next / Close button -->
+    <button
+      class="flex items-center gap-1.5 text-xs font-medium text-text-secondary hover:text-text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-brand-coral"
+      id="slide-next"
+      aria-label="Slide siguiente"
+      data-next
+    >
+      <span data-next-label>Siguiente</span>
+      <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
 </div>
 
-<!-- Navigation arrows -->
-<button
-  class="fixed left-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-surface/80 backdrop-blur-md border border-surface-border text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-coral disabled:opacity-30 disabled:cursor-not-allowed"
-  id="slide-prev"
-  aria-label="Slide anterior"
-  data-prev
-  disabled
->
-  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-  </svg>
-</button>
-
-<button
-  class="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-surface/80 backdrop-blur-md border border-surface-border text-text-secondary hover:text-text-primary hover:bg-surface-card transition-colors focus-visible:outline-2 focus-visible:outline-brand-coral disabled:opacity-30 disabled:cursor-not-allowed"
-  id="slide-next"
-  aria-label="Slide siguiente"
-  data-next
->
-  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</button>
-
 <script>
-  // Vanilla JS controller — will be augmented by PresentationController.ts
-  // This ensures basic nav works even without the TypeScript controller
+  // Vanilla JS controller
   const slides = document.querySelectorAll('[data-slide]');
   const totalSlides = slides.length;
   if (totalSlides > 0) {
@@ -83,6 +88,7 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
     const nextBtn = document.getElementById('slide-next');
     const progress = document.getElementById('slide-progress');
     const currentEl = document.getElementById('slide-current');
+    const nextLabel = document.querySelector('[data-next-label]');
 
     function showSlide(index: number) {
       slides.forEach((s, i) => {
@@ -95,12 +101,23 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
         progress.setAttribute('aria-valuenow', String(index + 1));
       }
       if (prevBtn) prevBtn.disabled = index === 0;
-      if (nextBtn) nextBtn.disabled = index === totalSlides - 1;
+
+      // Last slide: show "Cerrar" instead of "Siguiente"
+      const isLast = index === totalSlides - 1;
+      if (nextLabel) nextLabel.textContent = isLast ? 'Cerrar' : 'Siguiente';
+      if (nextBtn) {
+        nextBtn.setAttribute('aria-label', isLast ? 'Cerrar presentación' : 'Slide siguiente');
+      }
     }
 
     function navigate(delta: number) {
       const next = current + delta;
-      if (next >= 0 && next < totalSlides) showSlide(next);
+      if (next >= 0 && next < totalSlides) {
+        showSlide(next);
+      } else if (next >= totalSlides) {
+        // On last slide, "Cerrar" goes back
+        window.location.href = '/';
+      }
     }
 
     if (prevBtn) prevBtn.addEventListener('click', () => navigate(-1));
@@ -109,6 +126,10 @@ const accentColor = trip.visual?.accentColor ?? '#FF553D';
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') navigate(-1);
+      if (e.key === 'Escape') {
+        const closeLink = document.querySelector('[data-close]') as HTMLAnchorElement;
+        if (closeLink) closeLink.click();
+      }
     });
 
     // Touch support
