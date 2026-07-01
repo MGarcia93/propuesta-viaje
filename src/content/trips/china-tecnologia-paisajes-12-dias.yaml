@@ -232,7 +232,7 @@ destinations:
         estimatedCostPerPerson: 8
         status: estimated
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pudong_Shanghai_November_2017_HDR_panorama.jpg/1920px-Pudong_Shanghai_November_2017_HDR_panorama.jpg"
         alt: "Skyline nocturno de Shanghai visto desde el río"
         caption: "Shanghai como puerta de entrada al viaje"
         size: wide
@@ -280,13 +280,13 @@ destinations:
         estimatedCostPerPerson: 12
         status: estimated
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
         alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
         caption: "Wangxian Valley al anochecer"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
         alt: "Río, puente y construcciones tradicionales en Wangxian Valley"
         caption: "El valle antes del encendido nocturno"
         size: medium
@@ -341,19 +341,19 @@ destinations:
         estimatedCostPerPerson: 12
         status: estimated
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zhangjiajie_National_Forest_Park.jpg/1920px-Zhangjiajie_National_Forest_Park.jpg"
         alt: "Pilares de arenisca de Zhangjiajie entre nubes"
         caption: "Los paisajes verticales de Wulingyuan"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
         alt: "Puerta del Cielo en Tianmen Mountain"
         caption: "Tianmen Cave y los 999 escalones"
         size: large
         orientation: portrait
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tianmen_Mountain_20180326_094808.jpg/1920px-Tianmen_Mountain_20180326_094808.jpg"
         alt: "Teleférico de Tianmen sobre las montañas"
         caption: "La jornada de montaña más espectacular del viaje"
         size: medium
@@ -426,19 +426,19 @@ destinations:
         estimatedCostPerPerson: 4
         status: estimated
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
         alt: "Skyline nocturno de Chongqing junto a los ríos"
         caption: "La megaciudad vertical de noche"
         size: full
         orientation: landscape
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png/1920px-Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png"
         alt: "Monorriel de Liziba atravesando un edificio"
         caption: "Infraestructura y densidad urbana en Chongqing"
         size: medium
         orientation: landscape
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hongya_Cave_20180520.jpg/1920px-Hongya_Cave_20180520.jpg"
         alt: "Hongya Cave iluminada"
         caption: "Una de las noches visualmente más fuertes del viaje"
         size: large
@@ -492,13 +492,13 @@ destinations:
         estimatedCostPerPerson: 15
         status: estimated
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
         alt: "Mercados de electrónica de Huaqiangbei"
         caption: "El ecosistema de hardware de Shenzhen"
         size: large
         orientation: landscape
         status: pending
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg/1920px-SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg"
         alt: "Distrito de Futian iluminado de noche"
         caption: "El cierre futurista del recorrido"
         size: wide
@@ -525,7 +525,7 @@ itinerary:
     notes:
       - "No reservar una conexión ferroviaria ajustada después del vuelo."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Skyline_of_Shanghai_at_night%2C_Aug_10_2023.jpg/1920px-Skyline_of_Shanghai_at_night%2C_Aug_10_2023.jpg"
         alt: "Shanghai de noche"
         caption: "Primera escala del recorrido"
         status: pending
@@ -547,7 +547,7 @@ itinerary:
     notes:
       - "Dormir en el valle o en una pensión próxima para no depender del último bus."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wangxiangu_Scenic_Area_-_31_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_31_%28July_19%2C_2025%29.jpg"
         alt: "Wangxian Valley iluminado"
         caption: "La China de fantasía"
         status: pending
@@ -586,7 +586,7 @@ itinerary:
     notes:
       - "Cambiar el orden con el día 5 si la visibilidad es mejor en otra zona."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sandstone_spire_forest_Zhangjiajie_Hunan.jpg/1920px-Sandstone_spire_forest_Zhangjiajie_Hunan.jpg"
         alt: "Pilares de Zhangjiajie"
         caption: "El gran paisaje natural del viaje"
         status: pending
@@ -607,7 +607,7 @@ itinerary:
     notes:
       - "No intentar cubrir cada sendero; priorizar vistas y conexiones eficientes."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Rock_formations_hiding_in_the_clouds.jpg/1920px-Rock_formations_hiding_in_the_clouds.jpg"
         alt: "Montañas de Tianzi entre nubes"
         caption: "Segundo día de naturaleza vertical"
         status: pending
@@ -629,7 +629,7 @@ itinerary:
     notes:
       - "No combinar con un tren temprano esa misma tarde."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
         alt: "Puerta del Cielo de Tianmen"
         caption: "La jornada de montaña más espectacular"
         status: pending
@@ -650,7 +650,7 @@ itinerary:
     notes:
       - "Confirmar la estación exacta de llegada."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Night_in_Chongqing_%2820250501%29.jpg/1920px-Night_in_Chongqing_%2820250501%29.jpg"
         alt: "Chongqing iluminado"
         caption: "Cambio total de escala"
         status: pending
@@ -672,7 +672,7 @@ itinerary:
     notes:
       - "La topografía puede volver lento un recorrido que parece corto en el mapa."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png/1920px-Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png"
         alt: "Monorriel de Chongqing"
         caption: "La ciudad construida en varios niveles"
         status: pending
@@ -693,7 +693,7 @@ itinerary:
     notes:
       - "Puede convertirse en medio día de descanso si aparece cansancio acumulado."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chongqing_hotpot_2.jpg/1920px-Chongqing_hotpot_2.jpg"
         alt: "Hot pot y calles de Chongqing"
         caption: "La ciudad también se entiende a través de su comida"
         status: pending
@@ -714,7 +714,7 @@ itinerary:
     notes:
       - "Llevar comida y entretenimiento para el tren."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Commercial_area_of_futian_to_east2020.jpg/1920px-Commercial_area_of_futian_to_east2020.jpg"
         alt: "Distrito de Futian"
         caption: "Llegada a la China tecnológica"
         status: pending
@@ -735,7 +735,7 @@ itinerary:
     notes:
       - "No dedicar el día solo a comprar; observar cómo se organiza el ecosistema."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Huaqiangbei_July_2024_%282%29.jpg/1920px-Huaqiangbei_July_2024_%282%29.jpg"
         alt: "Tiendas de electrónica de Huaqiangbei"
         caption: "Tecnología tangible y cotidiana"
         status: pending
@@ -756,7 +756,7 @@ itinerary:
     notes:
       - "Reservar margen amplio para frontera, equipaje y aeropuerto."
     images:
-      - src: null
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg/1920px-Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg"
         alt: "Shenzhen Bay y skyline moderno"
         caption: "Cierre contemporáneo del viaje"
         status: pending
@@ -1448,7 +1448,7 @@ slides:
 # 20. Galería general
 # ──────────────────────────────────────────────
 gallery:
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
     alt: "Casas iluminadas sobre los acantilados de Wangxian Valley"
     caption: "Wangxian Valley al anochecer"
     city: "Wangxian Valley"
@@ -1456,7 +1456,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg/1920px-Wangxiangu_Scenic_Area_-_52_%28July_19%2C_2025%29.jpg"
     alt: "Río y puente dentro de Wangxian Valley"
     caption: "El valle antes de la noche"
     city: "Wangxian Valley"
@@ -1464,7 +1464,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/1_zhangjiajie_huangshizhai_wulingyuan_panorama_2012.jpg/1920px-1_zhangjiajie_huangshizhai_wulingyuan_panorama_2012.jpg"
     alt: "Pilares de arenisca de Zhangjiajie"
     caption: "El paisaje principal del viaje"
     city: "Zhangjiajie"
@@ -1472,7 +1472,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Zhangjiajie_%28223137313%29.jpeg/1920px-Zhangjiajie_%28223137313%29.jpeg"
     alt: "Pilares de Zhangjiajie cubiertos por niebla"
     caption: "La atmósfera de montaña en noviembre"
     city: "Zhangjiajie"
@@ -1480,7 +1480,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Bailong_Elevator_april_2008.jpg"
     alt: "Ascensor Bailong en Zhangjiajie"
     caption: "Infraestructura dentro del paisaje"
     city: "Zhangjiajie"
@@ -1488,7 +1488,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
     alt: "Puerta del Cielo de Tianmen Mountain"
     caption: "Tianmen Cave"
     city: "Zhangjiajie"
@@ -1496,7 +1496,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tianmen_Mountain_20180326_094808.jpg/1920px-Tianmen_Mountain_20180326_094808.jpg"
     alt: "Teleférico de Tianmen Mountain"
     caption: "Ascenso sobre las montañas"
     city: "Zhangjiajie"
@@ -1504,7 +1504,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png"
     alt: "Skyline nocturno de Chongqing"
     caption: "La megaciudad vertical"
     city: "Chongqing"
@@ -1512,7 +1512,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Hongya_Cave_20180520.jpg/1920px-Hongya_Cave_20180520.jpg"
     alt: "Hongya Cave iluminada"
     caption: "Chongqing después del atardecer"
     city: "Chongqing"
@@ -1520,7 +1520,7 @@ gallery:
     orientation: portrait
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png/1920px-Chongqing_Rail_Transit_Rapid%26Express_Train_Map.png"
     alt: "Monorriel de Liziba atravesando un edificio"
     caption: "Infraestructura urbana extrema"
     city: "Chongqing"
@@ -1528,7 +1528,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Chongqing_hotpot_2.jpg/1920px-Chongqing_hotpot_2.jpg"
     alt: "Hot pot de Chongqing"
     caption: "La experiencia gastronómica central"
     city: "Chongqing"
@@ -1536,7 +1536,7 @@ gallery:
     orientation: square
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
     alt: "Mercados de electrónica de Huaqiangbei"
     caption: "El ecosistema de hardware de Shenzhen"
     city: "Shenzhen"
@@ -1544,7 +1544,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
     alt: "Componentes electrónicos y puestos de reparación en Shenzhen"
     caption: "Tecnología cotidiana"
     city: "Shenzhen"
@@ -1552,7 +1552,7 @@ gallery:
     orientation: square
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg/1920px-SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg"
     alt: "Distrito de Futian iluminado"
     caption: "Shenzhen contemporánea"
     city: "Shenzhen"
@@ -1560,7 +1560,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg/1920px-Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg"
     alt: "Shenzhen Bay y skyline moderno"
     caption: "La cara costera de la ciudad"
     city: "Shenzhen"
@@ -1568,7 +1568,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Night_in_Chongqing_%2820250501%29.jpg/1920px-Night_in_Chongqing_%2820250501%29.jpg"
     alt: "Hot pot y skyline nocturno de Chongqing"
     caption: "Una de las noches más potentes del recorrido"
     city: "Chongqing"
@@ -1576,7 +1576,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DJI_Agriculture_Drones_in_DJI_Store_20250501.jpg/1920px-DJI_Agriculture_Drones_in_DJI_Store_20250501.jpg"
     alt: "Drones y prototipos en Shenzhen"
     caption: "Parte del ecosistema de hardware"
     city: "Shenzhen"
@@ -1584,7 +1584,7 @@ gallery:
     orientation: landscape
     status: pending
 
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/NLC416-09jh002948-34817_%E8%A9%A0%E7%89%A9%E8%A9%A9%E9%81%B8.pdf/page1-960px-NLC416-09jh002948-34817_%E8%A9%A0%E7%89%A9%E8%A9%A9%E9%81%B8.pdf.jpg"
     alt: "Calle de Wangxian Valley de noche"
     caption: "Arquitectura de fantasía iluminada"
     city: "Wangxian Valley"
