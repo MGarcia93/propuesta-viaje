@@ -60,8 +60,8 @@ catalog:
     - primera visita
   pace: moderate
   budgetLevel: medium
-  bestArgument: "Combina tres imágenes esenciales y muy diferentes de China sin agregar una cuarta base."
-  mainConcession: "Se eliminan Chongqing, Shanghai, Xi'an y Wangxian Valley."
+  bestArgument: "Incluye dos íconos nacionales: la Ciudad Prohibida y la Gran Muralla. Cada base se vive de día y de noche, sin convertir el viaje en una carrera."
+  mainConcession: "Se sacrifica Chongqing y Xi'an para hacer lugar a Beijing y la Muralla. Shanghai queda fuera porque Shenzhen cubre mejor la China futurista."
 
 # ──────────────────────────────────────────────
 # 2.3 Identidad visual
@@ -239,31 +239,31 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ciudad-prohibida-vista-desde-la-plaza-de-tiananmen-1.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg/1920px-China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg"
         alt: "Ciudad Prohibida vista desde la Plaza de Tiananmén"
         caption: "El núcleo imperial de Beijing"
         size: full
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tejados-de-la-ciudad-prohibida-vistos-desde-jingsh-2.jpg"
+      - src: null
         alt: "Tejados de la Ciudad Prohibida vistos desde Jingshan"
         caption: "La vista panorámica del conjunto imperial"
         size: large
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gran-muralla-en-la-seccion-de-mutianyu-3.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
         alt: "Gran Muralla en la sección de Mutianyu"
         caption: "La gran excursión histórica del viaje"
         size: full
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/calle-tradicional-de-un-hutong-de-beijing-1.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Hutong_Jiemen_%28Snowyowls%29.jpg"
         alt: "Calle tradicional de un hutong de Beijing"
         caption: "La escala cotidiana de la ciudad"
         size: medium
         orientation: portrait
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/templo-del-cielo-en-beijing-2.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg/1920px-Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg"
         alt: "Templo del Cielo en Beijing"
         caption: "Arquitectura ceremonial"
         size: large
@@ -318,31 +318,31 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/zhangjiajie-pillars.jpg"
+      - src: null
         alt: "Pilares de arenisca de Zhangjiajie entre nubes"
         caption: "El paisaje principal del viaje"
         size: full
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ascensor-bailong-junto-a-los-acantilados-3.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Bailong_Elevator_april_2008.jpg"
         alt: "Ascensor Bailong junto a los acantilados"
         caption: "Infraestructura dentro del paisaje"
         size: medium
         orientation: portrait
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tianzi-mountain-entre-niebla-4.jpg"
+      - src: null
         alt: "Tianzi Mountain entre niebla"
         caption: "La segunda jornada del parque"
         size: large
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerta-del-cielo-de-tianmen-mountain-1.jpg"
+      - src: null
         alt: "Puerta del Cielo de Tianmen Mountain"
         caption: "Tianmen Cave y los 999 escalones"
         size: large
         orientation: portrait
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/teleferico-de-tianmen-sobre-las-montanas-6.jpg"
+      - src: null
         alt: "Teleférico de Tianmen sobre las montañas"
         caption: "La experiencia panorámica del día 8"
         size: wide
@@ -404,31 +404,31 @@ destinations:
         estimatedCostPerPerson: null
         status: pending
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/mercados-de-electronica-de-huaqiangbei-7.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Huaqiangbei%26Shennan_Cross2021.jpg/1920px-Huaqiangbei%26Shennan_Cross2021.jpg"
         alt: "Mercados de electrónica de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         size: large
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/robots-y-drones-expuestos-en-shenzhen-8.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Shenzhen_Technology_University_emblem_2022.svg/1920px-Shenzhen_Technology_University_emblem_2022.svg.png"
         alt: "Robots y drones expuestos en Shenzhen"
         caption: "Productos y prototipos del ecosistema tecnológico"
         size: medium
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/distrito-de-futian-iluminado-9.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg/1920px-SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg"
         alt: "Distrito de Futian iluminado"
         caption: "La Shenzhen futurista"
         size: full
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/shenzhen-bay-y-skyline-moderno-10.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg/1920px-Skyline_of_Shenzhen_Bay_Port_From_the_South.jpg"
         alt: "Shenzhen Bay y skyline moderno"
         caption: "La ciudad costera y contemporánea"
         size: wide
         orientation: landscape
         status: pending
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerto-y-paseo-de-shekou-sea-world-1.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Skyline_of_Shekou%2C_Shenzhen.jpg/1920px-Skyline_of_Shekou%2C_Shenzhen.jpg"
         alt: "Puerto y paseo de Shekou Sea World"
         caption: "La alternativa relajada del último día completo"
         size: medium
@@ -455,7 +455,7 @@ itinerary:
     notes:
       - "No programar una visita importante."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/calle-nocturna-de-beijing-12.jpg"
+      - src: null
         alt: "Calle nocturna de Beijing"
         caption: "Primera noche del viaje"
         status: pending
@@ -477,7 +477,7 @@ itinerary:
     notes:
       - "Reservar la Ciudad Prohibida con anticipación."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/ciudad-prohibida-y-sus-patios-13.jpg"
+      - src: null
         alt: "Ciudad Prohibida y sus patios"
         caption: "El día histórico principal"
         status: pending
@@ -498,7 +498,7 @@ itinerary:
     notes:
       - "Elegir transporte de regreso claramente definido."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gran-muralla-en-mutianyu-14.jpg"
+      - src: null
         alt: "Gran Muralla en Mutianyu"
         caption: "Uno de los íconos nacionales del viaje"
         status: pending
@@ -519,7 +519,7 @@ itinerary:
     notes:
       - "No intentar cubrir todas las alternativas."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/templo-del-cielo-15.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg/1920px-Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg"
         alt: "Templo del Cielo"
         caption: "La mañana ceremonial de Beijing"
         status: pending
@@ -559,7 +559,7 @@ itinerary:
     notes:
       - "No intentar completar todo el parque."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/yuanjiajie-pillars-alt.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stunning_rock_formations_in_Bailong_%28%E7%99%BD%E9%BE%99%EF%BC%89Yuanjiajie_%EF%BC%88%E8%A2%81%E5%AE%B6%E7%95%8C%EF%BC%89scenic_area.jpg/1920px-Stunning_rock_formations_in_Bailong_%28%E7%99%BD%E9%BE%99%EF%BC%89Yuanjiajie_%EF%BC%88%E8%A2%81%E5%AE%B6%E7%95%8C%EF%BC%89scenic_area.jpg"
         alt: "Pilares de Yuanjiajie"
         caption: "El gran paisaje natural"
         status: pending
@@ -580,7 +580,7 @@ itinerary:
     notes:
       - "Puede reordenarse según niebla y visibilidad."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/tianzi-mountain-entre-niebla-4.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/1_tianzishan_wulingyuan_zhangjiajie_2012.jpg/1920px-1_tianzishan_wulingyuan_zhangjiajie_2012.jpg"
         alt: "Tianzi Mountain entre niebla"
         caption: "Segundo día del parque"
         status: pending
@@ -601,7 +601,7 @@ itinerary:
     notes:
       - "Elegir alternativa mecánica si aparece cansancio."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/puerta-del-cielo-de-tianmen-18.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/5/53/Tianmen_Cave_-_panoramio.jpg"
         alt: "Puerta del Cielo de Tianmen"
         caption: "Una experiencia distinta al parque forestal"
         status: pending
@@ -622,7 +622,7 @@ itinerary:
     notes:
       - "No sumar una visita importante."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/futian-iluminado-19.jpg"
+      - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg/1920px-SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%BF%B1%E6%B2%B3%E5%A4%A7%E9%81%93_Binhe_Boulevard_night_June_2024_R12S_11.jpg"
         alt: "Futian iluminado"
         caption: "Llegada a la China futurista"
         status: pending
@@ -643,7 +643,7 @@ itinerary:
     notes:
       - "No concentrarse únicamente en comprar."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/mercados-de-huaqiangbei-20.jpg"
+      - src: null
         alt: "Mercados de Huaqiangbei"
         caption: "Tecnología que se puede tocar"
         status: pending
@@ -664,7 +664,7 @@ itinerary:
     notes:
       - "Elegir entre una jornada moderna o una alternativa más relajada."
     images:
-      - src: "src/assets/trips/china-clasica-tecnologica-12-dias/shenzhen-bay-y-skyline-21.jpg"
+      - src: null
         alt: "Shenzhen Bay y skyline"
         caption: "La ciudad más allá de Huaqiangbei"
         status: pending
@@ -1298,42 +1298,42 @@ gallery:
     category: history
     orientation: landscape
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/View_over_southern_Forbidden_City_form_east.jpg/1920px-View_over_southern_Forbidden_City_form_east.jpg"
     alt: "Tejados de la Ciudad Prohibida desde Jingshan"
     caption: "La vista panorámica de Beijing"
     city: "Beijing"
     category: history
     orientation: landscape
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/1920px-Great_Wall_of_China_July_2006.JPG"
     alt: "Gran Muralla en Mutianyu"
     caption: "El ícono histórico del recorrido"
     city: "Beijing"
     category: history
     orientation: landscape
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Hutong_Jiemen_%28Snowyowls%29.jpg"
     alt: "Hutong tradicional de Beijing"
     caption: "La escala cotidiana de la capital"
     city: "Beijing"
     category: culture
     orientation: portrait
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg/1920px-Temple_of_Heaven%2C_Beijing%2C_China_-_010_edit.jpg"
     alt: "Templo del Cielo"
     caption: "Arquitectura ceremonial"
     city: "Beijing"
     category: culture
     orientation: portrait
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/1_zhangjiajie_huangshizhai_wulingyuan_panorama_2012.jpg/1920px-1_zhangjiajie_huangshizhai_wulingyuan_panorama_2012.jpg"
     alt: "Pilares de Zhangjiajie entre nubes"
     caption: "El gran paisaje natural"
     city: "Zhangjiajie"
     category: nature
     orientation: landscape
     status: pending
-  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-7.jpg"
+  - src: null
     alt: "Ascensor Bailong"
     caption: "Infraestructura dentro del parque"
     city: "Zhangjiajie"
@@ -1354,7 +1354,7 @@ gallery:
     category: adventure
     orientation: portrait
     status: pending
-  - src: null
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Tianmen_Mountain_20180326_094808.jpg/1920px-Tianmen_Mountain_20180326_094808.jpg"
     alt: "Teleférico de Tianmen"
     caption: "La gran vista panorámica"
     city: "Zhangjiajie"
@@ -1368,7 +1368,7 @@ gallery:
     category: technology
     orientation: landscape
     status: pending
-  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-12.jpg"
+  - src: null
     alt: "Robots y drones en Shenzhen"
     caption: "Productos y prototipos"
     city: "Shenzhen"
@@ -1389,7 +1389,7 @@ gallery:
     category: urban
     orientation: landscape
     status: pending
-  - src: "src/assets/trips/china-clasica-tecnologica-12-dias/gallery-15.jpg"
+  - src: null
     alt: "Shekou Sea World"
     caption: "La alternativa relajada"
     city: "Shenzhen"
